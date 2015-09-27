@@ -1,3 +1,6 @@
+#ifndef VECTOR_HPP
+#define VECTOR_HPP
+
 template <class Object>
 class Vector
 {
@@ -155,10 +158,12 @@ public:
 
     // ±∏”√»›¡ø
     enum {
-        SPARE_CAPACITY = 16
+        SPARE_CAPACITY = 3
     };
 private:
     int size_;
     int capacity_;
     Object* objects;
 };
+
+#endif  // VECTOR_HPP

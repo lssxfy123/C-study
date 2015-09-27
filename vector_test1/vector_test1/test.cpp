@@ -40,10 +40,24 @@ int main(int argc, char* argv[])
     array.push_back(1);
     array.push_back(2);
 
-    for (Vector<int>::const_iterator it = array.begin(); it != array.end(); ++it)
+    Vector<int>::const_iterator it = array.end();
+
+    int a[3] = {1};
+    for (int i = 0; i != 3; ++i)
     {
-        cout << *it << endl;
+        cout << a[i] << endl;
     }
+
+    // 可以看出尽管a[3]不存在
+    // 但其地址存在，这也是end()能够执行成功的原因
+    // 编译器将a[2]的地址加上sizeof(int)得到&a[3]
+    cout << &a[2] << endl;  // 0071FB28
+    cout << &a[3] << endl;  // 0071FB2C
+
+    //for (Vector<int>::const_iterator it = array.begin(); it != array.end(); ++it)
+    //{
+    //    cout << *it << endl;
+    //}
 
     return 0;
 }
