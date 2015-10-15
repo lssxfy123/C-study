@@ -1,4 +1,4 @@
-// Copyright 2015.刘珅珅
+// Copyright 2015.
 // author：刘珅珅
 // 最大公因数gcd
 
