@@ -86,10 +86,11 @@ int MaxSumRec(const vector<int>& array, int left, int right)
 
     // 跨数据中部从而占据左右两半部分的最大子序列和
     // 这个子序列包含左半部分的最后一个元素以及
-    // 右半部分的第一个元素
+    // 右半部分的第一个元素(如果不包含，则肯定是左半部分最大子序列或右半部分最大子序列)
     int max_left_border_sum = INT_MIN;
     int left_border_sum = 0;
 
+    // i = center为左半部分的最后一个元素
     for (int i = center; i >= left; --i)
     {
         left_border_sum += array[i];
@@ -102,6 +103,7 @@ int MaxSumRec(const vector<int>& array, int left, int right)
     int max_right_border_sum = INT_MIN;
     int right_border_sum = 0;
 
+    // i = center + 1为右半部分的第一个元素
     for (int j = center + 1; j <= right; ++j)
     {
         right_border_sum += array[j];

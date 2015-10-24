@@ -18,5 +18,9 @@ int main(int argc, char* argv[])
     int k = list1.back();
 
     cout << k << endl;
+
+    List<int>::const_iterator iter;
+
+    List<int> list2(list1);
     return 0;
 }

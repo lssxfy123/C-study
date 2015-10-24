@@ -4,6 +4,103 @@
 template <class Object>
 class Vector
 {
+// 定义迭代器
+public:
+    class const_iterator
+    {
+        friend class Vector<Object>;
+    public:
+        const Object& operator*() const
+        {
+            return retrieve();
+        }
+
+        // 前缀++
+        const_iterator& operator++ ()
+        {
+            current_++;
+            return *this;
+        }
+
+        // 后缀++
+        const_iterator& operator++ (int)
+        {
+            const_iterator old = *this;
+            ++(*this);
+            return old;
+        }
+
+        bool operator== (const const_iterator& rhs) const 
+        {
+            return current_ == rhs.current_;
+        }
+
+        bool operator!= (const const_iterator& rhs) const
+        {
+            return !(*this == rhs);
+        }
+
+    protected:
+        Object& retrieve() const
+        {
+            assertIsValid();
+            return *current_;
+        }
+
+        const_iterator(const Vector<Object>& vec, Object* p)
+            : vector_(&vec), current_(p)
+        {
+
+        }
+
+        void assertIsValid() const
+        {
+            if (vector_ == NULL || current_ == NULL)
+            {
+                throw range_error("iterator is invalid!");
+            }
+        }
+    protected:
+        Object* current_;
+        const Vector<Object>* vector_;
+    };
+
+    class iterator : public const_iterator
+    {
+        friend class Vector<Object>;
+
+    public:
+        Object& operator* ()
+        {
+            return retrieve();
+        }
+
+        const Object& operator* () const
+        {
+            return const_iterator::operator *();
+        }
+
+        iterator& operator++ ()
+        {
+            ++current_;
+            return *this;
+        }
+
+        iterator& operator++ (int)
+        {
+            iterator old = *this;
+            ++(*this);
+            return old;
+        }
+
+    protected:
+        iterator(const Vector<Object>& vect, Object* p)
+            : const_iterator(vect, p)
+        {
+
+        }
+    };
+
 public:
     explicit Vector(int init_size = 0) : size_(init_size), capacity_(init_size + SPARE_CAPACITY)
     {
@@ -133,27 +230,90 @@ public:
         return objects[size_ - 1];
     }
 
-    typedef Object* iterator;
-    typedef const Object* const_iterator;
+    //typedef Object* iterator;
+    //typedef const Object* const_iterator;
 
     iterator begin()
     {
-        return &objects[0];
+        return iterator(*this, &objects[0]);
+        // return &objects[0];
     }
 
     const_iterator begin() const
     {
-        return &objects[0];
+        return const_iterator(*this, &objects[0]);
+        // return &objects[0];
     }
 
     iterator end()
     {
-        return &objects[size()];
+        return iterator(*this, &objects[size()]);
+        // return &objects[size()];
     }
 
     const_iterator end() const
     {
-        return &objects[size()];
+        return const_iterator(*this, &objects[size()]);
+        // return &objects[size()];
+    }
+
+    iterator insert(iterator pos, const Object& x)
+    {
+        iterator iter = begin();
+        Object* old = objects;
+        int index = 0;
+        ++size_;
+
+        if (capacity_ < size_)
+        {
+            capacity_ = size_;
+        }
+
+        objects = new Object[capacity_];
+
+        while (iter != pos)
+        {
+            objects[index] = old[index];
+            ++iter;
+            ++index;
+        }
+        objects[index] = x;
+        for (int k = index + 1; k < size_; ++k)
+        {
+            objects[k] = old[k - 1];
+        }
+
+        delete[] old;
+        return iterator(*this, &objects[index]);
+    }
+
+    // 删除
+    iterator erase(iterator pos)
+    {
+        if (pos == end())
+        {
+            return pos;
+        }
+
+        iterator iter = begin();
+        Object* old = objects;
+        --size_;
+        objects = new Object[capacity_];
+        int index = 0;
+
+        while (iter != pos)
+        {
+            objects[index] = old[index];
+            ++iter;
+            ++index;
+        }
+
+        for (int j = index; j < size_; ++j)
+        {
+            objects[j] = old[j + 1];
+        }
+
+        return iterator(*this, &objects[index]);
     }
 
     // 备用容量

@@ -8,27 +8,15 @@ using namespace std;
 
 #include "Vector.hpp"
 
-//int a[5];
-//
-//int func(int index)
-//{
-//    if ((index < 0) || (index >= 5))
-//    {
-//        throw range_error("index is not between 0 and 4");
-//    }
-//    return a[index];
-//}
-
 int main(int argc, char* argv[])
 {
-    //for (int i = 0; i != 5; ++i)
-    //{
-    //    a[i] = i;
-    //}
-
+    //Vector<int> vector1;
+    //vector1.push_back(1);
+    //vector1.push_back(2);
+    //vector1.push_back(3);
     //try
     //{
-    //    cout << func(5) << endl;
+    //    cout << vector1[3] << endl;
     //}
     //catch (runtime_error& e)
     //{
@@ -40,24 +28,51 @@ int main(int argc, char* argv[])
     array.push_back(1);
     array.push_back(2);
 
-    Vector<int>::const_iterator it = array.end();
-
-    int a[3] = {1};
-    for (int i = 0; i != 3; ++i)
+    for (Vector<int>::const_iterator itr = array.begin(); itr != array.end(); ++itr)
     {
-        cout << a[i] << endl;
+        cout << *itr << ",";
     }
 
-    // 可以看出尽管a[3]不存在
-    // 但其地址存在，这也是end()能够执行成功的原因
-    // 编译器将a[2]的地址加上sizeof(int)得到&a[3]
-    cout << &a[2] << endl;  // 0071FB28
-    cout << &a[3] << endl;  // 0071FB2C
+    cout << endl;
 
-    //for (Vector<int>::const_iterator it = array.begin(); it != array.end(); ++it)
+    Vector<int>::iterator itr = array.end();
+    itr = array.insert(itr, 3);
+
+    for (Vector<int>::const_iterator itr = array.begin(); itr != array.end(); ++itr)
+    {
+        cout << *itr << ",";
+    }
+
+    cout << endl;
+
+    itr = array.begin();
+    array.erase(itr);
+
+    for (Vector<int>::const_iterator itr = array.begin(); itr != array.end(); ++itr)
+    {
+        cout << *itr << ",";
+    }
+    cout << endl;
+
+    Vector<int> array1(array);
+
+    for (Vector<int>::const_iterator itr = array.begin(); itr != array.end(); ++itr)
+    {
+        cout << *itr << ",";
+    }
+    cout << endl;
+
+    //int a[3] = {1};
+    //for (int i = 0; i != 3; ++i)
     //{
-    //    cout << *it << endl;
+    //    cout << a[i] << endl;
     //}
+
+    //// 可以看出尽管a[3]不存在
+    //// 但其地址存在，这也是end()能够执行成功的原因
+    //// 编译器将a[2]的地址加上sizeof(int)得到&a[3]
+    //cout << &a[2] << endl;  // 0071FB28
+    //cout << &a[3] << endl;  // 0071FB2C
 
     return 0;
 }
