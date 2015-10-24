@@ -22,5 +22,12 @@ int main(int argc, char* argv[])
     List<int>::const_iterator iter;
 
     List<int> list2(list1);
+
+    for (iter = list2.begin(); iter != list2.end(); ++iter)
+    {
+        cout << *iter << ",";
+    }
+
+    cout << endl;
     return 0;
 }

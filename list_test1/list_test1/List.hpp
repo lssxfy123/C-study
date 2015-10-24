@@ -161,7 +161,7 @@ public:
     List(const List& rhs)
     {
         init();
-        *this = rhs;
+        *this = rhs; // 调用了重载的运算符=
     }
 
     ~List()
@@ -171,7 +171,7 @@ public:
         delete tail_;
     }
 
-    const List& operator==(const List& rhs)
+    const List& operator=(const List& rhs)
     {
         if (this == &rhs)
         {
@@ -182,7 +182,7 @@ public:
 
         for (const_iterator itr = rhs.begin(); itr != rhs.end(); ++itr)
         {
-            push_back(*rhs);
+            push_back(*itr);
         }
     }
 
@@ -220,6 +220,12 @@ public:
     {
         // tail_结点是尾结点，同样不是有效结点
         return iterator(tail_);
+    }
+
+    const_iterator end() const
+    {
+        // tail_结点是尾结点，同样不是有效结点
+        return const_iterator(tail_);
     }
 
     Object& front()
