@@ -79,7 +79,7 @@ string MiddleToLast(string middle)
                             // 栈后进先出，优先级高的后进去先出来
                             operator_stack_.push(c);
                         } else {
-                            while (!operator_stack_.empty() 
+                            while (!operator_stack_.empty()
                                 && GetOperatorPriority(c) <= GetOperatorPriority(operator_stack_.top()))
                             {
                                 last.append(1, operator_stack_.top());
@@ -160,7 +160,34 @@ void PreOrderTraverse(BinaryNode* root)
 // 中序遍历
 void InOrderTraverse(BinaryNode* root)
 {
-
+    if (root != NULL)
+    {
+        if (root->left_)
+        {
+            if (IsOperator(root->left_->data_)
+            && GetOperatorPriority(root->left_->data_) < GetOperatorPriority(root->data_))
+            {
+                cout << "(";
+                InOrderTraverse(root->left_);
+                cout << ")";
+            } else {
+                InOrderTraverse(root->left_);
+            }
+        }
+        cout << root->data_ << ' ';
+        if (root->right_)
+        {
+            if (IsOperator(root->right_->data_)
+            && GetOperatorPriority(root->right_->data_) <= GetOperatorPriority(root->data_))
+            {
+                cout << "(";
+                InOrderTraverse(root->right_);
+                cout << ")";
+            } else {
+                InOrderTraverse(root->right_);
+            }
+        }
+    }
 }
 
 int main(int argc, char* argv[])
@@ -170,8 +197,18 @@ int main(int argc, char* argv[])
     string last = MiddleToLast(expression);
     cout << "last: " << last << endl;
     BinaryNode* root = CreateBinaryTree(last);
+
+    cout << "后序遍历：" << endl;
     PostOrderTraverse(root);
     cout << endl;
+
+    cout << "先序遍历：" << endl;
     PreOrderTraverse(root);
+    cout << endl;
+
+    cout << "中序遍历：" << endl;
+    InOrderTraverse(root);
+
+    cout << endl;
     return 0;
 }
