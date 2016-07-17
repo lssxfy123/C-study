@@ -17,29 +17,70 @@ public:
         root_ = NULL;
     }
 
-    BinarySearchTree(const BinarySearchTree& rhs);
-    ~BinarySearchTree()
+    BinarySearchTree(const BinarySearchTree& rhs)
     {
+        root_ = Clone(rhs.root_);
     }
 
-    const Object& FindMin() const;
-    const Object& FindMax() const;
+    ~BinarySearchTree()
+    {
+        MakeEmpty();
+    }
+
+    const Object& FindMin() const
+    {
+        return FindMin(root_)->element_;
+    }
+
+    const Object& FindMax() const
+    {
+        return FindMax(root_)->element_;
+    }
     bool Contains(const Object& x) const;
-    bool IsEmpty() const;
+
+    bool IsEmpty() const
+    {
+        return root_ == NULL;
+    }
+
     void PrintTree() const
     {
         PrintTree(root_);
     }
 
-    void MakeEmpty();
+    void PrePrintTree() const
+    {
+        PrePrintTree(root_);
+    }
+
+    void PostPrintTree() const
+    {
+        PostPrintTree(root_);
+    }
+
+    void MakeEmpty()
+    {
+        MakeEmpty(root_);
+    }
     void Insert(const Object& x)
     {
         Insert(x, root_);
     }
 
-    void Remove(const Object& x);
+    void Remove(const Object& x)
+    {
+        Remove(x, root_);
+    }
 
-    const BinarySearchTree& operator= (const BinarySearchTree& rhs);
+    const BinarySearchTree& operator= (const BinarySearchTree& rhs)
+    {
+        if (this != &rhs)
+        {
+            MakeEmpty();
+            root_ = Clone(rhs.root_);
+        }
+        return *this;
+    }
 
 private:
     struct BinaryNode
@@ -70,9 +111,62 @@ private:
         // 可以看出这个插入函数没法插入重复元
     }
 
-    void Remove(const Object& x, BinaryNode*& t) const;
-    BinaryNode* FindMin(BinaryNode* t) const;
-    BinaryNode* FindMax(BinaryNode* t) const;
+    void Remove(const Object& x, BinaryNode*& t) const
+    {
+        if (t == NULL)
+        {
+            return;
+        }
+
+        if (IsLessThan(x, t->element_))
+        {
+            Remove(x, t->left_);
+        } else if (IsLessThan(t->element_, x))
+        {
+            Remove(x, t->right_);
+        } else if (t->left_ != NULL && t->right_ != NULL)  // 两个子结点
+        {
+            // 用右子树的最小结点代替该结点，
+            // 以保证二叉查找树，结点数据必须小于其右子树全部结点数据的性质
+            // 然后删除右子树的最小结点
+            t->element_ = FindMin(t->right_)->element_;
+            Remove(t->element_, t->right_);
+            cout << "two children" << endl;
+        } 
+        else 
+        {
+            BinaryNode* old = t;
+            t = (t->left_ != NULL)?t->left_:t->right_;
+            delete old;
+        }
+    }
+
+    BinaryNode* FindMin(BinaryNode* t) const
+    {
+        if (t == NULL)
+        {
+            return NULL;
+        }
+
+        if (t->left_ == NULL)
+        {
+            return t;
+        }
+
+        FindMin(t->left_);
+    }
+
+    BinaryNode* FindMax(BinaryNode* t) const
+    {
+        if (t != NULL)
+        {
+            while (t->right_ != NULL)
+            {
+                t = t->right_;
+            }
+        }
+        return t;
+    }
     bool Contains(const Object& x, BinaryNode* t) const
     {
         if (t == NULL)
@@ -87,7 +181,18 @@ private:
         }
     }
 
-    void MakeEmpty(BinaryNode*& t);
+    void MakeEmpty(BinaryNode*& t)
+    {
+        if (t != NULL)
+        {
+            MakeEmpty(t->left_);
+            MakeEmpty(t->right_);
+            delete t;
+            t = NULL;
+        }
+    }
+
+    // 中序遍历
     void PrintTree(BinaryNode* t) const
     {
         if (t == NULL)
@@ -100,7 +205,41 @@ private:
         PrintTree(t->right_);
     }
 
-    BinaryNode* Clone(BinaryNode* t) const;
+    // 前序遍历
+    void PrePrintTree(BinaryNode* t) const
+    {
+        if (t == NULL)
+        {
+            return;
+        }
+
+        cout << t->element_ << ' ';
+        PrePrintTree(t->left_);
+        PrePrintTree(t->right_);
+    }
+
+    // 后序遍历
+    void PostPrintTree(BinaryNode* t) const
+    {
+        if (t == NULL)
+        {
+            return;
+        }
+
+        PostPrintTree(t->left_);
+        PostPrintTree(t->right_);
+        cout << t->element_ << ' ';
+    }
+
+    BinaryNode* Clone(BinaryNode* t) const
+    {
+        if (t == NULL)
+        {
+            return NULL;
+        }
+
+        return new BinaryNode(t->element_, Clone(t->left_), Clone(t->right_));
+    }
 
 private:
     BinaryNode* root_;
@@ -118,10 +257,45 @@ int main(int argc, char* argv[])
     BinarySearchTree<float> binary_search_tree;
     binary_search_tree.Insert(3.2);
     binary_search_tree.Insert(3.5);
+    binary_search_tree.Insert(3.3);
     binary_search_tree.Insert(4.6);
     binary_search_tree.Insert(2.9);
     binary_search_tree.Insert(5.4);
     binary_search_tree.PrintTree();
+    cout << endl;
+    binary_search_tree.PrePrintTree();
+    cout << endl;
+    binary_search_tree.PostPrintTree();
+    cout << endl;
+
+    if (binary_search_tree.Contains(3.2))
+    {
+        cout << "exist" << endl;
+    } else {
+        cout << "not exist" << endl;
+    }
+
+    if (binary_search_tree.Contains(3.1))
+    {
+        cout << "exist" << endl;
+    } else {
+        cout << "not exist" << endl;
+    }
+
+    cout << "Min " << binary_search_tree.FindMin() << endl;
+    cout << "Max " << binary_search_tree.FindMax() << endl;
+
+    BinarySearchTree<float> binary_search_tree2(binary_search_tree);
+    binary_search_tree2.PrintTree();
+    cout << endl;
+
+    BinarySearchTree<float> binary_search_tree3;
+    binary_search_tree3 = binary_search_tree;
+    binary_search_tree3.PrintTree();
+    cout << endl;
+
+    binary_search_tree3.Remove(3.5);
+    binary_search_tree3.PrintTree();
     cout << endl;
     return 0;
 }
