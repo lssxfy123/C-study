@@ -4,12 +4,13 @@
 #include <algorithm>
 #include <iostream>
 #include <list>
+#include <string>
 #include <vector>
 using namespace std;
 
 int hash(int key)
 {
-    return key % 10;
+    return key % 12;
 }
 
 int hash(const string& key)
@@ -23,11 +24,41 @@ int hash(const string& key)
     return hash_value;
 }
 
+// 距离n最近的素数
+int NextPrime(int n)
+{
+    if (n % 2 == 0)
+    {
+        ++n;
+    }
+
+    bool isPrime = true;
+    for (; ; n += 2)
+    {
+        for (int i = 3; i * i <= n; i += 2)
+        {
+            if (n % i == 0)
+            {
+                isPrime = false;
+                break;
+            }
+        }
+
+        if (isPrime)
+        {
+            return n;
+        }
+        isPrime = true;
+    }
+    return n;
+}
+
+
 template <typename HashObj>
 class HashTable
 {
 public:
-    explicit HashTable(int size = 101) : current_size_(size)
+    explicit HashTable(int size = 23) : current_size_(0)
     {
         hash_list_.resize(size);
     }
@@ -59,7 +90,11 @@ public:
         which_list_.push_back(x);
         ++current_size_;
 
-        // 暂时不考虑再哈希
+        // 再哈希
+        if (current_size_ > hash_list_.size())
+        {
+            Rehash();
+        }
         return true;
     }
 
@@ -72,9 +107,32 @@ public:
             return false;
         }
 
-        which_list_.erase(x);
+        which_list_.erase(itor);
         --current_size_;
         return true;
+    }
+
+
+    void Rehash()
+    {
+        vector<list<HashObj> > old_list = hash_list_;
+        hash_list_.resize(NextPrime(old_list.size() * 2));
+        for (int i = 0; i < hash_list_.size(); ++i)
+        {
+            hash_list_[i].clear();
+        }
+
+        // 拷贝之前的元素
+        current_size_ = 0;
+        for (int i = 0; i < old_list.size(); ++i)
+        {
+            list<HashObj>::iterator itor = old_list[i].begin();
+            while (itor != old_list[i].end())
+            {
+                Insert(*itor);
+                ++itor;
+            }
+        }
     }
 
     void PrintTable()
@@ -94,7 +152,41 @@ public:
             }
         }
     }
+
+    // 成功平均查找长度
+    void CalculateSuccessAverageSearchLength()
+    {
+        double success_average_search_length = 0;
+        for (int i = 0; i < hash_list_.size(); ++i)
+        {
+            list<HashObj>& element_list = hash_list_[i];
+            if (element_list.size() > 0)
+                success_average_search_length += (1 + element_list.size()) *  element_list.size() / 2;
+        }
+        success_average_search_length /= current_size_;
+        cout << "成功平均查找长度为：" << success_average_search_length << endl;
+    }
+
+    // 不成功平均查找长度
+    void CalculateUnSuccessAverageSearchLength()
+    {
+        // 使用的哈希函数为key MOD 12
+        // 哈希值只可能为0-11，共12个哈希值
+        int hash_count = 12;
+        double unsuccess_average_search_length = 0;
+        for (int i = 0; i < hash_count; ++i)
+        {
+            list<HashObj>& element_list = hash_list_[i];
+            if (element_list.size() > 0)
+                unsuccess_average_search_length += (element_list.size() + 1);
+            else
+                unsuccess_average_search_length += 1;
+        }
+        unsuccess_average_search_length /= hash_count;
+        cout << "不成功平均查找长度为：" << unsuccess_average_search_length << endl;
+    }
 private:
+    // 哈希函数
     int MyHash(const HashObj& x)
     {
         int hase_value = hash(x);
@@ -112,4 +204,4 @@ private:
     vector<list<HashObj> > hash_list_;
 };
 
-#endif
+#endif  // HASH_TABLE_H
