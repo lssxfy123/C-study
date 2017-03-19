@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "smart_bag_test1", "smart_bag_test1.vcproj", "{585951B6-F068-4DCD-8686-A83030D9F589}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{585951B6-F068-4DCD-8686-A83030D9F589}.Debug|Win32.ActiveCfg = Debug|Win32
+		{585951B6-F068-4DCD-8686-A83030D9F589}.Debug|Win32.Build.0 = Debug|Win32
+		{585951B6-F068-4DCD-8686-A83030D9F589}.Release|Win32.ActiveCfg = Release|Win32
+		{585951B6-F068-4DCD-8686-A83030D9F589}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

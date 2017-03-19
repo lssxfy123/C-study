@@ -119,6 +119,63 @@ void QuickSort(vector<Comparable>& array)
     cout << endl;
 }
 
+
+// 快速选择，找到第k个最小值
+template<typename Comparable>
+void QuickSelect(vector<Comparable>& array, int left, int right, int k)
+{
+    if (left + 10 <= right)
+    {
+        // 枢纽元
+        Comparable pivot = Median3(array, left, right);
+        int i = left;
+        int j = right - 1;  // right位置的元素肯定比pivot大
+        for (; ;)
+        {
+            // 左边小于枢纽元
+            while (array[++i] < pivot)
+            {
+            }
+
+            // 右边大于枢纽元
+            while (pivot < array[--j])
+            {
+            }
+
+            if (i < j)
+            {
+                swap(array[i] , array[j]);
+            } else
+                break;
+        }
+
+        // 退出上面的for循环
+        // 说明array[i] >= array[right - 1]
+        // 交换它们进行排序
+        // array[i]存储的就是pivot
+        swap(array[i], array[right - 1]);
+
+        if (k <= i)
+        {
+            // 只排left到i - 1的元素
+            QuickSelect(array, left, i - 1, k);
+        } else if (k > i)
+        {
+            // 只排i + 1到right的元素
+            QuickSelect(array, i + 1, right, k);
+        }
+    } else {
+        InsertionSort(array, left, right);
+    }
+}
+
+template<typename Comparable>
+Comparable QuickSelect(vector<Comparable> array, int k)
+{
+    QuickSelect(array, 0, array.size() - 1, k);
+    return array[k - 1];
+}
+
 int main(int argc, char* argv[])
 {
     vector<int> array_test;
@@ -141,5 +198,22 @@ int main(int argc, char* argv[])
     cout << endl;
     cout << "快速排序:" << endl;
     QuickSort(array_test);
+
+    vector<int> array_select;
+    for (int i = 0; i < length; ++i)
+    {
+        array_select.push_back(rand() % (max - min + 1) + min);
+    }
+
+    cout << "快速选择" << endl;
+    cout << "原始序列" << endl;
+    for (int i = 0; i < array_select.size(); ++i)
+    {
+        cout << array_select[i] << " ";
+    }
+    cout << endl;
+    int k = 5;
+    int k_min = QuickSelect(array_select, k);
+    cout << "第 " << k << " 个最小值为" << k_min << endl;
     return 0;
 }
