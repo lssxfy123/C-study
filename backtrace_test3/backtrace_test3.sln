@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "backtrace_test3", "backtrace_test3.vcproj", "{EDAF3C95-AFE4-4E8E-821B-12D845E02C3F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDAF3C95-AFE4-4E8E-821B-12D845E02C3F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EDAF3C95-AFE4-4E8E-821B-12D845E02C3F}.Debug|Win32.Build.0 = Debug|Win32
+		{EDAF3C95-AFE4-4E8E-821B-12D845E02C3F}.Release|Win32.ActiveCfg = Release|Win32
+		{EDAF3C95-AFE4-4E8E-821B-12D845E02C3F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
