@@ -25,5 +25,29 @@ int main(int argc, char* argv[])
     cout << "y: " << get<0>(y) << endl;
     cout << "str: " << str << endl;
 
+    int i = 0;
+    string s = "default";
+
+    // 以i,s的引用建立tuple
+    auto m = tie(i, s); // m类型为tuple<int&, string&>
+    cout << "i: " << get<0>(m) << endl;
+    cout << "s: " << get<1>(m) << endl;
+    get<0>(m) = 1;
+    get<1>(m) = "my value";
+    cout << "modify i: " << i << endl;
+    cout << "modify s: " << s << endl;
+
+    typedef tuple<int, float, string> TupleType;
+    // tuple_size<tupletype>::value获取tuple元素个数
+    cout << "tuple count " << tuple_size<TupleType>::value << endl;
+    // tuple_element<i, tupletype>::type获取第i个元素的类型
+    tuple_element<1, TupleType>::type e1;  // float
+    // tuple_cat串接所有形式的tuple
+    int n = 0;
+    // tt类型为tuple<int, double, const char*, int&>
+    auto tt = tuple_cat(make_tuple(42, 7.7, "hello"), tie(n));
+
+    tuple<float, int> t2(4.3f, 3);
+    pair<int, float> p1(piecewise_construct, make_tuple(42), make_tuple(4.3f));
     return 0;
 }
