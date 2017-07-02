@@ -1,6 +1,6 @@
 // Copyright 2017.Áõ«|«|
 // author£ºÁõ«|«|
-// 
+// chrono³ÌÐò¿â£ºduration(Ê±¼ä¶Î)
 #include <iostream>
 #include <chrono>
 #include <ratio>
