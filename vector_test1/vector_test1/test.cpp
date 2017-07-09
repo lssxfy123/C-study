@@ -8,6 +8,14 @@ using namespace std;
 
 #include "Vector.hpp"
 
+class A {
+public:
+    A()
+    {
+        cout << "construct A" << endl;
+    }
+};
+
 int main(int argc, char* argv[])
 {
     //Vector<int> vector1;
@@ -74,5 +82,10 @@ int main(int argc, char* argv[])
     //cout << &a[2] << endl;  // 0071FB28
     //cout << &a[3] << endl;  // 0071FB2C
 
+    Vector<A> vec_a(10);
+    A a;
+    vec_a.push_back(a);
+    vec_a.push_back(a);
+    vec_a.push_back(a);
     return 0;
 }
