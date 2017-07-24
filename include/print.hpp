@@ -4,6 +4,15 @@
 #include <iostream>
 using namespace std;
 
+// 解决vs上<<无法直接输出string类型的问题
+namespace std
+{
+    ostream& operator <<(ostream& os, const string& src)
+    {
+        return os << src.c_str() << endl;
+    }
+}
+
 template<typename T>
 inline void PrintElements(const T& coll, const string& optstr = "")
 {
