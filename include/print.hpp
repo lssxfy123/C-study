@@ -9,7 +9,7 @@ namespace std
 {
     ostream& operator <<(ostream& os, const string& src)
     {
-        return os << src.c_str() << endl;
+        return os << src.c_str();
     }
 }
 
