@@ -8,3 +8,4 @@ Release
 *.vcproj
 *.vcproj.*
 *.ipch
+*.db
