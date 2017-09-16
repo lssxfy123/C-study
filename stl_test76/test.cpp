@@ -55,5 +55,37 @@ int main(int argc, char* argv[])
     partial_sort(coll3.begin(), coll3.begin() + 5,
         coll3.end(), greater<int>());
     PrintElements(coll3, "after first five elements:  ");
+    cout << endl;
+
+    // nth_element
+    deque<int> coll4;
+    InsertElements(coll4, 3, 7);
+    InsertElements(coll4, 2, 6);
+    InsertElements(coll4, 1, 5);
+    PrintElements(coll4, "coll4:  ");
+
+    // extract the four lowest elements
+    // 在visual studio中貌似会把整个
+    // 序列排序
+    nth_element(coll4.begin(), coll4.begin() + 3, coll4.end());
+    cout << "the four lowest elements are:  ";
+    copy(coll4.cbegin(), coll4.cbegin() + 4,
+        ostream_iterator<int>(cout, " "));
+    cout << endl;
+    PrintElements(coll4, "coll4:  ");
+
+    // extract the four highest elements
+    nth_element(coll4.begin(), coll4.end() - 4, coll4.end());
+    cout << "the four highest elements:  ";
+    copy(coll4.cend() - 4, coll4.cend(), ostream_iterator<int>(cout, " "));
+    cout << endl;
+    PrintElements(coll4, "coll4:  ");
+
+    // extract the four highest elements(second version)
+    nth_element(coll4.begin(), coll4.begin() + 3, coll4.end(), greater<int>());
+    cout << "the four highest element are:  ";
+    copy(coll4.cbegin(), coll4.cbegin() + 4, ostream_iterator<int>(cout, " "));
+    cout << endl;
+    PrintElements(coll4, "coll4:  ");
     return 0;
 }
