@@ -16,10 +16,18 @@ int main(int argc, char* argv[])
     regex reg1("<.*>.*</.*>");
     string source = "<tag>value</tag>";
     bool found = regex_match(source, reg1);
-    out(found);
+    out(found);  // found
 
     regex reg2("<(.*)>.*</\\1>");
     found = regex_match(source, reg2);
-    out(found);
+    out(found);  // found
+
+    regex reg3("<\\(.*\\)>.*</\\1>", regex_constants::grep);
+    found = regex_match(source, reg3);
+    out(found);  // found
+
+    found = regex_match(source, regex("<(.*)>.*</\\1>"));
+    out(found);  // found
+    cout << endl;
     return 0;
 }
