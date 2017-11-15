@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "input_output2", "input_output2.vcproj", "{2A7676EF-90B7-480C-BD25-667B0236B048}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A7676EF-90B7-480C-BD25-667B0236B048}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2A7676EF-90B7-480C-BD25-667B0236B048}.Debug|Win32.Build.0 = Debug|Win32
+		{2A7676EF-90B7-480C-BD25-667B0236B048}.Release|Win32.ActiveCfg = Release|Win32
+		{2A7676EF-90B7-480C-BD25-667B0236B048}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

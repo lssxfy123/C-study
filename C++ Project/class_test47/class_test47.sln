@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "class_test47", "class_test47\class_test47.vcproj", "{FC5CF038-F58A-451B-8A1A-1F0F147ECC78}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC5CF038-F58A-451B-8A1A-1F0F147ECC78}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FC5CF038-F58A-451B-8A1A-1F0F147ECC78}.Debug|Win32.Build.0 = Debug|Win32
+		{FC5CF038-F58A-451B-8A1A-1F0F147ECC78}.Release|Win32.ActiveCfg = Release|Win32
+		{FC5CF038-F58A-451B-8A1A-1F0F147ECC78}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

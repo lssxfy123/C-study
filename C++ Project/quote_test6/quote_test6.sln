@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "quote_test6", "quote_test6.vcproj", "{4D5F85B8-9693-40B9-A5A7-1C7D2C47B5DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D5F85B8-9693-40B9-A5A7-1C7D2C47B5DF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4D5F85B8-9693-40B9-A5A7-1C7D2C47B5DF}.Debug|Win32.Build.0 = Debug|Win32
+		{4D5F85B8-9693-40B9-A5A7-1C7D2C47B5DF}.Release|Win32.ActiveCfg = Release|Win32
+		{4D5F85B8-9693-40B9-A5A7-1C7D2C47B5DF}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "func_array_pointer1", "func_array_pointer1.vcproj", "{098C42CD-DB5A-4328-9F18-4E376011BE63}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{098C42CD-DB5A-4328-9F18-4E376011BE63}.Debug|Win32.ActiveCfg = Debug|Win32
+		{098C42CD-DB5A-4328-9F18-4E376011BE63}.Debug|Win32.Build.0 = Debug|Win32
+		{098C42CD-DB5A-4328-9F18-4E376011BE63}.Release|Win32.ActiveCfg = Release|Win32
+		{098C42CD-DB5A-4328-9F18-4E376011BE63}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

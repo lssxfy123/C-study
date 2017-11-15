@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lvalue_rvalue_test", "lvalue_rvalue_test.vcproj", "{EDF24963-3B9E-47F5-9281-4CD2C99C1A7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDF24963-3B9E-47F5-9281-4CD2C99C1A7A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EDF24963-3B9E-47F5-9281-4CD2C99C1A7A}.Debug|Win32.Build.0 = Debug|Win32
+		{EDF24963-3B9E-47F5-9281-4CD2C99C1A7A}.Release|Win32.ActiveCfg = Release|Win32
+		{EDF24963-3B9E-47F5-9281-4CD2C99C1A7A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
