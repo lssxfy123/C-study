@@ -1,5 +1,6 @@
+// Copyright 2017.Áõ«|«|
+// author£ºÁõ«|«|
 // 100!Çó½â
-
 #include <malloc.h>
 #include <math.h>
 #include <stdio.h>

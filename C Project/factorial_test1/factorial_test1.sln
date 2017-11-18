@@ -1,18 +1,26 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "factorial_test1", "factorial_test1.vcproj", "{C6D170E5-E686-4F88-A7CF-500B2D5C9C0F}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "factorial_test1", "factorial_test1.vcxproj", "{B1C9542B-27FE-43D6-A090-74098D8B3817}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Win32 = Debug|Win32
-		Release|Win32 = Release|Win32
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C6D170E5-E686-4F88-A7CF-500B2D5C9C0F}.Debug|Win32.ActiveCfg = Debug|Win32
-		{C6D170E5-E686-4F88-A7CF-500B2D5C9C0F}.Debug|Win32.Build.0 = Debug|Win32
-		{C6D170E5-E686-4F88-A7CF-500B2D5C9C0F}.Release|Win32.ActiveCfg = Release|Win32
-		{C6D170E5-E686-4F88-A7CF-500B2D5C9C0F}.Release|Win32.Build.0 = Release|Win32
+		{B1C9542B-27FE-43D6-A090-74098D8B3817}.Debug|x64.ActiveCfg = Debug|x64
+		{B1C9542B-27FE-43D6-A090-74098D8B3817}.Debug|x64.Build.0 = Debug|x64
+		{B1C9542B-27FE-43D6-A090-74098D8B3817}.Debug|x86.ActiveCfg = Debug|Win32
+		{B1C9542B-27FE-43D6-A090-74098D8B3817}.Debug|x86.Build.0 = Debug|Win32
+		{B1C9542B-27FE-43D6-A090-74098D8B3817}.Release|x64.ActiveCfg = Release|x64
+		{B1C9542B-27FE-43D6-A090-74098D8B3817}.Release|x64.Build.0 = Release|x64
+		{B1C9542B-27FE-43D6-A090-74098D8B3817}.Release|x86.ActiveCfg = Release|Win32
+		{B1C9542B-27FE-43D6-A090-74098D8B3817}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

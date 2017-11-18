@@ -1,5 +1,7 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
+// C语言数组的测试
 #include <stdio.h>
-
 int c[5];
 
 int main(int argc, char* argv[])
@@ -30,11 +32,13 @@ int main(int argc, char* argv[])
 
     for (m = 0; m != 5; ++m)
     {
+        // 随机数
         printf("%d\n", b[m]);
     }
 
     for (m = 0; m != 5; ++m)
     {
+        // 全局变量：初始化为0
         printf("%d\n", c[m]);
     }
 

@@ -1,3 +1,6 @@
+// Copyright 2017.Áõ«|«|
+// author£ºÁõ«|«|
+// char×Ö·ûµÄÊä³ö
 #include <stdio.h>
 
 int main(int argc, char* argv[])
