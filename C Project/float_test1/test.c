@@ -1,3 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
+// 浮点数运算精度控制
 #include <stdio.h>
 
 int main(int argc, char* argv[])
