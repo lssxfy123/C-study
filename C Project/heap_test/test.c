@@ -1,5 +1,6 @@
+// Copyright 2017.Áõ«|«|
+// author£ºÁõ«|«|
 // ¶ÑÄÚ´æ·ÖÅä
-
 #include <malloc.h>
 #include <stdio.h>
 

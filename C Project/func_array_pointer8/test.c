@@ -1,5 +1,6 @@
+// Copyright 2017.Áõ«|«|
+// author£ºÁõ«|«|
 // ×Ö·û´®Á¬½Ó
-
 // #include <assert.h>
 #include <stdio.h>
 // #include <string.h>

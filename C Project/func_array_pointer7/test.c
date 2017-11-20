@@ -1,5 +1,6 @@
+// Copyright 2017.Áõ«|«|
+// author£ºÁõ«|«|
 // ×Ö·û´®Óë×Ö·ûÖ¸Õë
-
 #include <stdio.h>
 
 void reverse(char* str);

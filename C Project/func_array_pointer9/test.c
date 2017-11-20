@@ -1,5 +1,6 @@
-// 指针与函数
-
+// Copyright 2017.刘珅珅
+// author：刘珅珅
+// 函数指针
 #include <stdio.h>
 
 int (*pf) (float);  // 函数指针

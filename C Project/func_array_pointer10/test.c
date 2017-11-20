@@ -1,5 +1,6 @@
-// 指针与函数
-
+// Copyright 2017.刘珅珅
+// author：刘珅珅
+// 函数指针作为形参
 #include <stdio.h>
 
 int max(int, int);

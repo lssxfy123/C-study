@@ -1,5 +1,6 @@
-// 指针与函数：指针函数
-
+// Copyright 2017.刘珅珅
+// author：刘珅珅
+// 指针函数
 #include <malloc.h>
 #include <stdio.h>
 
