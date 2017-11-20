@@ -1,3 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
+// 全局变量，局部静态变量与函数
 #include <stdio.h>
 #include <malloc.h>
 
@@ -33,5 +36,5 @@ void func(int i)
     ++n;
     printf("%d\n", i);
     printf("a = %d\n", a);
-    printf("p = %d\n", p[0]);
+    printf("p = %d\n", p[0]);  // 随机数
 }

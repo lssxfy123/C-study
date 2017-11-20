@@ -1,5 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 指向数组的指针与指针数组
-
 #include <stdio.h>
 
 void average(float* p, int n);

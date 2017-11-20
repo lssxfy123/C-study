@@ -1,5 +1,6 @@
+// Copyright 2017.Áõ«|«|
+// author£ºÁõ«|«|
 // ¶şÖØÖ¸Õë
-
 #include <stdio.h>
 
 void func(float** p);
