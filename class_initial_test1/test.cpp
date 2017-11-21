@@ -1,8 +1,11 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 类中成员的初始化
-
 #include <iostream>
 using namespace std;
 
+// C98下
+// C11下可以初始化
 class Test
 {
 private:

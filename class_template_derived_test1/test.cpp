@@ -1,7 +1,6 @@
 // Copyright 2016.Áõ«|«|
 // author£ºÁõ«|«|
 // ÀàÄ£°åµÄ¼Ì³Ğ
-
 #include <iostream>
 using namespace std;
 

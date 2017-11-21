@@ -1,7 +1,6 @@
 // Copyright 2016.刘珅珅
 // author：刘珅珅
 // 派生类继承基类的虚函数的访问控制
-
 #include <iostream>
 using namespace std;
 

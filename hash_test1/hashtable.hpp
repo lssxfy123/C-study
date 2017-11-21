@@ -8,12 +8,13 @@
 #include <vector>
 using namespace std;
 
-int hash(int key)
+// C++11中带有自身的hash函数
+int Hash(int key)
 {
     return key % 12;
 }
 
-int hash(const string& key)
+int Hash(const string& key)
 {
     int hash_value = 0;
     for (int i = 0; i < key.length(); ++i)
@@ -189,7 +190,7 @@ private:
     // 哈希函数
     int MyHash(const HashObj& x)
     {
-        int hase_value = hash(x);
+        int hase_value = Hash(x);
         hase_value %= hash_list_.size();
         if (hase_value < 0)
             hase_value += hash_list_.size();

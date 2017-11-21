@@ -1,3 +1,5 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 遍历文件夹下的所有文件
 #include <cstdlib>
 #include "direct.h"

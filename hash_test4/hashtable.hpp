@@ -39,7 +39,7 @@ void CreateCryTable()
 }
 
 // Blizzard:One-way hash
-int hash(const string& key, unsigned long hash_type)
+int Hash(const string& key, unsigned long hash_type)
 {
     unsigned long seed_first = 0x7FED7FED;
     unsigned long seed_second = 0xEEEEEEEE;
@@ -219,7 +219,7 @@ private:
     // ¹þÏ£º¯Êý
     int  MyHash(const Key& x, unsigned long hash_type) const
     {
-        int hase_value = hash(x, hash_type);
+        int hase_value = Hash(x, hash_type);
         return hase_value ;
     }
 

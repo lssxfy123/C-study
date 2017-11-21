@@ -1,18 +1,26 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "binary_heap_test1", "binary_heap_test1.vcproj", "{957E8C6B-3261-495C-803E-E963010E6D64}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "binary_heap_test1", "binary_heap_test1.vcxproj", "{8FD8D0DA-99F5-42B2-A51B-BF82A623158F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Win32 = Debug|Win32
-		Release|Win32 = Release|Win32
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{957E8C6B-3261-495C-803E-E963010E6D64}.Debug|Win32.ActiveCfg = Debug|Win32
-		{957E8C6B-3261-495C-803E-E963010E6D64}.Debug|Win32.Build.0 = Debug|Win32
-		{957E8C6B-3261-495C-803E-E963010E6D64}.Release|Win32.ActiveCfg = Release|Win32
-		{957E8C6B-3261-495C-803E-E963010E6D64}.Release|Win32.Build.0 = Release|Win32
+		{8FD8D0DA-99F5-42B2-A51B-BF82A623158F}.Debug|x64.ActiveCfg = Debug|x64
+		{8FD8D0DA-99F5-42B2-A51B-BF82A623158F}.Debug|x64.Build.0 = Debug|x64
+		{8FD8D0DA-99F5-42B2-A51B-BF82A623158F}.Debug|x86.ActiveCfg = Debug|Win32
+		{8FD8D0DA-99F5-42B2-A51B-BF82A623158F}.Debug|x86.Build.0 = Debug|Win32
+		{8FD8D0DA-99F5-42B2-A51B-BF82A623158F}.Release|x64.ActiveCfg = Release|x64
+		{8FD8D0DA-99F5-42B2-A51B-BF82A623158F}.Release|x64.Build.0 = Release|x64
+		{8FD8D0DA-99F5-42B2-A51B-BF82A623158F}.Release|x86.ActiveCfg = Release|Win32
+		{8FD8D0DA-99F5-42B2-A51B-BF82A623158F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,7 +7,7 @@
 #include <vector>
 using namespace std;
 
-int hash(int key)
+int Hash(int key)
 {
     return key % 10;
 }
@@ -182,7 +182,7 @@ private:
     // ¹şÏ£º¯Êı
     int MyHash(const HashObj& x) const
     {
-        int hase_value = hash(x);
+        int hase_value = Hash(x);
         hase_value %= array_.size();
         if (hase_value < 0)
             hase_value += array_.size();

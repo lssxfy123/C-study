@@ -3,7 +3,6 @@
 // hash表处理大量数据
 // 大量查询字符串，查找前10个热门查询
 // 参考：http://kb.cnblogs.com/page/189480/
-
 #include <iostream>
 using namespace std;
 
