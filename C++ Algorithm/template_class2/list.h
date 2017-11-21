@@ -15,7 +15,7 @@ public:
 	List(int n = 0);
 	List(const List <T> &copy);
 
-	friend ostream& operator << <> (ostream &out, const List <T> &obj);
+	friend ostream& operator << <T> (ostream &out, const List <T> &obj);
 
 private:
 	int num;

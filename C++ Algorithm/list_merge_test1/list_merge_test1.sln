@@ -1,18 +1,26 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "list_merge_test1", "list_merge_test1\list_merge_test1.vcproj", "{C3763257-4BE0-4F71-904D-C57C2D106180}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "list_merge_test1", "list_merge_test1.vcxproj", "{1E7B8FB4-A8AF-4A89-8CAE-8AC8916B5858}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Win32 = Debug|Win32
-		Release|Win32 = Release|Win32
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C3763257-4BE0-4F71-904D-C57C2D106180}.Debug|Win32.ActiveCfg = Debug|Win32
-		{C3763257-4BE0-4F71-904D-C57C2D106180}.Debug|Win32.Build.0 = Debug|Win32
-		{C3763257-4BE0-4F71-904D-C57C2D106180}.Release|Win32.ActiveCfg = Release|Win32
-		{C3763257-4BE0-4F71-904D-C57C2D106180}.Release|Win32.Build.0 = Release|Win32
+		{1E7B8FB4-A8AF-4A89-8CAE-8AC8916B5858}.Debug|x64.ActiveCfg = Debug|x64
+		{1E7B8FB4-A8AF-4A89-8CAE-8AC8916B5858}.Debug|x64.Build.0 = Debug|x64
+		{1E7B8FB4-A8AF-4A89-8CAE-8AC8916B5858}.Debug|x86.ActiveCfg = Debug|Win32
+		{1E7B8FB4-A8AF-4A89-8CAE-8AC8916B5858}.Debug|x86.Build.0 = Debug|Win32
+		{1E7B8FB4-A8AF-4A89-8CAE-8AC8916B5858}.Release|x64.ActiveCfg = Release|x64
+		{1E7B8FB4-A8AF-4A89-8CAE-8AC8916B5858}.Release|x64.Build.0 = Release|x64
+		{1E7B8FB4-A8AF-4A89-8CAE-8AC8916B5858}.Release|x86.ActiveCfg = Release|Win32
+		{1E7B8FB4-A8AF-4A89-8CAE-8AC8916B5858}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

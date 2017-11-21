@@ -1,10 +1,6 @@
-/************************************************************************/
-/*    文件名      ：test.cpp
-/*    作者        ：刘珅珅
-/*    日期        ：2011/11/1
-/*    功能描述    ：函数模板的测试                                                                     */
-/************************************************************************/
-
+// Copyright 2017.刘珅珅
+// author：刘珅珅
+// 函数模板的测试   
 #include <iostream>
 using namespace std;
 
@@ -14,9 +10,9 @@ void compare(const T &a, const T &b)
 {
     //注意C++编程的规范性
 
-    if(a > b)
+    if (a > b)
         cout << "a>b" << endl;
-    else if(a < b)
+    else if (a < b)
         cout << "a<b" << endl;
     else
         cout << "a=b" << endl;

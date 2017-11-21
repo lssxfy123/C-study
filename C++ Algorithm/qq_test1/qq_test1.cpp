@@ -1,5 +1,6 @@
+// Copyright 2017.Áõ«|«|
+// author£ºÁõ«|«|
 // Á´±í·´Ðò
-
 #include <iostream>
 using std::cin;
 using std::cout;

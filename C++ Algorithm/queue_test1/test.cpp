@@ -1,3 +1,5 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // C++实现一个队列
 
 #include <iostream>

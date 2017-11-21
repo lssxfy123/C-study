@@ -1,3 +1,5 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // C++实现一个链式栈
 
 #include <iostream>

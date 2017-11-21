@@ -1,3 +1,5 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 用两个队列实现栈
 
 #include <iostream>

@@ -1,5 +1,6 @@
-
-
+// Copyright 2017.Áõ«|«|
+// author£ºÁõ«|«|
+// ÓÑÔªº¯ÊýÄ£°å
 #include <iostream>
 #include <string>
 #include "list.cpp"
