@@ -1,5 +1,7 @@
+// Copyright 2017.Αυ«|«|
+// author£ΊΑυ«|«|
+// µ¥Α΄±ν
 #include <stdio.h>
-
 #include "lnode.h"
 
 int main(int argc, char* argv[])

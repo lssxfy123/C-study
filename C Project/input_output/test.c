@@ -1,3 +1,6 @@
+// Copyright 2017.Αυ«|«|
+// author£ΊΑυ«|«|
+// getchar/putchar
 #include <stdio.h>
 
 int main(int argc, char* argv[])

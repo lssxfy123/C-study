@@ -1,3 +1,6 @@
+// Copyright 2017.Áõ«|«|
+// author£ºÁõ«|«|
+// switchÓï¾ä²âÊÔ
 #include <stdio.h>
 
 int func()

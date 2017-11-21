@@ -1,3 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
+// 输出格式化，浮点数的输出特性
 #include <stdio.h>
 
 int main(int argc, char* argv[])

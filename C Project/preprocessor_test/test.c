@@ -1,3 +1,6 @@
+// Copyright 2017.Αυ«|«|
+// author£ΊΑυ«|«|
+// Ίκ¶¨Òε
 #include <stdio.h>
 
 #define S 3 + 2

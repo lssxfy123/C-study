@@ -1,3 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
+// 格式化输入输出
 #include <stdio.h>
 
 int main(int argc, char* argv[])

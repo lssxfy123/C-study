@@ -1,5 +1,6 @@
-// 结构体
-
+// Copyright 2017.刘珅珅
+// author：刘珅珅
+// C语言结构体
 #include <stdio.h>
 
 #include "pv.h"

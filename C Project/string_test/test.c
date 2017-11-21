@@ -1,5 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 华为测试题：找出一串字符串中的整数并求和
-
 #include <stdio.h>
 
 int StringIntSum(char* string);

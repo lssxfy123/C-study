@@ -1,4 +1,6 @@
-
+// Copyright 2017.刘珅珅
+// author：刘珅珅
+// 无符号数与有符号数
 #include <stdio.h>
 
 int main(int argc, char* argv[])
@@ -11,7 +13,7 @@ int main(int argc, char* argv[])
 
     int k = 0;
 
-    // i = j + 8;  // j被当成无符号数处理
+    i = j + 8;  // j被当成无符号数处理
 
     printf("%u\n", i);  // 4294967295，这是-9的补码转换为无符号数的值再加上8得到的值
 

@@ -1,3 +1,6 @@
+// Copyright 2017.Αυ«|«|
+// author£ΊΑυ«|«|
+// Ίκ¶¨ÒεΊΝΤ¤±ΰÒλ
 #include <stdio.h>
 
 #define MAX 30

@@ -1,3 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
+// sizeof运算符测量变量的内存大小
 #include <stdio.h>
 
 void func(int b[10]);
@@ -17,7 +20,7 @@ int main(int argc, char* argv[])
 
     printf("%d\n", sizeof(a));
     printf("%d\n", sizeof(b));
-    printf("%d\n", sizeof(c));
+    printf("%d\n", sizeof(c));  // 6
 
     func(b);
 
@@ -26,5 +29,5 @@ int main(int argc, char* argv[])
 
 void func(int b[10])
 {
-    printf("%d\n", sizeof(b));
+    printf("%d\n", sizeof(b));  // 4，b为指针
 }

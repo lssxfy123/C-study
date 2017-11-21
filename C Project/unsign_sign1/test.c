@@ -1,4 +1,6 @@
-// 无符号数和有符号数
+// Copyright 2017.刘珅珅
+// author：刘珅珅
+// 无符号数与有符号数的溢出
 #include <stdio.h>
 
 int main(int argc, char* argv[])

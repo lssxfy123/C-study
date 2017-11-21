@@ -1,3 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
+// 无符号数与有符号数
 #include <stdio.h>
 
 int main(int argc, char* argv[])

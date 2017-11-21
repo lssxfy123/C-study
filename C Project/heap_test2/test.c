@@ -1,5 +1,6 @@
-// 堆内存分配
-
+// Copyright 2017.刘珅珅
+// author：刘珅珅
+// 堆内存分配的释放
 #include <malloc.h>
 #include <stdio.h>
 

@@ -1,18 +1,26 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sizeof_test3", "sizeof_test3.vcproj", "{44B51923-3144-4B9A-A8D1-EF5A2FFB67B9}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sizeof_test3", "sizeof_test3.vcxproj", "{8F17C44B-63D0-40A9-9489-E80E2B6B2FEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Win32 = Debug|Win32
-		Release|Win32 = Release|Win32
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{44B51923-3144-4B9A-A8D1-EF5A2FFB67B9}.Debug|Win32.ActiveCfg = Debug|Win32
-		{44B51923-3144-4B9A-A8D1-EF5A2FFB67B9}.Debug|Win32.Build.0 = Debug|Win32
-		{44B51923-3144-4B9A-A8D1-EF5A2FFB67B9}.Release|Win32.ActiveCfg = Release|Win32
-		{44B51923-3144-4B9A-A8D1-EF5A2FFB67B9}.Release|Win32.Build.0 = Release|Win32
+		{8F17C44B-63D0-40A9-9489-E80E2B6B2FEE}.Debug|x64.ActiveCfg = Debug|x64
+		{8F17C44B-63D0-40A9-9489-E80E2B6B2FEE}.Debug|x64.Build.0 = Debug|x64
+		{8F17C44B-63D0-40A9-9489-E80E2B6B2FEE}.Debug|x86.ActiveCfg = Debug|Win32
+		{8F17C44B-63D0-40A9-9489-E80E2B6B2FEE}.Debug|x86.Build.0 = Debug|Win32
+		{8F17C44B-63D0-40A9-9489-E80E2B6B2FEE}.Release|x64.ActiveCfg = Release|x64
+		{8F17C44B-63D0-40A9-9489-E80E2B6B2FEE}.Release|x64.Build.0 = Release|x64
+		{8F17C44B-63D0-40A9-9489-E80E2B6B2FEE}.Release|x86.ActiveCfg = Release|Win32
+		{8F17C44B-63D0-40A9-9489-E80E2B6B2FEE}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

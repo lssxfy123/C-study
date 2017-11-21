@@ -1,3 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
+// 无符号数和有符号数
 #include <stdio.h>
 
 int main(int argc, char* argv[])
@@ -6,6 +9,7 @@ int main(int argc, char* argv[])
     char b = a;
     short c = b;
 
+	printf("%d\n", a);  // 129
     printf("%d\n", (unsigned short)a);  // 129
     printf("%d\n", c);  // -127
 
@@ -13,7 +17,7 @@ int main(int argc, char* argv[])
     // 在有符号字符中其代表的值为-127
     // 在16位中-127的原码为10000000 0111 1111
     // 其补码为11111111 10000001，看成无符号数即为65409
-    printf("%d\n", (unsigned short)b);  // 65409
+    printf("%u\n", (unsigned short)b);  // 65409
 
     return 0;
 }

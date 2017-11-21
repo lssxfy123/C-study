@@ -1,10 +1,13 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
+// C语言内置类型的大小
 #include <stdio.h>
 
 int main(int argc, char* argv[])
 {
     int a = 0;
     short b = 1;
-    long int l = 234;
+    long l = 234;
     long long ll = 456;
     float f = 23.4;
     double d = 45.6;
@@ -23,16 +26,16 @@ int main(int argc, char* argv[])
         printf("最后一个字符不为结束符\n");
     }
 
-    printf("%d\n", sizeof(a));
-    printf("%d\n", sizeof(str));
-    printf("%d\n", sizeof(p));
-    printf("%d\n", sizeof(c));
-    printf("%d\n", sizeof(b));
-    printf("%d\n", sizeof(l));
-    printf("%d\n", sizeof(ll));
-    printf("%d\n", sizeof(f));
-    printf("%d\n", sizeof(d));
-    printf("%d\n", sizeof(p1));
+    printf("int %d\n", sizeof(a));
+    printf("char[] %d\n", sizeof(str));
+    printf("pointer %d\n", sizeof(p));
+    printf("char %d\n", sizeof(c));
+    printf("short %d\n", sizeof(b));
+    printf("long %d\n", sizeof(l));
+    printf("long long %d\n", sizeof(ll));
+    printf("float %d\n", sizeof(f));
+    printf("double %d\n", sizeof(d));
+    printf("pointer %d\n", sizeof(p1));
 
     return 0;
 }

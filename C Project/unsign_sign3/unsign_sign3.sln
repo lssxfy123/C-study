@@ -1,18 +1,26 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unsign_sign3", "unsign_sign3\unsign_sign3.vcproj", "{4B1C5D28-A554-4A7D-A1E0-A20AD03F36ED}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unsign_sign3", "unsign_sign3.vcxproj", "{F06C368D-0F34-4C9A-974E-C6ECADA9E197}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Win32 = Debug|Win32
-		Release|Win32 = Release|Win32
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4B1C5D28-A554-4A7D-A1E0-A20AD03F36ED}.Debug|Win32.ActiveCfg = Debug|Win32
-		{4B1C5D28-A554-4A7D-A1E0-A20AD03F36ED}.Debug|Win32.Build.0 = Debug|Win32
-		{4B1C5D28-A554-4A7D-A1E0-A20AD03F36ED}.Release|Win32.ActiveCfg = Release|Win32
-		{4B1C5D28-A554-4A7D-A1E0-A20AD03F36ED}.Release|Win32.Build.0 = Release|Win32
+		{F06C368D-0F34-4C9A-974E-C6ECADA9E197}.Debug|x64.ActiveCfg = Debug|x64
+		{F06C368D-0F34-4C9A-974E-C6ECADA9E197}.Debug|x64.Build.0 = Debug|x64
+		{F06C368D-0F34-4C9A-974E-C6ECADA9E197}.Debug|x86.ActiveCfg = Debug|Win32
+		{F06C368D-0F34-4C9A-974E-C6ECADA9E197}.Debug|x86.Build.0 = Debug|Win32
+		{F06C368D-0F34-4C9A-974E-C6ECADA9E197}.Release|x64.ActiveCfg = Release|x64
+		{F06C368D-0F34-4C9A-974E-C6ECADA9E197}.Release|x64.Build.0 = Release|x64
+		{F06C368D-0F34-4C9A-974E-C6ECADA9E197}.Release|x86.ActiveCfg = Release|Win32
+		{F06C368D-0F34-4C9A-974E-C6ECADA9E197}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

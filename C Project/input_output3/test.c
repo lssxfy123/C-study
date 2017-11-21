@@ -1,5 +1,6 @@
-// 浮点数与整数的输出比较
-
+// Copyright 2017.刘珅珅
+// author：刘珅珅
+// 浮点数的输出
 #include <stdio.h>
 
 int main(int argc, char* argv[])

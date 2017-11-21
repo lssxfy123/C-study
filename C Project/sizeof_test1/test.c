@@ -1,5 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 结构体的大小计算
-
 #include <stdio.h>
 
 struct A

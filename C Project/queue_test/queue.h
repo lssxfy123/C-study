@@ -32,19 +32,19 @@ int IsEmpty(Queue *pqueue);
 int GetSize(Queue *pqueue);
 
 /*返回队头元素*/
-PNode GetFront(Queue *pqueue,Item *pitem);
+PNode GetFront(Queue *pqueue, Item *pitem);
 
 /*返回队尾元素*/
-PNode GetRear(Queue *pqueue,Item *pitem);
+PNode GetRear(Queue *pqueue, Item *pitem);
 
 /*将新元素入队*/
-PNode EnQueue(Queue *pqueue,Item item);
+PNode EnQueue(Queue *pqueue, Item item);
 
 /*队头元素出队*/
-PNode DeQueue(Queue *pqueue,Item *pitem);
+PNode DeQueue(Queue *pqueue, Item *pitem);
 
 /*遍历队列并对各数据项调用visit函数*/
-void QueueTraverse(Queue *pqueue,void (*visit)());
+void QueueTraverse(Queue *pqueue, void (*visit)());
 
 #endif
 

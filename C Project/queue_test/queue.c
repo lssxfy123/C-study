@@ -6,7 +6,7 @@
 Queue *InitQueue()
 {
     Queue *pqueue = (Queue *)malloc(sizeof(Queue));
-    if(pqueue!=NULL)
+    if (pqueue!=NULL)
     {
         pqueue->front = NULL;
         pqueue->rear = NULL;
@@ -18,7 +18,7 @@ Queue *InitQueue()
 /*销毁一个队列*/
 void DestroyQueue(Queue *pqueue)
 {
-    if(IsEmpty(pqueue)!=1)
+    if(IsEmpty(pqueue) != 1)
         ClearQueue(pqueue);
     free(pqueue);
 }
@@ -26,9 +26,9 @@ void DestroyQueue(Queue *pqueue)
 /*清空一个队列*/
 void ClearQueue(Queue *pqueue)
 {
-    while(IsEmpty(pqueue)!=1)
+    while (IsEmpty(pqueue)!=1)
     {
-        DeQueue(pqueue,NULL);
+        DeQueue(pqueue, NULL);
     }
 
 }
@@ -49,9 +49,9 @@ int GetSize(Queue *pqueue)
 }
 
 /*返回队头元素*/
-PNode GetFront(Queue *pqueue,Item *pitem)
+PNode GetFront(Queue *pqueue, Item *pitem)
 {
-    if(IsEmpty(pqueue)!=1&&pitem!=NULL)
+    if (IsEmpty(pqueue) !=1 &&pitem != NULL)
     {
         *pitem = pqueue->front->data;
     }
@@ -60,9 +60,9 @@ PNode GetFront(Queue *pqueue,Item *pitem)
 
 /*返回队尾元素*/
 
-PNode GetRear(Queue *pqueue,Item *pitem)
+PNode GetRear(Queue *pqueue, Item *pitem)
 {
-    if(IsEmpty(pqueue)!=1&&pitem!=NULL)
+    if(IsEmpty(pqueue) != 1 && pitem != NULL)
     {
         *pitem = pqueue->rear->data;
     }
@@ -70,15 +70,15 @@ PNode GetRear(Queue *pqueue,Item *pitem)
 }
 
 /*将新元素入队*/
-PNode EnQueue(Queue *pqueue,Item item)
+PNode EnQueue(Queue *pqueue, Item item)
 {
     PNode pnode = (PNode)malloc(sizeof(Node));
-    if(pnode != NULL)
+    if (pnode != NULL)
     {
         pnode->data = item;
         pnode->next = NULL;
 
-        if(IsEmpty(pqueue))
+        if (IsEmpty(pqueue))
         {
             pqueue->front = pnode;
         }
@@ -93,28 +93,28 @@ PNode EnQueue(Queue *pqueue,Item item)
 }
 
 /*队头元素出队*/
-PNode DeQueue(Queue *pqueue,Item *pitem)
+PNode DeQueue(Queue *pqueue, Item *pitem)
 {
     PNode pnode = pqueue->front;
-    if(IsEmpty(pqueue)!=1&&pnode!=NULL)
+    if (IsEmpty(pqueue) != 1 && pnode != NULL)
     {
-        if(pitem!=NULL)
+        if (pitem != NULL)
             *pitem = pnode->data;
         pqueue->size--;
         pqueue->front = pnode->next;
         free(pnode);
-        if(pqueue->size==0)
+        if (pqueue->size == 0)
             pqueue->rear = NULL;
     }
     return pqueue->front;
 }
 
 /*遍历队列并对各数据项调用visit函数*/
-void QueueTraverse(Queue *pqueue,void (*visit)())
+void QueueTraverse(Queue *pqueue, void (*visit)())
 {
     PNode pnode = pqueue->front;
     int i = pqueue->size;
-    while(i--)
+    while (i--)
     {
         visit(pnode->data);
         pnode = pnode->next;
