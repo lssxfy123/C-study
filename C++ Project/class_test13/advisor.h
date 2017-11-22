@@ -4,6 +4,7 @@
 class Advisor
 {
   public:
+	  Advisor();
     Advisor(int number);
 
   private:

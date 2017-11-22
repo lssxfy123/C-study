@@ -1,18 +1,26 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CNKI_test2", "CNKI_test2\CNKI_test2.vcproj", "{13B8A38D-6C8F-4886-898D-4D89E9BF526F}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CNKI_test2", "CNKI_test2.vcxproj", "{0DDAD199-616E-48A3-97A7-AADD234A9115}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Win32 = Debug|Win32
-		Release|Win32 = Release|Win32
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{13B8A38D-6C8F-4886-898D-4D89E9BF526F}.Debug|Win32.ActiveCfg = Debug|Win32
-		{13B8A38D-6C8F-4886-898D-4D89E9BF526F}.Debug|Win32.Build.0 = Debug|Win32
-		{13B8A38D-6C8F-4886-898D-4D89E9BF526F}.Release|Win32.ActiveCfg = Release|Win32
-		{13B8A38D-6C8F-4886-898D-4D89E9BF526F}.Release|Win32.Build.0 = Release|Win32
+		{0DDAD199-616E-48A3-97A7-AADD234A9115}.Debug|x64.ActiveCfg = Debug|x64
+		{0DDAD199-616E-48A3-97A7-AADD234A9115}.Debug|x64.Build.0 = Debug|x64
+		{0DDAD199-616E-48A3-97A7-AADD234A9115}.Debug|x86.ActiveCfg = Debug|Win32
+		{0DDAD199-616E-48A3-97A7-AADD234A9115}.Debug|x86.Build.0 = Debug|Win32
+		{0DDAD199-616E-48A3-97A7-AADD234A9115}.Release|x64.ActiveCfg = Release|x64
+		{0DDAD199-616E-48A3-97A7-AADD234A9115}.Release|x64.Build.0 = Release|x64
+		{0DDAD199-616E-48A3-97A7-AADD234A9115}.Release|x86.ActiveCfg = Release|Win32
+		{0DDAD199-616E-48A3-97A7-AADD234A9115}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

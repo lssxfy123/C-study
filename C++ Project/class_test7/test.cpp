@@ -1,5 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 友元
-
 #include <iostream>
 
 class A;  // 前向声明，类名声明

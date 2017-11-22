@@ -1,5 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 使用智能指针
-
 #include "counter.cpp"
 
 #include <iostream>
@@ -58,8 +59,6 @@ HasPtr& HasPtr::operator=(const HasPtr& rhs)
 
     return *this;
 }
-
-
 
 
 int main(int argc, char* argv[])

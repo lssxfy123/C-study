@@ -1,5 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 拷贝构造函数，赋值运算符重载与继承
-
 #include <iostream>
 using namespace std;
 

@@ -1,5 +1,6 @@
+// Copyright 2017.Áõ«|«|
+// author£ºÁõ«|«|
 // ÃüÃû¿Õ¼ä
-
 #include <iostream>
 
 #include "sgcc.h"

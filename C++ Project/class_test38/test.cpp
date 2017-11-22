@@ -1,3 +1,6 @@
+// Copyright 2017.Áõ«|«|
+// author£ºÁõ«|«|
+// ÃüÃû¿Õ¼ä
 #include <iostream>
 using std::cout;
 using std::endl;

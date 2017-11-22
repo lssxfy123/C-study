@@ -1,4 +1,6 @@
-
+// Copyright 2017.刘珅珅
+// author：刘珅珅
+// inline函数与虚函数
 #include<iostream>
 using namespace std;
 
@@ -19,7 +21,6 @@ inline void A::f()
 {
     cout << "我是真正的内联函数，不能同时设置为虚函数！" << endl;
 }
-
 
 
 class B : public A

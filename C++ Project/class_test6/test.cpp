@@ -1,3 +1,5 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // const static 类成员变量
 
 #include <iostream>

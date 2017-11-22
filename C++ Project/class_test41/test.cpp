@@ -1,5 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 重载对命名空间的影响
-
 #include <iostream>
 using std::cout;
 using std::endl;

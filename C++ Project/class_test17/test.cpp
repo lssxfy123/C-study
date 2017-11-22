@@ -1,5 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 虚函数与默认实参
-
 #include <iostream>
 
 class Base

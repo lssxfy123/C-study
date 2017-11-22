@@ -1,3 +1,5 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 类中的静态变量
 #include <iostream>
 using namespace std;

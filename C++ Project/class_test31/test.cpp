@@ -1,5 +1,6 @@
+// Copyright 2017.Áõ«|«|
+// author£ºÁõ«|«|
 // ¶àÖØ¼Ì³ĞºÍĞéÄâ¼Ì³Ğ
-
 #include <iostream>
 using namespace std;
 

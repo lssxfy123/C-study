@@ -1,3 +1,5 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 非虚拟继承导致的二义性
 #include <iostream>
 using namespace std;

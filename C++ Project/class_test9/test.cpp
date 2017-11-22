@@ -1,5 +1,6 @@
+// Copyright 2017.Áõ«|«|
+// author£ºÁõ«|«|
 // ¿½±´¹¹Ôìº¯Êý
-
 #include <iostream>
 #include <string>
 #include "person.h"

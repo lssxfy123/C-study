@@ -1,5 +1,6 @@
+// Copyright 2017.Áõ«|«|
+// author£ºÁõ«|«|
 // constÒıÓÃ
-
 #include <iostream>
 
 int main(int argc, char* argv[])

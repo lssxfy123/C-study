@@ -1,5 +1,6 @@
+// Copyright 2017.Áõ«|«|
+// author£ºÁõ«|«|
 // ¿½±´¹¹Ôìº¯Êı
-
 #include <iostream>
 #include "student.h"
 

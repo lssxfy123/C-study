@@ -1,5 +1,6 @@
+// Copyright 2017.Áõ«|«|
+// author£ºÁõ«|«|
 // C++Ðéº¯Êý±í
-
 #include <iostream>
 
 class Base

@@ -1,5 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 类的静态成员
-
 #include <iostream>
 
 #include "student.h"

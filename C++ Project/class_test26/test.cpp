@@ -1,5 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 类类型与转换
-
 #include <iostream>
 
 class SmallInt

@@ -1,5 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 构造函数和析构函数中调用虚函数
-
 #include <iostream>
 using std::cout;
 using std::endl;

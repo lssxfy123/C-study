@@ -1,5 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 类继承中的函数重载
-
 #include <iostream>
 
 class Base

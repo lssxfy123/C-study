@@ -1,5 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 多重继承构造顺序
-
 #include <iostream>
 using namespace std;
 

@@ -1,5 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 纯虚函数：同样会触发动态绑定
-
 #include <iostream>
 using std::cout;
 using std::endl;

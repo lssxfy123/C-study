@@ -1,3 +1,6 @@
+// Copyright 2017.Áõ«|«|
+// author£ºÁõ«|«|
+// explicit¹Ø¼ü×Ö
 #include <iostream>
 
 class Test1

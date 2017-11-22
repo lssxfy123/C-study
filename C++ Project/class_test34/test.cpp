@@ -1,5 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 类继承中构造函数的调用
-
 #include <iostream>
 
 class Base

@@ -1,5 +1,6 @@
+// Copyright 2017.Áõ«|«|
+// author£ºÁõ«|«|
 // thisÖ¸Õë
-
 #include <iostream>
 
 #include "b.h"

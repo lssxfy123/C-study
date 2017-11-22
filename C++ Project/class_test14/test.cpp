@@ -1,5 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 类的多态性
-
 #include <iostream>
 
 #include "shape.h"

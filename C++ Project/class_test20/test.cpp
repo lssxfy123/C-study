@@ -1,5 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 继承中的构造函数
-
 #include <iostream>
 using namespace std;
 

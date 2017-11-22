@@ -1,5 +1,6 @@
+// Copyright 2017.Αυ«|«|
+// author£ΊΑυ«|«|
 // Ύ²Μ¬³ΙΤ±ΣλΌΜ³Π
-
 #include <iostream>
 
 class Base
