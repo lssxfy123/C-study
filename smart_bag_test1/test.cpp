@@ -1,8 +1,10 @@
 // Copyright 2017.刘珅珅
 // author：刘珅珅
 // 01背包-动态规划
+#include <algorithm>
 #include <iostream>
 #include <fstream>
+#include <limits>
 #include <string>
 using namespace std;
 
@@ -37,7 +39,7 @@ int GetMaxValue(int weight, int count)
 
         // 不放入count个物品所能获取的最大价值
         int max_value2 = GetMaxValue(weight, count - 1);
-        max_value = max(max_value1, max_value2);
+        max_value =  max<int>(max_value1, max_value2);
     } else {
         ++calculate_count;
         // 背包的剩余容量小于第count个物品的体积

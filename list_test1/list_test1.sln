@@ -1,18 +1,26 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "list_test1", "list_test1\list_test1.vcproj", "{5F42A618-F2D3-4BFC-8610-20CBF418DC46}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "list_test1", "list_test1.vcxproj", "{59B53ADB-FF71-46FE-8CF5-4A62C95D6F18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Win32 = Debug|Win32
-		Release|Win32 = Release|Win32
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5F42A618-F2D3-4BFC-8610-20CBF418DC46}.Debug|Win32.ActiveCfg = Debug|Win32
-		{5F42A618-F2D3-4BFC-8610-20CBF418DC46}.Debug|Win32.Build.0 = Debug|Win32
-		{5F42A618-F2D3-4BFC-8610-20CBF418DC46}.Release|Win32.ActiveCfg = Release|Win32
-		{5F42A618-F2D3-4BFC-8610-20CBF418DC46}.Release|Win32.Build.0 = Release|Win32
+		{59B53ADB-FF71-46FE-8CF5-4A62C95D6F18}.Debug|x64.ActiveCfg = Debug|x64
+		{59B53ADB-FF71-46FE-8CF5-4A62C95D6F18}.Debug|x64.Build.0 = Debug|x64
+		{59B53ADB-FF71-46FE-8CF5-4A62C95D6F18}.Debug|x86.ActiveCfg = Debug|Win32
+		{59B53ADB-FF71-46FE-8CF5-4A62C95D6F18}.Debug|x86.Build.0 = Debug|Win32
+		{59B53ADB-FF71-46FE-8CF5-4A62C95D6F18}.Release|x64.ActiveCfg = Release|x64
+		{59B53ADB-FF71-46FE-8CF5-4A62C95D6F18}.Release|x64.Build.0 = Release|x64
+		{59B53ADB-FF71-46FE-8CF5-4A62C95D6F18}.Release|x86.ActiveCfg = Release|Win32
+		{59B53ADB-FF71-46FE-8CF5-4A62C95D6F18}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
