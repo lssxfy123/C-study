@@ -1,4 +1,6 @@
-
+// Copyright 2017.刘珅珅
+// author：刘珅珅
+// 去掉字符串头部和尾部的非有效字符
 #include <iostream>
 #include <string>
 using namespace std;

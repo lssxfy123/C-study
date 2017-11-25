@@ -1,4 +1,6 @@
-// 引用
+// Copyright 2017.刘珅珅
+// author：刘珅珅
+// 指针的引用
 #include <iostream>
 
 int main(int argc, char* argv[])

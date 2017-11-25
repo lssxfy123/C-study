@@ -1,5 +1,6 @@
+// Copyright 2017.Áõ«|«|
+// author£ºÁõ«|«|
 // vectorÈİÆ÷
-
 #include <iostream>
 #include <vector>
 using std::vector;

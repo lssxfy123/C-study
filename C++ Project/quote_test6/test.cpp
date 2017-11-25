@@ -1,5 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 返回非引用和返回引用
-
 #include <iostream>
 
 int n = 8;

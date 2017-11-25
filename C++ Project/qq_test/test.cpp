@@ -1,5 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 抽奖算法：输入一个0-100的整数，为抽奖的概率
-
 #include <iostream>
 #include <cstdlib>
 #include <time.h>

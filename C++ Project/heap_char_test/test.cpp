@@ -1,5 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 动态分配字符指针与删除
-
 #include <iostream>
 using std::cout;
 using std::endl;

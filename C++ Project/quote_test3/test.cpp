@@ -1,5 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 指针形参与引用形参
-
 #include <iostream>
 
 void func1(int* p);

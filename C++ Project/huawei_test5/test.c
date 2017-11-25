@@ -1,5 +1,6 @@
-// 深圳华为招聘
-
+// Copyright 2017.刘珅珅
+// author：刘珅珅
+// C语言实现查找区间内的所有素数
 #include <stdio.h>
 #include <math.h>
 

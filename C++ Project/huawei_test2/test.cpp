@@ -1,4 +1,6 @@
-
+// Copyright 2017.刘珅珅
+// author：刘珅珅
+// 删除字符串头部和尾部空格
 #include <iostream>
 #include <string>
 using std::cin;

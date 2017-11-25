@@ -1,5 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // C++中的函数作用域
-
 #include <iostream>
 using namespace std;
 

@@ -1,5 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // C++中的单例模式
-
 #include <iostream>
 using std::cout;
 using std::endl;

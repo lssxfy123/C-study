@@ -1,5 +1,6 @@
-// 深圳华为招聘
-
+// Copyright 2017.刘珅珅
+// author：刘珅珅
+// 求一个区间内所有的素数
 #include <iostream>
 #include <cmath>
 using std::cin;

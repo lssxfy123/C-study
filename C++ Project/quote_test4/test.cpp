@@ -1,5 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // 引用数组形参
-
 #include <iostream>
 
 void PrintValue(int (&array)[10]);

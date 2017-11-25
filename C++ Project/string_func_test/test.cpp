@@ -1,3 +1,6 @@
+// Copyright 2017.Áõ«|«|
+// author£ºÁõ«|«|
+// stringº¯ÊıµÄ²âÊÔ
 #include <iostream>
 using namespace std;
 

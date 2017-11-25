@@ -1,4 +1,6 @@
-// 函数的重载与默认参数的函数
+// Copyright 2017.刘珅珅
+// author：刘珅珅
+// 函数的重载
 #include <iostream>
 
 void func(int a);
@@ -16,11 +18,11 @@ int main(int argc, char* argv[])
 
 void func(int a)
 {
-    std::cout << a << std::endl;
+    std::cout << "int " << a << std::endl;
 }
 
 
 void func(float b)
 {
-    std::cout << b << std::endl;
+    std::cout << "float " << b << std::endl;
 }

@@ -1,3 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
+// 查找字符串所有数字并求和
 #include <iostream>
 
 int StringIntSum(const char* string);

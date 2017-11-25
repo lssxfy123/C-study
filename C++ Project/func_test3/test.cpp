@@ -1,3 +1,5 @@
+// Copyright 2017.Αυ«|«|
+// author£ΊΑυ«|«|
 // ΔΪΑͺΊ―Κύ
 #include <iostream>
 

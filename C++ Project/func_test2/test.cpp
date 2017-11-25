@@ -1,5 +1,6 @@
+// Copyright 2017.刘珅珅
+// author：刘珅珅
 // C++默认参数的函数
-
 #include <iostream>
 
 void func(int a = 0);
