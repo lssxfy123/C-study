@@ -76,6 +76,8 @@ int MaxSumRec(const vector<int>& array, int left, int right)
         return array[left];
     }
 
+    cout << "left = " << left << " right = " << right << endl;
+
     int center = static_cast<int>((left + right) / 2);
 
     // 左半部分最大子序列和

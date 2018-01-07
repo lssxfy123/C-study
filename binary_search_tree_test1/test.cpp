@@ -133,7 +133,7 @@ private:
             Remove(t->element_, t->right_);
             cout << "two children" << endl;
         } 
-        else 
+        else   // 一个子节点
         {
             BinaryNode* old = t;
             t = (t->left_ != NULL)?t->left_:t->right_;
@@ -153,7 +153,7 @@ private:
             return t;
         }
 
-        FindMin(t->left_);
+        return FindMin(t->left_);
     }
 
     BinaryNode* FindMax(BinaryNode* t) const
@@ -255,27 +255,30 @@ bool BinarySearchTree<Object, Comparator>:: Contains(const Object& x) const
 int main(int argc, char* argv[])
 {
     BinarySearchTree<float> binary_search_tree;
-    binary_search_tree.Insert(3.2);
-    binary_search_tree.Insert(3.5);
-    binary_search_tree.Insert(3.3);
-    binary_search_tree.Insert(4.6);
-    binary_search_tree.Insert(2.9);
-    binary_search_tree.Insert(5.4);
+    binary_search_tree.Insert(3.2f);
+    binary_search_tree.Insert(3.5f);
+    binary_search_tree.Insert(3.3f);
+    binary_search_tree.Insert(4.6f);
+    binary_search_tree.Insert(2.9f);
+    binary_search_tree.Insert(5.4f);
+    cout << "中序遍历：左子树->根->右子树" << endl;
     binary_search_tree.PrintTree();
     cout << endl;
+    cout << "前序遍历：根->左子树->右子树" << endl;
     binary_search_tree.PrePrintTree();
     cout << endl;
+    cout << "后序遍历：左子树->右子树->根" << endl;
     binary_search_tree.PostPrintTree();
     cout << endl;
 
-    if (binary_search_tree.Contains(3.2))
+    if (binary_search_tree.Contains(3.2f))
     {
         cout << "exist" << endl;
     } else {
         cout << "not exist" << endl;
     }
 
-    if (binary_search_tree.Contains(3.1))
+    if (binary_search_tree.Contains(3.1f))
     {
         cout << "exist" << endl;
     } else {
@@ -294,7 +297,7 @@ int main(int argc, char* argv[])
     binary_search_tree3.PrintTree();
     cout << endl;
 
-    binary_search_tree3.Remove(3.5);
+    binary_search_tree3.Remove(3.5f);
     binary_search_tree3.PrintTree();
     cout << endl;
     return 0;
