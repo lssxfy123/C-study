@@ -130,6 +130,11 @@ private:
     AVLTreeNode* LeftRightRotation(AVLTreeNode* root)
     {
         cout << "先左旋后右旋" << endl;
+        // 先左旋后右旋是为了解决
+        // 左子树插入右孩子导致的失衡
+        // root为失衡子树的根结点
+        // 先对root的左子树进行左旋，
+        // 是为了将root子树变成左子树插入左孩子的问题
         root->left_child_  = LeftRotation(root->left_child_);
         return RightRotation(root);
     }

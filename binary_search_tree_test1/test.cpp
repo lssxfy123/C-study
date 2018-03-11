@@ -29,13 +29,22 @@ public:
 
     const Object& FindMin() const
     {
+        if (root_ == nullptr)
+        {
+            throw std::runtime_error("binary search tree is null");
+        }
         return FindMin(root_)->element_;
     }
 
     const Object& FindMax() const
     {
+        if (root_ == nullptr)
+        {
+            throw std::runtime_error("binary search tree is null");
+        }
         return FindMax(root_)->element_;
     }
+
     bool Contains(const Object& x) const;
 
     bool IsEmpty() const
@@ -133,7 +142,7 @@ private:
             Remove(t->element_, t->right_);
             cout << "two children" << endl;
         } 
-        else   // 一个子节点
+        else   // 一个子结点或没有子结点
         {
             BinaryNode* old = t;
             t = (t->left_ != NULL)?t->left_:t->right_;
