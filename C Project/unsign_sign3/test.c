@@ -5,23 +5,44 @@
 
 int main(int argc, char* argv[])
 {
-    unsigned int i = 1;
-    int j = -9;
+    unsigned char b = 54;
+    unsigned char c = 254;
 
-    short int m = -1;
-    unsigned short int n = 65535;
+    char m = 2;
+    char n = 65;
 
-    int k = 0;
+    char x = -102;
+    char y = -126;
 
-    i = j + 8;  // j被当成无符号数处理
+    m = m >> 1;  // 1
 
-    printf("%u\n", i);  // 4294967295，这是-9的补码转换为无符号数的值再加上8得到的值
+    // n : 0100 0001
+    // 左移1位：1000 0010
+    n = n << 1;
+    printf("n = %d\n", n);  // -126
 
-    m = n - 9;
-    printf("%d\n", m);  // -10，将n当成有符号数处理，其值为-1
+    // 左移1位：0000 0100
+    n = n << 1;
+    printf("n = %d\n", n);  // 4
 
-    k = i * j;
-    printf("%d\n", k);
+    x = x >> 1;
+    printf("x = %d\n", x);  // -51
 
+    x = x >> 10;  // -1
+    printf("x = %d\n", x);
+    
+    y = y << 1;
+    printf("y = %d\n", y);
+
+    b = b << 1;
+
+    // 254:1111 1110
+    // 左移1位变成：1111 1100
+    c = c << 1;  // 252
+
+    printf("m = %d\n", m);
+
+    printf("b = %u\n", b);
+    printf("c = %u\n", c);
     return 0;
 }
