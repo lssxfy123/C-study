@@ -30,6 +30,7 @@ int main(int argc, char* argv[])
 
     // *p1 = 108;  // error，指定的为const对象
     a = 55;
+    printf("%d\n", *p1);  // 55
     p1 = &f;
     p2 = &e;
 

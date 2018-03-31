@@ -37,6 +37,10 @@ Node* CreateList(Node* head)
         }
         else
         {
+            // 修改pointer_temp->next的值，
+            // 所有与pointer_temp指向同一块
+            // 内存地址的指针的next值也会改变
+            // 这和通过*操作符修改指针值的效果一样
             pointer_temp->next = pointer_new;
         }
 

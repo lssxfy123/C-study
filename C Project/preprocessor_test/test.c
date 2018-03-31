@@ -27,6 +27,6 @@ int main(int argc, char* argv[])
     printf("%d\n", b);
 
     PR(D1, a);
-    PR(D2,a, b);
+    PR(D2, a, b);
     return 0;
 }

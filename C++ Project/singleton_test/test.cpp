@@ -2,6 +2,7 @@
 // author：刘珅珅
 // C++中的单例模式
 #include <iostream>
+#include "locker.h"
 using std::cout;
 using std::endl;
 
@@ -18,7 +19,7 @@ class CSingleton
 
   public:
     static int count;  // 用来测试是否实现了单例
-
+    static Locker locker;
 };
 
 int CSingleton::count = 0;
@@ -28,13 +29,18 @@ CSingleton::CSingleton()
     ++count;
 }
 
+Locker CSingleton::locker;
+
 CSingleton::~CSingleton()
 {
 }
 
 CSingleton& CSingleton::GetInstance()
 {
+    // C++11中不需要加锁，编译器保证静态变量的多线程安全
+    locker.lock();
     static CSingleton instance;
+    locker.unlock();
     return instance;  // 返回一个局部静态变量给引用
 }
 

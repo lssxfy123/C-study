@@ -36,7 +36,7 @@ PNode Push(Stack *ps, Item item)
     if (pnode != NULL)
     {
         pnode->data = item;
-        pnode->down = GetTop(ps,NULL);
+        pnode->down = GetTop(ps, NULL);
         ps->size++;
         ps->top = pnode;
 
@@ -83,7 +83,7 @@ void ClearStack(Stack *ps)
 {
     while (IsEmpty(ps) != 1)
     {
-        Pop(ps,NULL);
+        Pop(ps, NULL);
     }
 }
 

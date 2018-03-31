@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
         {
             for (i = 0; i < 10; ++i)
             {
-                a[i][j][k] = 1;
+                a[i][j][k] = i + j + k;
             }
         }
     }
@@ -42,6 +42,7 @@ int main(int argc, char* argv[])
         printf("%d\n", c[m]);
     }
 
+    // Êä³öÎªµØÖ·
     printf("%x\n", a[0]);
     printf("%x\n", a[0][1]);
 
