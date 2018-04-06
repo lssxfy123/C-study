@@ -1,6 +1,6 @@
 // Copyright 2017.刘珅珅
 // author：刘珅珅
-// 100!求解
+// 阶乘求解
 #include <malloc.h>
 #include <math.h>
 #include <stdio.h>
@@ -12,7 +12,7 @@ int main(int argc, char* argv[])
     int i;
     int j;
     int* a = NULL;
-    int number = 100;  // 要求的阶乘数
+    int number = 12000;  // 要求的阶乘数
     int digit = 0;     // 阶乘的位数
     double sum = 0;
     int pos = 0;
@@ -23,6 +23,8 @@ int main(int argc, char* argv[])
         sum += log10((double)i);
     }
     digit = (int)(sum + 1);
+    printf("digit = %d\n", digit);
+    //return 0;
 
     a = (int*)malloc(digit * sizeof(int));
 
