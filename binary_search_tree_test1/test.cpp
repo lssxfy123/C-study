@@ -62,6 +62,11 @@ public:
         PrePrintTree(root_);
     }
 
+    void PrePrintTreeNoRecursion() const
+    {
+        PrePrintTreeNoRecursion(root_);
+    }
+
     void PostPrintTree() const
     {
         PostPrintTree(root_);
@@ -227,6 +232,45 @@ private:
         PrePrintTree(t->right_);
     }
 
+    // 非递归前序遍历
+    void PrePrintTreeNoRecursion(BinaryNode* t) const
+    {
+        if (t == nullptr)
+        {
+            return;
+        }
+
+        stack<BinaryNode*> tree_stack;
+        BinaryNode* left = nullptr;
+        BinaryNode* right = nullptr;
+        tree_stack.push(t);
+
+        while (tree_stack.size() > 0)
+        {
+            BinaryNode* tmp = tree_stack.top();
+            tree_stack.pop();
+            cout << tmp->element_ << ' ';
+            left = tmp->left_;
+            right = tmp->right_;
+            if (right != nullptr)
+            {
+                tree_stack.push(right);
+            }
+
+            while (left != nullptr)
+            {
+                cout << left->element_ << ' ';
+                tmp = tmp->left_;
+                left = tmp->left_;
+                right = tmp->right_;
+                if (right != nullptr)
+                {
+                    tree_stack.push(right);
+                }
+            }
+        }
+    }
+
     // 后序遍历
     void PostPrintTree(BinaryNode* t) const
     {
@@ -275,6 +319,8 @@ int main(int argc, char* argv[])
     cout << endl;
     cout << "前序遍历：根->左子树->右子树" << endl;
     binary_search_tree.PrePrintTree();
+    cout << endl;
+    binary_search_tree.PrePrintTreeNoRecursion();
     cout << endl;
     cout << "后序遍历：左子树->右子树->根" << endl;
     binary_search_tree.PostPrintTree();
