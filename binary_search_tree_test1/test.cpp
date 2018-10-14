@@ -57,6 +57,11 @@ public:
         PrintTree(root_);
     }
 
+    void PrintTreeNoRecursion() const
+    {
+        PrintTreeNoRecursion(root_);
+    }
+
     void PrePrintTree() const
     {
         PrePrintTree(root_);
@@ -70,6 +75,11 @@ public:
     void PostPrintTree() const
     {
         PostPrintTree(root_);
+    }
+
+    void PostPrintTreeNoRecursion() const
+    {
+        PostPrintTreeNoRecursion(root_);
     }
 
     void MakeEmpty()
@@ -207,6 +217,7 @@ private:
     }
 
     // 中序遍历
+    // 左子树->根->右子树
     void PrintTree(BinaryNode* t) const
     {
         if (t == NULL)
@@ -219,7 +230,75 @@ private:
         PrintTree(t->right_);
     }
 
+    // 非递归中序遍历
+    // 核心思想是将树的根结点与左孩子压入栈，
+    // 先压根结点，再压左孩子，因为栈先进后出，
+    // 如果结点有右孩子，将右孩子看成根结点，
+    // 循环之前的操作
+    void PrintTreeNoRecursion(BinaryNode* root) const
+    {
+        if (root == nullptr)
+        {
+            return;
+        }
+
+        stack<BinaryNode*> tree_stack;
+        BinaryNode* right = root->right_;
+        BinaryNode* left = root->left_;
+        tree_stack.push(root);
+
+        // 将根结点与其左孩子压入栈
+        while (left != nullptr)
+        {
+            tree_stack.push(left);
+            root = left->left_;  // t,t->left_都已在 栈中，所以是left->left_
+            if (root != nullptr)
+            {
+                tree_stack.push(root);
+                left = root->left_;
+            }
+            else
+            {
+                break;
+            }
+        }
+
+        while (tree_stack.size() > 0)
+        {
+            BinaryNode* tmp = tree_stack.top();
+            tree_stack.pop();
+            cout << tmp->element_ << ' ';
+            right = tmp->right_;
+            if (right != nullptr)
+            {
+                // 将右孩子看成根结点
+                // 将根结点与左孩子压入栈
+                tmp = right;
+                left = tmp->left_;
+                right = tmp->right_;
+                tree_stack.push(tmp);
+                while (left != nullptr)
+                {
+                    tree_stack.push(left);
+                    tmp = left->left_;
+                    if (tmp != nullptr)
+                    {
+                        tree_stack.push(tmp);
+                        left = tmp->left_;
+                        right = tmp->right_;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+            }
+        }
+
+    }
+
     // 前序遍历
+    // 根->左子树->右子树
     void PrePrintTree(BinaryNode* t) const
     {
         if (t == NULL)
@@ -233,6 +312,12 @@ private:
     }
 
     // 非递归前序遍历
+    // 将根结点压入栈中
+    // 弹出栈顶元素并输出
+    // 如果其右孩子不为空，压入栈
+    // 如果其左孩子不为空，输出并
+    // 遍历其左子树，将每个结点的左
+    // 孩子输出，右孩子压入栈
     void PrePrintTreeNoRecursion(BinaryNode* t) const
     {
         if (t == nullptr)
@@ -272,6 +357,7 @@ private:
     }
 
     // 后序遍历
+    // 左子树->右子树->根
     void PostPrintTree(BinaryNode* t) const
     {
         if (t == NULL)
@@ -282,6 +368,55 @@ private:
         PostPrintTree(t->left_);
         PostPrintTree(t->right_);
         cout << t->element_ << ' ';
+    }
+
+    void PostPrintTreeNoRecursion(BinaryNode* root) const
+    {
+        if (root == nullptr)
+        {
+            return;
+        }
+
+        BinaryNode* tmp = root;
+        BinaryNode* assist = nullptr;  // 辅助结点
+        stack<BinaryNode*> tree_stack;
+
+        // 核心思想:由于后序遍历是左子树->右子树->根
+        // 根结点不为nullptr，将其压入栈中，并将其左子结点
+        // 也压入栈中，访问栈顶元素时，如果其右子树存在，则
+        // 将其右孩子看成根结点并重复之前的压栈操作
+        // 需要辅助元素assist的原因是:某结点右子树存在，需要
+        // 再次进行压栈操作，该结点并未出栈，后续还会再次访问
+        // 到该结点，利用栈后进先出的特性，访问到该元素之前弹出
+        // 的栈元素肯定为该结点的右孩子，以此来判断是否已遍历过
+        // 其右子树
+        while (tmp != nullptr || !tree_stack.empty())
+        {
+            if (tmp != nullptr)
+            {
+                // 记录tmp的所有左子结点
+                tree_stack.push(tmp);
+                tmp = tmp->left_;
+            }
+            else
+            {
+                tmp = tree_stack.top();
+
+                // 右子树存在且未被访问
+                if (tmp->right_ != nullptr
+                    && tmp->right_ != assist)
+                {
+                    tmp = tmp->right_;
+                }
+                else
+                {
+                    tree_stack.pop();
+                    cout << tmp->element_ << ' ';
+                    assist = tmp;
+                    tmp = nullptr;
+                }
+            }
+        }
     }
 
     BinaryNode* Clone(BinaryNode* t) const
@@ -317,6 +452,8 @@ int main(int argc, char* argv[])
     cout << "中序遍历：左子树->根->右子树" << endl;
     binary_search_tree.PrintTree();
     cout << endl;
+    binary_search_tree.PrintTreeNoRecursion();
+    cout << endl;
     cout << "前序遍历：根->左子树->右子树" << endl;
     binary_search_tree.PrePrintTree();
     cout << endl;
@@ -324,6 +461,8 @@ int main(int argc, char* argv[])
     cout << endl;
     cout << "后序遍历：左子树->右子树->根" << endl;
     binary_search_tree.PostPrintTree();
+    cout << endl;
+    binary_search_tree.PostPrintTreeNoRecursion();
     cout << endl;
 
     if (binary_search_tree.Contains(3.2f))
