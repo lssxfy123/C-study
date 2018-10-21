@@ -91,6 +91,11 @@ public:
         Insert(x, root_);
     }
 
+    void InsertNoRecursion(const Object& x)
+    {
+        root_ = InsertNoRecursion(x, root_);
+    }
+
     void Remove(const Object& x)
     {
         Remove(x, root_);
@@ -133,6 +138,40 @@ private:
         }
 
         // 可以看出这个插入函数没法插入重复元
+    }
+
+    // 非递归插入
+    BinaryNode* InsertNoRecursion(const Object& x, BinaryNode* root) const
+    {
+        if (root == nullptr)
+        {
+            root = new BinaryNode(x, nullptr, nullptr);
+            return root;
+        }
+
+        BinaryNode* node = new BinaryNode(x, nullptr, nullptr);
+        BinaryNode* tmp = root;
+        while (true)
+        {
+            if (tmp->element_ > x)
+            {
+                if (tmp->left_ == nullptr)
+                {
+                    tmp->left_ = node;
+                    return root;
+                }
+                tmp = tmp->left_;
+            }
+            else
+            {
+                if (tmp->right_ == nullptr)
+                {
+                    tmp->right_ = node;
+                    return root;
+                }
+                tmp = tmp->right_;
+            }
+        }
     }
 
     void Remove(const Object& x, BinaryNode*& t) const
@@ -443,16 +482,27 @@ bool BinarySearchTree<Object, Comparator>:: Contains(const Object& x) const
 int main(int argc, char* argv[])
 {
     BinarySearchTree<float> binary_search_tree;
+    BinarySearchTree<float> binary_search_tree1;
     binary_search_tree.Insert(3.2f);
     binary_search_tree.Insert(3.5f);
     binary_search_tree.Insert(3.3f);
     binary_search_tree.Insert(4.6f);
     binary_search_tree.Insert(2.9f);
     binary_search_tree.Insert(5.4f);
+
+    binary_search_tree1.InsertNoRecursion(3.2f);
+    binary_search_tree1.InsertNoRecursion(3.5f);
+    binary_search_tree1.InsertNoRecursion(3.3f);
+    binary_search_tree1.InsertNoRecursion(4.6f);
+    binary_search_tree1.InsertNoRecursion(2.9f);
+    binary_search_tree1.InsertNoRecursion(5.4f);
+
     cout << "中序遍历：左子树->根->右子树" << endl;
     binary_search_tree.PrintTree();
     cout << endl;
     binary_search_tree.PrintTreeNoRecursion();
+    cout << endl;
+    binary_search_tree1.PrintTree();
     cout << endl;
     cout << "前序遍历：根->左子树->右子树" << endl;
     binary_search_tree.PrePrintTree();
