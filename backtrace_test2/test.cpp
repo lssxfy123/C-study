@@ -107,7 +107,8 @@ void DFS(int level)
                 // 递归调用把所有函数的调用都压入栈中
                 // 返回时依次从栈中弹出
                 DFS(level + 1);
-                trace[level][i] = 0;
+                trace[level][i] = 0;  // 这里很重要，需要将trace[level][i]重新置为0，
+                // 才能进行下一次试探
             }
         }
     }

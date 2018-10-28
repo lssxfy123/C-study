@@ -1,6 +1,8 @@
 // Copyright 2017.刘珅珅
 // author：刘珅珅
 // 回溯算法-求幂集
+// 如A = {1, 2, 3}
+// 幂集：{{1, 2, 3}, {1, 2}, {1, 3} {1}, {2, 3}, {2}, {3}, {}}
 #include <algorithm>
 #include <iostream>
 #include <vector>
@@ -20,19 +22,20 @@ void DFS(vector<int>& array, int level)
 
     // temp也是解空间树
     // 搜索的过程中动态产生
-    temp.push_back(array[level]);
+    //https://wenku.baidu.com/view/6b611332ddccda38376baf91.html
+    temp.push_back(array[level]);  // 取array[level]元素
     solution_tree.push_back(temp);
-    DFS(array, level + 1);
-    temp.pop_back();
+    DFS(array, level + 1);  // 进入下一层搜索
+    temp.pop_back();  // 不取array[level]元素
     solution_tree.push_back(temp);
-    DFS(array, level + 1);
+    DFS(array, level + 1);  // 进入下一层搜索
 }
 
 vector<vector<int> > SubSets(vector<int>& array)
 {
     sort(array.begin(), array.end());
     DFS(array, 0);
-    reverse(result.begin(), result.end());
+    // reverse(result.begin(), result.end());
     return result;
 }
 

@@ -4,7 +4,9 @@
 #include <algorithm>
 #include <functional>
 #include <iostream>
+#include <unordered_map>
 #include <stack>
+#include <queue>
 #include <string>
 using namespace std;
 
@@ -80,6 +82,16 @@ public:
     void PostPrintTreeNoRecursion() const
     {
         PostPrintTreeNoRecursion(root_);
+    }
+
+    void LevelPrintTree() const
+    {
+        LevelPrintTree(root_);
+    }
+
+    void LevelPrintTreeNoRecursion() const
+    {
+        LevelPrintTreeNoRecursion(root_);
     }
 
     void MakeEmpty()
@@ -458,6 +470,82 @@ private:
         }
     }
 
+    // 层次遍历
+    void LevelPrintTree(BinaryNode* root) const
+    {
+        vector<vector<Object>> result;
+        unordered_map<int, vector<Object>> level_map;
+        DFS(root, 1, level_map);
+        for (int i = 1; i <= level_map.size(); ++i)
+        {
+            result.push_back(level_map[i]);
+        }
+    }
+
+    void DFS(BinaryNode* node, int level,unordered_map<int, vector<Object>>& level_map) const
+    {
+        if (node == nullptr)
+        {
+            return;
+        }
+
+        if (level_map.find(level) != level_map.end())
+        {
+            level_map[level].push_back(node->element_);
+        }
+        else
+        {
+            vector<Object> level_result;
+            level_result.push_back(node->element_);
+            level_map.insert(pair<int, vector<Object>>(level, level_result));
+        }
+
+        DFS(node->left_, level + 1, level_map);
+        DFS(node->right_, level + 1, level_map);
+
+    }
+
+    void LevelPrintTreeNoRecursion(BinaryNode* root) const
+    {
+        vector<vector<Object>> result;
+        if (root == nullptr)
+        {
+            return;
+        }
+
+        queue<BinaryNode*> node_queue;
+        node_queue.push(root);
+        while (!node_queue.empty())
+        {
+            int size = node_queue.size();
+            vector<Object> level_result;
+
+            // 循环的结束值是size，即上个
+            // 循环插入的结点数目，由于二叉树
+            // 每个结点最多有两个子结点，所以
+            // 一次循环就将其左右子结点都入队，
+            // 循环完毕后其实是将下一层的所有子
+            // 结点都入队
+            for (int i = 0; i < size; ++i)
+            {
+                BinaryNode* head = node_queue.front();
+                node_queue.pop();
+                level_result.push_back(head->element_);
+                if (head->left_ != nullptr)
+                {
+                    node_queue.push(head->left_);
+                }
+
+                if (head->right_ != nullptr)
+                {
+                    node_queue.push(head->right_);
+                }
+            }
+
+            result.push_back(level_result);
+        }
+    }
+
     BinaryNode* Clone(BinaryNode* t) const
     {
         if (t == NULL)
@@ -514,6 +602,8 @@ int main(int argc, char* argv[])
     cout << endl;
     binary_search_tree.PostPrintTreeNoRecursion();
     cout << endl;
+    cout << "层次遍历" << endl;
+    binary_search_tree.LevelPrintTree();
 
     if (binary_search_tree.Contains(3.2f))
     {
