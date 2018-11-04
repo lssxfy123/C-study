@@ -232,11 +232,11 @@ private:
     // 删除指定的元素
     AVLTreeNode* Remove(T value, AVLTreeNode*& node)
     {
+        // AVL树是二叉查找树
         if (node != nullptr)
         {
             if (node->value_ == value)  // 找到删除结点
             {
-                // AVL树是二叉查找树
                 // 左右结点均不为空
                 if (node->right_child_ != nullptr && node->left_child_ != nullptr)
                 {
@@ -246,6 +246,7 @@ private:
                         // 查找左子树的最大结点
                         // 用其值代替node根结点的值
                         // 然后删除左子树的最大结点
+                        // 这样可以保证平衡性
                         AVLTreeNode* left_max_node = FindMax(node->left_child_);
                         node->value_ = left_max_node->value_;
                         node->left_child_ = Remove(left_max_node->value_, node->left_child_);
@@ -286,6 +287,7 @@ private:
                 {
                     // 相当于在左子树上插入右孩子
                     // node左孩子的右子树高度大于左子树
+                    // (画图就能看明白)
                     if (Height(node->left_child_->right_child_) > 
                         Height(node->left_child_->left_child_))
                     {

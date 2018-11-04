@@ -54,6 +54,11 @@ public:
         return root_ == NULL;
     }
 
+    bool IsBalanced() const
+    {
+        IsBalanced(root_);
+    }
+
     void PrintTree() const
     {
         PrintTree(root_);
@@ -113,6 +118,11 @@ public:
         Remove(x, root_);
     }
 
+    void RemoveNoRecursion(const Object& x)
+    {
+        root_ = RemoveNoRecursion(x, root_);
+    }
+
     const BinarySearchTree& operator= (const BinarySearchTree& rhs)
     {
         if (this != &rhs)
@@ -133,6 +143,65 @@ private:
         BinaryNode(const Object& element, BinaryNode* lt, BinaryNode* rt)
         : element_(element), left_(lt), right_(rt) {}
     };
+
+    // 时间复杂度为O(n*logn)，结点的高度会被重复计算
+    bool IsBalanced(BinaryNode* root) const
+    {
+        if (root == nullptr)
+        {
+            return 0;
+        }
+        int leftHeight = GetHeight(root->left_);
+        int rightHeight = GetHeight(root->right_);
+        if (abs(leftHeight - rightHeight) > 1)
+        {
+            return false;
+        }
+        return IsBalanced(root->left_) && IsBalanced(root->right_);
+    }
+
+    bool IsBalanced2(BinaryNode* root) const
+    {
+        return GetHeight2(root) == -1 ? false : true;
+    }
+
+
+    int GetHeight(BinaryNode* root) const 
+    {
+        if (root == nullptr)
+        {
+            return 0;
+        }
+        int height = max(GetHeight(root->left_), GetHeight(root->right_)) + 1;
+    }
+
+    // 时间复杂度为O(n)，所有结点都只会被计算一次
+    int GetHeight2(BinaryNode* root)
+    {
+        if (root == nullptr)
+        {
+            return 0;
+        }
+
+        int leftHeight = GetHeight2(root->left_);
+        if (leftHeight == -1)
+        {
+            return -1;
+        }
+
+        int rightHeight = GetHeight2(root->right_);
+        if (rightHeight == -1)
+        {
+            return -1;
+        }
+
+        if (abs(leftHeight - rightHeight) > 1)
+        {
+            return -1;
+        }
+
+        return max(leftHeight, rightHeight) + 1;
+    }
 
     // 使用了指针的引用
     // 在递归调用过程中，修改t的指向会改变外层的t的指向，从而形成树
@@ -193,6 +262,10 @@ private:
             return;
         }
 
+        // 在const函数中不能修改类成员变量
+        // 但对于指针而言，可以改变其指向的对象
+        // root_ = nullptr;  // error
+
         if (IsLessThan(x, t->element_))
         {
             Remove(x, t->left_);
@@ -214,6 +287,63 @@ private:
             t = (t->left_ != NULL)?t->left_:t->right_;
             delete old;
         }
+    }
+
+    BinaryNode* RemoveNoRecursion(const Object& x, BinaryNode* root)
+    {
+        if (root == nullptr)
+        {
+            return nullptr;
+        }
+
+        BinaryNode* tmp = root;
+        while (tmp != nullptr)
+        {
+            if (tmp->element_ < x)
+            {
+                tmp = tmp->right_;
+            }
+            else if (tmp->element_ > x)
+            {
+                tmp = tmp->left_;
+            }
+            else
+            {
+                if (tmp->left_ != nullptr && tmp->right_ != nullptr)
+                {
+                    BinaryNode* delete_node = tmp->right_;
+                    BinaryNode* parent = tmp;
+                    while (delete_node->left_ != nullptr)
+                    {
+                        parent = delete_node;
+                        delete_node = delete_node->left_;
+                    }
+                    tmp->element_ = delete_node->element_;
+
+                    // 如果待删除结点为其父结点的左孩子
+                    // delete_node没有左孩子
+                    if (parent->left_ == delete_node)
+                    {
+                        parent->left_ = delete_node->right_;
+                    }
+                    else
+                    {
+                        parent->right_ = delete_node->right_;
+                    }
+                    
+                    delete delete_node;
+                    break;
+                }
+                else
+                {
+                    BinaryNode* old = tmp;
+                    tmp = (tmp->left_ != nullptr) ? tmp->left_ : tmp->right_;
+                    delete old;
+                    break;
+                }
+            }
+        }
+        return root;
     }
 
     BinaryNode* FindMin(BinaryNode* t) const
@@ -575,6 +705,8 @@ int main(int argc, char* argv[])
     binary_search_tree.Insert(3.5f);
     binary_search_tree.Insert(3.3f);
     binary_search_tree.Insert(4.6f);
+    binary_search_tree.Insert(3.9f);
+    binary_search_tree.Insert(5.1f);
     binary_search_tree.Insert(2.9f);
     binary_search_tree.Insert(5.4f);
 
@@ -604,6 +736,16 @@ int main(int argc, char* argv[])
     cout << endl;
     cout << "层次遍历" << endl;
     binary_search_tree.LevelPrintTree();
+
+    cout << "删除测试" << endl;
+    binary_search_tree.RemoveNoRecursion(3.5f);
+    cout << "删除后的中序遍历：左子树->根->右子树" << endl;
+    binary_search_tree.PrintTree();
+    cout << endl;
+    binary_search_tree1.RemoveNoRecursion(3.5f);
+    cout << "删除后的中序遍历：左子树->根->右子树" << endl;
+    binary_search_tree1.PrintTree();
+    cout << endl;
 
     if (binary_search_tree.Contains(3.2f))
     {
