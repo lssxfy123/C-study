@@ -6,52 +6,120 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-typedef struct List
+typedef struct ListNode
 {
-    int number;
-    struct List* next;
-} List;
+    int val;
+    struct ListNode* next;
+} ListNode;
 
-List* CreateList(List* head);
-void PrintList(List* head);
-List* ReverseList(List* head);
+ListNode* CreateList(ListNode* head);
+void PrintList(ListNode* head);
+ListNode* ReverseList(ListNode* head);
 
-void ListTest(List* head);
+// 链表划分
+ListNode* Partition(ListNode* head, int x)
+{
+    if (head == nullptr)
+    {
+        return head;
+    }
+
+    // 第1个大于x的结点
+    ListNode* first_greater_node = nullptr;
+    ListNode* prev_first_greater_node = nullptr;
+    ListNode* tmp = head;
+    ListNode* prev = nullptr;
+    bool hasHead = false;
+    while (tmp != nullptr)
+    {
+        if (tmp->val >= x)
+        {
+            prev_first_greater_node = prev;
+            first_greater_node = tmp;
+            prev = tmp;
+            tmp = tmp->next;
+            break;
+        }
+        prev = tmp;
+        tmp = tmp->next;
+        hasHead = true;  // 链表第1个结点小于x，head结点不需要更改
+    }
+    if (first_greater_node == nullptr || tmp == nullptr)
+    {
+        return head;
+    }
+
+    while (tmp != nullptr)
+    {
+        if (tmp->val >= x)
+        {
+            prev = tmp;
+            tmp = tmp->next;
+        }
+        else
+        {
+            ListNode* tmp_next = tmp->next;
+            prev->next = tmp_next;
+            if (prev_first_greater_node != nullptr)
+            {
+                prev_first_greater_node->next = tmp;
+            }
+            prev_first_greater_node = tmp;
+            tmp->next = first_greater_node;
+            if (!hasHead)
+            {
+                head = tmp;
+                hasHead = true;
+            }
+            tmp = prev->next;
+        }
+    }
+
+    return head;
+}
+
+void ListTest(ListNode* head);
 
 int main(int argc, char* argv[])
 {
-    List* head = NULL;
+    ListNode* head = NULL;
 
     head = CreateList(head);
+    cout << "链表划分" << endl;
+    head = Partition(head, 3);
+    PrintList(head);
+    cout << endl;
     ListTest(head);
     PrintList(head);
+    cout << endl;
 
     cout << "链表反序" << endl;
     head = ReverseList(head);
     // ReverseList(head);  // 这样操作是不会将链表反序，因为在函数中修改指针本身是没有用的
     PrintList(head);
+    cout << endl;
 
     return 0;
 }
 
-void ListTest(List* head)
+void ListTest(ListNode* head)
 {
-    head->number = 1;  // 会修改函数外部实参中的值
+    head->val = 1;  // 会修改函数外部实参中的值
     head = NULL;  // 不会影响函数外部实参的值
 }
 
 // 创建链表
-List* CreateList(List* head)
+ListNode* CreateList(ListNode* head)
 {
-    List* list1_ptr = NULL;
-    List* list2_ptr = NULL;
+    ListNode* list1_ptr = NULL;
+    ListNode* list2_ptr = NULL;
 
-    list1_ptr = new List;
+    list1_ptr = new ListNode;
     // list2_ptr = new List;
 
-    memset(list1_ptr, 0, sizeof(List));
+    memset(list1_ptr, 0, sizeof(ListNode));
 
-    cin >> list1_ptr->number;
+    cin >> list1_ptr->val;
 
     // 如果每次新节点的元素number大于0，则增加节点
     // 初始化状态下head为NULL，第一次循环，head==NULL，将head
@@ -61,7 +129,7 @@ List* CreateList(List* head)
     // 将list2_ptr指向list1_ptr；第三次循环，将list2_ptr->next指向新产生
     // 的节点list1_ptr，实际是将第二个节点的next指针指向了新产生的list1_ptr
     // 这样就构成了链表
-    while (list1_ptr->number > 0)
+    while (list1_ptr->val > 0)
     {
         if (head == NULL)
         {
@@ -74,9 +142,9 @@ List* CreateList(List* head)
 
         list2_ptr = list1_ptr;
 
-        list1_ptr = new List;  // 将list1_ptr当成每次添加的新节点
-        memset(list1_ptr, 0, sizeof(List));
-        cin >> list1_ptr->number;
+        list1_ptr = new ListNode;  // 将list1_ptr当成每次添加的新节点
+        memset(list1_ptr, 0, sizeof(ListNode));
+        cin >> list1_ptr->val;
 
         list1_ptr->next = NULL;
     }
@@ -84,7 +152,7 @@ List* CreateList(List* head)
     return head;
 }
 
-void PrintList(List* head)
+void PrintList(ListNode* head)
 {
     if (head == NULL)
     {
@@ -96,7 +164,7 @@ void PrintList(List* head)
 
         while (head != NULL)
         {
-            cout << head->number << endl;
+            cout << head->val << ",";
 
             // 在函数中修改指针本身，不会影响函数外部的实参指针
             head = head->next;
@@ -106,7 +174,7 @@ void PrintList(List* head)
 }
 
 // 链表反序
-List* ReverseList(List* head)
+ListNode* ReverseList(ListNode* head)
 {
     if (head == NULL)
     {
@@ -114,9 +182,9 @@ List* ReverseList(List* head)
         return head;
     }
 
-    List* p1 = NULL;
-    List* p2 = NULL;
-    List* p3 = NULL;
+    ListNode* p1 = NULL;
+    ListNode* p2 = NULL;
+    ListNode* p3 = NULL;
 
     p1 = head;
     p2 = p1->next;
