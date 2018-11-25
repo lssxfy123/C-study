@@ -28,6 +28,7 @@ int removeDuplicates(vector<int> &nums) {
     return nums.size();
 }
 
+// 删除重复元素，每个元素只出现一次
 int removeDuplicates1(vector<int> &nums) {
     // write your code here
     if (nums.size() == 0)
@@ -37,6 +38,8 @@ int removeDuplicates1(vector<int> &nums) {
     int length = 0;
     for (int i = 1; i < nums.size();  ++i)
     {
+        // 将数组后面与之前元素不同的元素
+        // 向前挪移
         if (nums[length] != nums[i])
         {
             nums[++length] = nums[i];
@@ -51,6 +54,7 @@ int removeDuplicates1(vector<int> &nums) {
     return length + 1;
 }
 
+// 删除重复元素，每个元素最多出现两次
 int removeDuplicates2(vector<int> &nums) {
     // write your code here
     if (nums.size() == 0)
