@@ -7,34 +7,27 @@
 #include "../../include/print.hpp"
 using namespace std;
 
+// 递归：速度较慢
 int GetMinValue(int x, int y, vector<vector<int>> &grid)
 {
     vector<int> tmp;
-    if (x - 1 >= 0)
+    if (x == grid.size() - 1 && y == grid[0].size() -1)
     {
-        tmp.push_back(GetMinValue(x - 1, y, grid));
+        return grid[x][y];
     }
 
-    //if (x + 1 < rows)
-    //{
-    //    tmp.push_back(GetMinValue(x + 1, y));
-    //}
-
-    if (y - 1 >= 0)
+    // x为最后一行，只能向右走
+    if (x == grid.size() - 1 && y != grid[0].size() - 1)
     {
-        tmp.push_back(GetMinValue(x, y - 1, grid));
+        return grid[x][y] + GetMinValue(x, y + 1, grid);
+    }
+    // y在最后一列，只能向下走
+    else if (x != grid.size() - 1 && y == grid[0].size() - 1)
+    {
+        return grid[x][y] + GetMinValue(x + 1, y, grid);
     }
 
-    //if (y + 1 < colums)
-    //{
-    //    tmp.push_back(GetMinValue(x, y + 1));
-    //}
-
-    if (tmp.size() > 0)
-    {
-        return *min_element(tmp.begin(), tmp.end()) + grid[x][y];
-    }
-    return grid[x][y];
+    return grid[x][y] + min(GetMinValue(x + 1, y, grid), GetMinValue(x, y + 1, grid));
 }
 
 int minPathSum(vector<vector<int>> &grid) {
@@ -50,7 +43,7 @@ int minPathSum(vector<vector<int>> &grid) {
         return 0;
     }
 
-    int sum = GetMinValue(rows - 1, colums - 1, grid);
+    int sum = GetMinValue(0, 0, grid);
     return sum;
 }
 
