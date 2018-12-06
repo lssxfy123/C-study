@@ -41,6 +41,15 @@ int main(int argc, char* argv[])
     auto t2 = f2();  // t2 = 0;
     cout << "t2 = " << t2 << endl;
 
+	int v3 = 5;
+	auto t3 = [&v3]() {
+		++v3;  // 引用捕获可以在lambda函数中修改其值
+		return v3;
+	};
+
+	cout << "v3 = " << v3 << endl;
+	cout << "t3 = " << t3() << endl;
+
     // 隐式值捕获
     // 不需要指明需要捕获的变量
     auto f3 = [=]() {
