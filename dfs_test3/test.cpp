@@ -11,10 +11,18 @@ int maze[5][9];  // 定义迷宫
 int paths;  // 路径条数
 int n = 5;
 int m = 9;
-int p = 1;  // 终点x
-int q = 1;  // 终点y
+int p = 0;  // 终点x
+int q = 0;  // 终点y
 int book[51][51];
 int min_step = 99999;
+
+struct Point
+{
+	int x;
+	int y;
+};
+
+vector<Point> current_path;  // 当前路径
 
 void dfs(int x, int y, int step)
 {
@@ -27,12 +35,27 @@ void dfs(int x, int y, int step)
 	if (x == p && y == q)
 	{
 		++paths;
+		for (int i = 0; i < current_path.size(); ++i)
+		{
+			if (i < current_path.size() - 1)
+			{
+				cout << "(" << current_path[i].x << "," << current_path[i].y
+					<< ")" << "->";
+			}
+			else
+			{
+				cout << "(" << current_path[i].x << "," << current_path[i].y
+					<< ")";
+			}
+		}
+		cout << endl;
+
 		if (step < min_step)
 			min_step = step;
 		return;
 	}
 
-	for (int k = 0; k < 3; ++k)
+	for (int k = 0; k < 4; ++k)
 	{
 		int tx = x + next[k][0];
 		int ty = y + next[k][1];
@@ -41,7 +64,10 @@ void dfs(int x, int y, int step)
 		if (maze[tx][ty] == 0 && book[tx][ty] == 0)
 		{
 			book[tx][ty] = 1;  // 标记已走
+			Point point = { tx, ty };
+			current_path.push_back(point);
 			dfs(tx, ty, step + 1);  // 尝试下一个
+			current_path.pop_back();
 			book[tx][ty] = 0;  // 尝试结束，取消这个点的标记
 		}
 	}
@@ -70,6 +96,7 @@ int main(int argc, char* argv[])
 {
 	int startx = 0;
 	int starty = 8;
+	InitMaze();
 	book[startx][starty] = 1;
 	dfs(startx, starty, 0);
 	cout << "min step: " << min_step << endl;
