@@ -10,6 +10,11 @@
 11. 二叉查找数搜索区间：lintcode/search_range_test
 13. 字符串查找：lintcode/string_find_test
 14. 二分查找：lintcode/half_search_test
+15. 全排列：lintcode/permute_test
+16. 带重复元素的排列：lintcode/permute_test
+17. 子集：lintcode/subsets_test
+18. 子集II：lintcode/subsets_test
+20. 骰子求和：lintcode/dices_sum_test
 22. 平面列表：无
 28. 搜索二维矩阵：lintcode/search_matrix_test
 35. 翻转链表：lintcode/reverse_list_test
