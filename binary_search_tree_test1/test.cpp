@@ -8,6 +8,9 @@
 #include <stack>
 #include <queue>
 #include <string>
+#include <sstream>
+#include <regex>
+#include <iterator>
 using namespace std;
 
 template <typename Object, typename Comparator = less<Object> >
@@ -122,6 +125,39 @@ public:
     {
         root_ = RemoveNoRecursion(x, root_);
     }
+
+	string Serialize() const
+	{
+		return Serialize(root_);
+	}
+
+	void Deserialize(string& data)
+	{
+		if (data == "{}")
+		{
+			root_ = nullptr;
+		}
+
+		if (data.back() == '}')
+		{
+			data.pop_back();
+		}
+
+		if (data.front() == '{')
+		{
+			data.erase(data.begin());
+		}
+
+		regex re{ "," };
+		vector<string> res(sregex_token_iterator(data.begin(), data.end(), re, -1), sregex_token_iterator());
+		for (int i = 0; i < res.size(); ++i)
+		{
+			cout << res[i] << " ";
+		}
+		cout << endl;
+
+		root_ = Deserialize(res);
+	}
 
     const BinarySearchTree& operator= (const BinarySearchTree& rhs)
     {
@@ -676,6 +712,107 @@ private:
         }
     }
 
+	string Serialize(BinaryNode* root) const
+	{
+		string result = {};
+		if (root == nullptr)
+		{
+			return result;
+		}
+
+		vector<BinaryNode*> array;
+		array.push_back(root);
+
+		// 类似二叉树的层次遍历，但不需要遍历输出，
+	    // 所以不需要使用queue
+		for (int i = 0; i < array.size(); ++i)
+		{
+			BinaryNode* node = array[i];
+			if (node == nullptr)
+			{
+				continue;
+			}
+
+			array.push_back(node->left_);
+			array.push_back(node->right_);
+		}
+
+		// 去掉末尾的nullptr
+		while (array.size() > 0 && array.back() == nullptr)
+		{
+			array.pop_back();
+		}
+
+		stringstream ss;
+		ss << "{";
+		for (int i = 0; i < array.size(); ++i)
+		{
+			if (array[i] == nullptr)
+			{
+				ss << "#,";
+			}
+			else
+			{
+				if (i < array.size() - 1)
+					ss << array[i]->element_ << ",";
+				else
+					ss << array[i]->element_;
+			}
+		}
+		ss << "}";
+		result = ss.str();
+		return result;
+	}
+
+	Object Convert(const string & t) {
+		stringstream stream;
+		stream << t;  // 向流中传值
+		Object result;  // 这里存储转换结果
+		stream >> result;  // 向result中写入值
+		return result;
+	}
+
+	BinaryNode* Deserialize(vector<string>& nodes)
+	{
+		if (nodes.size() == 0)
+		{
+			return nullptr;
+		}
+
+		BinaryNode* root = new BinaryNode(Convert(nodes[0]), nullptr, nullptr);
+		bool is_left_child = true;
+
+		// 反序列化的思想：
+		// 将根结点插入队列中，然后判断下一个nodes字符串是否是有效结点
+		// 如果不为"#"，就当成上一个结点的左孩子，再下一个就是右孩子
+		// 然后把根结点出队，序列化是按层序列的
+		queue<BinaryNode*> node_queue;
+		node_queue.push(root);
+		for (int i = 1; i < nodes.size(); ++i)
+		{
+			if (nodes[i] != "#")
+			{
+				BinaryNode* node = new BinaryNode(Convert(nodes[i]), nullptr, nullptr);
+				if (is_left_child)
+				{
+					node_queue.front()->left_ = node;
+				}
+				else
+				{
+					node_queue.front()->right_ = node;
+				}
+				node_queue.push(node);
+			}
+
+			if (!is_left_child)
+			{
+				node_queue.pop();
+			}
+			is_left_child = !is_left_child;  // 左孩子的下一个就是右孩子
+		}
+		return root;
+	}
+
     BinaryNode* Clone(BinaryNode* t) const
     {
         if (t == NULL)
@@ -716,6 +853,15 @@ int main(int argc, char* argv[])
     binary_search_tree1.InsertNoRecursion(4.6f);
     binary_search_tree1.InsertNoRecursion(2.9f);
     binary_search_tree1.InsertNoRecursion(5.4f);
+
+	string serialize = binary_search_tree1.Serialize();
+	BinarySearchTree<float> deserialize_tree;
+
+	cout << "序列化二叉树: " << serialize  << endl;
+	deserialize_tree.Deserialize(serialize);
+	cout << "反序列化二叉树: " << endl;
+	deserialize_tree.PrintTree() ;
+	cout << endl;
 
     cout << "中序遍历：左子树->根->右子树" << endl;
     binary_search_tree.PrintTree();
