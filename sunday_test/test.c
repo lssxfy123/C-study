@@ -100,7 +100,7 @@ int SundaySearch(unsigned char* src, int src_length, unsigned char* dest, int de
 
         // 查找在源字符串中，待搜索的字符串长度后一位的字符对应的标记
         k = marks[src[i + dest_length]];
-        if (k == -1)  // 如果该字符串不存在于待搜索的字符串中
+        if (k == -1)  // 如果该字符不存在于待搜索的字符串中
         {
             i = i + dest_length + 1;  // 直接将待搜索的字符串右移本身长度+1位
         }

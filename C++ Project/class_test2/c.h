@@ -13,7 +13,7 @@ class C
     C& SetHeight(int height);
 
   private:
-    int height;
+    int height = 0;
     const int width;
     // const int width = 0;  // error：不能在这里进行初始化
 };

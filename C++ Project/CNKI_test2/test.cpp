@@ -14,7 +14,7 @@ int main(int argc, char* argv[])
 {
     char src[100] = "abababababab";
     char* A = "ab";
-    char* B = "kk";
+    char* B = "kkk";
     Replace(src, A, B);
 
     cout << src << endl;
@@ -50,6 +50,7 @@ void Replace(char* src, const char* A, const char* B)
         int p_length = strlen(p);
         if (A_length > B_length)
         {
+			// A>B，用后面的字符填充A多出来的字符
             for (int i = A_length; i <= (p_length); ++i)
             {
                 p[i - (A_length - B_length)] = p[i];
@@ -57,6 +58,7 @@ void Replace(char* src, const char* A, const char* B)
         } else if (A_length < B_length)
         {
             // 因为src的长度足够，所以p可以访问到超出p_length范围
+			// A<B，将A后面的一部分字符向后移动，避免之后被B覆盖掉
             for (int i = p_length; i >= A_length; --i)
             {
                 p[i + (B_length - A_length)] = p[i];

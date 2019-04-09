@@ -4,6 +4,12 @@
 #include <iostream>
 using namespace std;
 
+void func()
+{
+	int k = 3;
+	constexpr int* p = &k;
+}
+
 int main(int argc, char* argv[])
 {
     // 新的内置类型long long
@@ -33,6 +39,16 @@ int main(int argc, char* argv[])
     k = 2;
     cout << *p << endl;  // 2
     // p = nullptr;  // error，不能改变p的指向
+	*p = 3;  // 可以通过*修改指向对象的值
+	cout << k << endl;  // 3
+
+	int k1 = 2;
+	// 下面是指向常量的指针
+	const int* p2 = &k1;
+	// *p2 = 5;  // error，不能通过*修改指针指向的对象
+	p2 = nullptr;  // 可以习惯指针本身
+	
+	func();
 
     // decltype类型指示符
     const int ci = 0;

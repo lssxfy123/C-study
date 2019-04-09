@@ -13,6 +13,18 @@ int main(int argc, char* argv[])
     cout << 7 % -4 << endl;  // 3
     cout << -7 % 4 << endl;  // -3
     cout << -7 % -4 << endl;  // -3
+	cout << endl;
+
+	cout << 7 / 4 << endl;  // 1
+	cout << 7 / -4 << endl;  // -1
+	cout << -7 / 4 << endl;  // -1
+	cout << -7 / -4 << endl;  // 1
+	cout << endl;
+
+	cout << 7 % 8 << endl;  // 7
+	cout << 7 % -8 << endl;  // 7
+	cout << -7 % 8 << endl;  // -7
+	cout << -7 % -8 << endl;  // -7
 
     // 有符号数与无符号数取模时
     // 将有符号数看成无符号数处理
