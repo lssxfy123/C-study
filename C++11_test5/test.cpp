@@ -44,15 +44,21 @@ public:
     // constexpr必须初始化所有的成员变量
     // 初始化值是一条常量表达式或constexpr
     // 构造函数（针对某些类类型的成员变量）
-    constexpr Test2(bool hw, bool io, bool other)
-        : hw_(hw), io_(io), other_(other)
+    // 必须在初始化列表中初始化，之后还可以在
+    // 构造函数体内初始化
+    constexpr Test2(bool hw, bool io, bool other, int count)
+        : hw_(hw), io_(io), other_(other), count_(count)
     {
-
+        count_ = count;
     }
+
+    Test2()
+    {}
 private:
     bool hw_;
     bool io_;
     bool other_;
+    int count_;
 };
 
 int main(int argc, char* argv[])
@@ -63,5 +69,9 @@ int main(int argc, char* argv[])
     Test1 t1;
     cout << endl;
     Test1 t2("1234");
+
+    // constexpr
+    Test2 t3(false, false, false, 3);
+    Test2 t4;
     return 0;
 }
