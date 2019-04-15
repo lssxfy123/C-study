@@ -45,8 +45,8 @@ int main(int argc, char* argv[])
 {
     shared_ptr<Person> ptr = InitFamily("nico");
     cout << "nico is shared " << ptr.use_count() << " times" << endl;  // 1
-    cout << "name of 1st kid of nico's mom " <<
-        ptr->mother_->kids_[0].lock()->name_.c_str() << endl;
+	cout << "name of 1st kid of nico's mom " <<
+		ptr->mother_->kids_[0].lock()->name_.c_str() << endl;
     ptr = InitFamily("jim");
     cout << "jim's family exists" << endl;
 
