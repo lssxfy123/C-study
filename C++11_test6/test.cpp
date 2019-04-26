@@ -47,8 +47,9 @@ int main(int argc, char* argv[])
 		return v3;
 	};
 
-	cout << "v3 = " << v3 << endl;
-	cout << "t3 = " << t3() << endl;
+	cout << "original v3 = " << v3 << endl;  // 5
+	cout << "t3 = " << t3() << endl;  // 6
+    cout << "v3 = " << v3 << endl;  // 6
 
     // 隐式值捕获
     // 不需要指明需要捕获的变量
