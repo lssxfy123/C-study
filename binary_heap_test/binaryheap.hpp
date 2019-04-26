@@ -106,8 +106,9 @@ public:
 private:
     // 由任意顺序的数组生成二叉堆
     // 从current_size_/2开始下滤的原因是
-    // 最底层的元素不需要下滤,根据二叉堆的结构
-    // 可以直接从current_size_/2开始下滤
+    // 最底层的元素不需要下滤，根据二叉堆(完全二叉树)的结构
+	// 有current_size_/2个元素是叶结点，叶结点不需要下滤，其没有
+	// 左右子结点，可以直接从current_size_/2开始下滤
     void BuildHeap()
     {
         for (int i = current_size_ / 2; i > 0; --i)
@@ -117,6 +118,7 @@ private:
     }
 
     // 下滤
+	// 所谓下滤就是把当前需要调整的结点与其左右子结点比较
     void PercolateDown(int hole)
     {
         int child;
@@ -127,12 +129,18 @@ private:
 
             // 如果child不等于current_size_，则表示右儿子肯定存在
             // 如果右儿子比左儿子小，则比较右儿子
+			// 从二叉堆的性质可以看出，左右子结点相互的大小并不确定
+			// 最小堆是结点比左右子结点都小，最大堆是结点比左右子结点都大
             if (child != current_size_ && array_[child + 1] < array_[child])
             {
                 ++child;
             }
 
-            if (array_[child] < tmp)
+			// 如果子结点小于当前节点，将子结点的值赋给当前结点
+			// 在for循环体中 会执行hold=child，继续进行下滤，这样
+			// 是为了将初始的array_[hole]下滤到初始结点到叶子结点
+			// 路径上最合适的位置
+            if (array_[child] < tmp)  // 最小堆
             {
                 array_[hole] = array_[child];
             } else

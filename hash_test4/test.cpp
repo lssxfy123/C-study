@@ -42,6 +42,6 @@ int main(int argc, char* argv[])
     hash_table.Insert("efgh");
     hash_table.Insert("efgh");
     hash_table.Insert("abct");
-    //hash_table.PrintTable();
+    hash_table.PrintTable();
     return 0;
 }

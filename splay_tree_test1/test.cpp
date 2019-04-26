@@ -324,16 +324,18 @@ private:
 
         for (;;)
         {
-            if (IsLessThan(value, node->value_))
+            if (IsLessThan(value, node->value_))  // value小于node的value
             {
                 if (node->left_child_ == nullptr)
                 {
                     break;
                 }
 
+				// value还小于node的左孩子的value
                 if (IsLessThan(value, node->left_child_->value_))
                 {
                     // 旋转是为了将value对应的结点更快伸展到根
+					// 把node的左孩子旋转成了node
                     RightRotation(node);
                     if (node->left_child_ == nullptr)
                     {
@@ -344,17 +346,21 @@ private:
                 // 挂载到右树Right的左子树上
                 // node即将变成其左孩子
                 // 挂载到Right上的比node->left_child_大
+				// 之所以挂载到Right的左子树上，是因为
+				// 之后挂载到Right上的肯定会比之前的小
+				// 因为node是前一个node的左孩子
                 Right->left_child_ = node;
                 Right = node;
                 node = node->left_child_;
             }
-            else if (IsLessThan(node->value_, value))
+            else if (IsLessThan(node->value_, value))  // node的value小于value
             {
                 if (node->right_child_ == nullptr)
                 {
                     break;
                 }
 
+				// node的右孩子的value还小于value
                 if (IsLessThan(node->right_child_->value_, value))
                 {
                     LeftRotation(node);

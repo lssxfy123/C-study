@@ -9,3 +9,4 @@ Release
 *.vcproj.*
 *.ipch
 *.db
+*.vcxproj.user

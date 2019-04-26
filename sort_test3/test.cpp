@@ -88,7 +88,7 @@ void QuickSort(vector<Comparable>& array, int left, int right)
         }
 
         // 退出上面的for循环
-        // 说明array[i] >= array[right - 1]
+        // 说明array[i] >= array[right - 1]，因为在Median3中pivot=array[right-1]
         // 交换它们进行排序
         // array[i]存储的就是pivot
         swap(array[i], array[right - 1]);

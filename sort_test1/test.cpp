@@ -82,13 +82,14 @@ template<typename Comparable>
 void PercolateDown(vector<Comparable>& array, int i, int n)
 {
     int child;
-    Comparable temp;
+    Comparable temp = array[i];
 
-    for (temp = array[i]; LefChild(i) < n; i = child)
+    for (; LefChild(i) < n; i = child)
     {
         child = LefChild(i);
 
         // 最大堆，小值下滤
+		// 查看左孩子和右孩子谁更大
         if (child != n - 1 && array[child] < array[child + 1])
         {
             ++child;
@@ -118,7 +119,7 @@ void HeapSort(vector<Comparable>& array)
         // array[0]肯定是数组的最大值
         // 排序开始，将array[0]与array[array.size() - 1]交换
         // 这样最大值就换到了数组末，然后执行下滤操作
-        // 注意是前array.size() - 1项的下滤，最后一项不参考
+        // 注意是前array.size() - 1项的下滤，最后一项不参与
         // 这样把前array.size() - 1项的最大值移动到了array[0]位置
         swap(array[0], array[j]);
         PercolateDown(array, 0, j);
