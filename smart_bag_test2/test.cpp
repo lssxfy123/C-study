@@ -77,7 +77,7 @@ void SmartBag()
             {
                 // max_value_array为一维数组，其存储的是重量为j时的所有选择的最优解
                 // 这样就不需要用二维数组了
-                // j需要从背部的最大容量开始递减，因为max_value_arry[j]需要根据
+                // j需要从背包的最大容量开始递减，因为max_value_arry[j]需要根据
                 // max_value_array[j - goods_weight[i]]来推导
                 // 目前没法给出最优的选择，即哪个物品选中，哪个没选中
                 max_value_array[j] = max_value_array[j - goods_weight[i]] + goods_value[i];

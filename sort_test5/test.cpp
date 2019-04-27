@@ -43,7 +43,7 @@ void FindKMaxNumbers(vector<Comparable>& array, vector<Comparable>& result_array
             // 初始值为kResultArraySize - 1，即最后一个值
             // 如果result_array中的值被后续的值替换，则需要重新寻找最小值
             // 如果min_element_index等于zone_begin_index，则--zone_begin_index，即
-            // 将起始位置向前移动1位，只移动1位是因为在往前的元素肯定比
+            // 将起始位置向前移动1位，只移动1位是因为再往前的元素肯定比
             // result_array[--zone_begin_index]大
             // 考虑min_element_index为0的情况
             if (min_element_index == zone_begin_index)
@@ -61,6 +61,9 @@ void FindKMaxNumbers(vector<Comparable>& array, vector<Comparable>& result_array
             }
 
             int index = zone_begin_index;
+            // 未重新排序的情况下，查找最小值
+            // result_array中0-zone_begin_index的元素是排序的
+            // zone_begin_index+1-kResultArraySize-1是未排序的
             for (int j = index + 1; j < kResultArraySize; ++j)
             {
                 if (result_array[index] > result_array[j])
