@@ -16,6 +16,8 @@ vector<int> searchRange(TreeNode * root, int k1, int k2) {
 		return result;
 	}
 
+	// 根据二叉查找树的特点
+	// 如果root结点小于k1，则其左子树结点肯定都小于k1
 	while (root != nullptr && root->val < k1)
 	{
 		root = root->right;
@@ -26,6 +28,7 @@ vector<int> searchRange(TreeNode * root, int k1, int k2) {
 		return result;
 	}
 
+	// 如果root结点大于k2，则其右子树结点肯定都大于k2
 	while (root != nullptr && root->val > k2)
 	{
 		root = root->left;
@@ -38,6 +41,7 @@ vector<int> searchRange(TreeNode * root, int k1, int k2) {
 
 	stack<TreeNode*> tree_stack;
 
+	// 要求结果为升序排列，所以进行中序遍历
 	while (root != nullptr)
 	{
 		tree_stack.push(root);

@@ -146,6 +146,7 @@ public:
                 // replace的子结点开始调整
                 adjust_node = replace->right_child_;
 
+				// 删除要保证树是一个二叉查找树
                 // delete_node的右孩子就是右子树最小结点
                 if (replace->parent_ == delete_node)
                 {
@@ -154,12 +155,22 @@ public:
                 else
                 {
                     // 设置replace->parent_的子结点
+					// replace要用来取代delete_node结点
+					// 所以要将其右子树(左子树肯定为nullptr)先设置好，设置
+					// 为replace->parent_的子结点
                     Transplant(replace, replace->right_child_);
+
+					// replace是delete_node的右子树的最小结点
+					// 先将delete_node的右子树设置为replace的右子树
+					// 之后还要设置delete_node的左子树
+					// 之后replace->right_child_为之前delete_node的右孩子
+					// 所以还要设置其parent_为replace
                     replace->right_child_ = delete_node->right_child_;
                     replace->right_child_->parent_ = replace;
                 }
 
                 Transplant(delete_node, replace);
+				// 设置replace的左子树
                 replace->left_child_ = delete_node->left_child_;
                 replace->left_child_->parent_ = replace;
                 replace->color_ = delete_node->color_;
@@ -367,7 +378,8 @@ private:
                     if (parent->right_child_ == node)
                     {
                         // 将当前结点的父结点作为新的当前结点进行旋转
-                        // 不能直接旋转当前结点，会破坏平衡条件5
+                        // 需要旋转的原因是当前情况不符合平衡条件4
+						// 旋转后将其转化为Case3
                         node = node->parent_;
                         LeftRotation(node);
                     }
@@ -399,7 +411,7 @@ private:
                 }
                 else
                 {
-                    // Case2：叔叔结点为黑色，当前结点为父结点的右孩子
+                    // Case2：叔叔结点为黑色，当前结点为父结点的左孩子
                     if (parent->left_child_ == node)
                     {
                         node = node->parent_;
@@ -432,6 +444,11 @@ private:
 
                 // Case1：兄弟结点是红色
                 // 父结点和兄弟结点的子结点肯定为黑
+				// 这里要以node_parent_作为子树的根结点进行左旋
+				// 如果不左旋，肯定为违背红黑平衡条件5，因为
+				// 之前兄弟结点为红色，涂成黑色后，以node_parent_
+				// 为根结点的子树肯定不红黑平衡了。左旋后，兄弟结点
+				// 变成了子树的根结点，至少不会再破坏该子树的红黑平衡
                 if (brother->color_ == Red)
                 {
                     brother->color_ = Black;
@@ -539,6 +556,8 @@ private:
 
     // 红黑子树的移植
     // 用replace替换src
+	// 如果src为其父结点的左孩子，replace也设置为src父结点的左孩子
+	// 否则就设置为src父结点的右孩子
     void Transplant(RedBlackNode* src, RedBlackNode* replace)
     {
         if (src->parent_ == null_node_)

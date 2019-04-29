@@ -167,12 +167,16 @@ vector<Interval> insert1(vector<Interval> &intervals, Interval newInterval) {
     }
 
     int index = 0;
+	// 将原间隔数组中间隔的start<newInterval.start都
+	// 插入到result，它们肯定在newInterval之前
     for (index = 0; index < intervals.size()
         && intervals[index].start < newInterval.start; ++index)
     {
         result.push_back(intervals[index]);
     }
 
+	// 如果result的最后一个间隔的end>=newInterval.start
+	// 说明newInterval与最后一个间隔存在重叠
     if (!result.empty() && result.back().end >= newInterval.start)
     {
         result.back().end = max(result.back().end, newInterval.end);
@@ -182,6 +186,10 @@ vector<Interval> insert1(vector<Interval> &intervals, Interval newInterval) {
         result.push_back(newInterval);
     }
 
+	// 插入newInterval后，将原间隔数组中剩余
+	// 间隔插入result中，要判断result最后一个
+	// 间隔的end是否大于之后间隔的start，以
+	// 判断是否需要合并间隔
     for (int i = index; i < intervals.size(); ++i)
     {
         if (result.back().end >= intervals[i].start)

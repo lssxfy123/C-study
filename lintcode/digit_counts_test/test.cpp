@@ -169,6 +169,25 @@ int digitCounts2(int k, int n) {
 	return result;
 }
 
+// 九章参考答案
+int digitCounts3(int k, int n) {
+	int count = 0;
+	if (k == 0) {
+		count = 1;
+	}
+	for (int i = 1; i <= n; i++) {
+		int number = i;
+		while (number > 0) {
+			if (number % 10 == k) {
+				count += 1;
+			}
+			number /= 10;
+		}
+	}
+
+	return count;
+}
+
 int digitCounts(int k, int n) {
 	// write your code here
 	int result = 0;
@@ -203,6 +222,8 @@ int digitCounts(int k, int n) {
 		// 依次类推
 		if (digits.size() > 0)
 		{
+			// 这里m除以100，是因为如果digits.size() > 0
+			// m最小也是100，ddigits.size()=1,m=100，表示十位
 			result += digit * digits.size() * m / 100;
 		}
 		else
@@ -215,7 +236,7 @@ int digitCounts(int k, int n) {
 		}
 
 		// 如果位数大于k且k不为0
-		// digits.size()代表为数
+		// digits.size()代表位数
 		// 需要额外增加10^digits.size()
 		// 十位：增加10^1
 		// 百位：增加10^2
@@ -265,6 +286,12 @@ int main(int argc, char* argv[])
 	cout << digitCounts(2, 100) << endl;  // 20
 	cout << digitCounts(2, 10000) << endl;  // 4000
 	cout << digitCounts(4, 483) << endl;  // 182
+
+	cout << digitCounts3(1, 1) << endl;  // 1
+	cout << digitCounts3(2, 10) << endl;  // 1
+	cout << digitCounts3(2, 100) << endl;  // 20
+	cout << digitCounts3(2, 10000) << endl;  // 4000
+	cout << digitCounts3(4, 483) << endl;  // 182
 
 	cout << digitCounts(0, 19) << endl;  // 2
 	cout << digitCounts(0, 100) << endl;  // 12

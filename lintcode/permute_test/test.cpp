@@ -191,6 +191,7 @@ int main(int argc, char* argv[])
     cout << "·ÇµÝ¹é" << endl;
     permute1(vec2);
     cout << "·ÇµÝ¹é2" << endl;
+	permute2(vec);
     permute2(vec2);
     return 0;
 }

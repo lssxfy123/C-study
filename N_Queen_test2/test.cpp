@@ -83,8 +83,8 @@ int main(int argc, char* argv[])
     // 生成有N个1组成的二进制数
     // N个皇后只需N为存储，有皇后的列对应的位为1
     upper_column = (upper_column << N) - 1;
-    //BinaryRecursion(upper_column);
-    //cout << endl;
+    BinaryRecursion(upper_column);
+    cout << endl;
     Test(0, 0, 0);
     cout << N << " Queen answer is " << sum << endl;
     //ofstream write;

@@ -162,11 +162,17 @@ vector<pair<int, double>> dicesSum(int n) {
         }
     }
 
+	for (int j = n; j <= 6 * n; ++j)
+	{
+		pair<int, double> p(j, dp[n][j]);
+		results.push_back(p);
+	}
+
     return results;
 }
 
 int main(int argc, char* argv[])
 {
-    dicesSum(15);
+    auto result = dicesSum(15);
     return 0;
 }

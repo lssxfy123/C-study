@@ -95,7 +95,7 @@ vector<vector<int>> subsets1(vector<int>& nums) {
     };
 
     // 思路：
-    // nums[i]若不和之前mums[i - 1]的重复，则把results中的每一个数组都添加nums[i],
+    // nums[i]若不和之前mums[i - 1]的重复，则把results中的每一个数组都添加nums[i]生成新的数组,
     // 若和之前的重复，则只使用results中上一个nums[i - 1]新产生的结果，
     // 因为nums[i - 1]之前的结果如果也添加nums[i]，则肯定会与nums[i - 1]
     // 产生的新结果重复
@@ -103,8 +103,8 @@ vector<vector<int>> subsets1(vector<int>& nums) {
     // 初始状态: results=[[]]
     // i = 0: results=[[], [1]]
     // i = 1: results = [[], [1], [2], [1, 2]]
-    // i = 2: nums[1] == nums[2]，所以results中，只使用i=1新产生的数组
-    // [2], [1, 2]，i=1之前i=0的数组不使用
+    // i = 2: nums[1] == nums[2]，所以results中，只使用i=1新产生的数组[2], [1, 2]
+    // i=1之前i=0的数组不使用
     int last_count = 0;
     for (int i = 0; i < nums.size(); ++i)
     {
