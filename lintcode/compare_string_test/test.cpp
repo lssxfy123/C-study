@@ -21,6 +21,7 @@ bool compareStrings(string &A, string &B) {
 
     unordered_map<char, int> map_B;
     unordered_map<char, int> map_A;
+    // 计算B中每个字符的个数
     for (int i = 0; i < B.length(); ++i)
     {
         if (map_B.find(B[i]) != map_B.end())
@@ -33,6 +34,7 @@ bool compareStrings(string &A, string &B) {
         }
     }
 
+    // 计算A中每个字符的个数
     for (int i = 0;i < A.length(); ++i)
     {
         if (map_A.find(A[i]) != map_A.end())

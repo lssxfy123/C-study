@@ -20,7 +20,8 @@ vector<int> twoSum(vector<int> &numbers, int target) {
 	{
 		if (hash.find(target - numbers[i]) != hash.end())
 		{
-			// target - numbers[i]下标更小
+			// target - numbers[i]在hash存在的更早
+            // hash值为下标，所以其下标更小
 			result.push_back(hash[target - numbers[i]]);
 			result.push_back(i);
 			return result;

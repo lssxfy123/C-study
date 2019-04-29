@@ -70,6 +70,7 @@ string reverseWords1(string& s)
 string reverseWords2(string& s)
 {
     string result = "";
+    // tmp存储字符串中的单词
     vector<string> tmp;
     int start = -1;
     for (int i = 0; i < s.size(); ++i)
@@ -82,6 +83,8 @@ string reverseWords2(string& s)
             }
             else
             {
+                // start为第一个非空格字符的位置，即单词的起始位置
+                // i - start为单词长度
                 tmp.push_back(s.substr(start, i - start));
                 start = -1;
                 continue;

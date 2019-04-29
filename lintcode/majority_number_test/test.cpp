@@ -17,6 +17,7 @@ int majorityNumber(vector<int> &nums) {
     for (int i = 1; i < nums.size(); ++i)
     {
         count += nums[i] == majorty_number ? 1 : -1;
+        // 如果为主元素，则出现次数大于数组长度的1/2，count肯定大于0
         if (count == 0)  // count为0表示0-i范围内，该元素不为主元素
         {
             majorty_number = nums[i];
