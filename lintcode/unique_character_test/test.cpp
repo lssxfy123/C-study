@@ -19,6 +19,18 @@ bool isUnique(string &str) {
     return true;
 }
 
+bool isUnique1(string &str) {
+	// write your code here
+	for (int i = 0; i < str.length() - 1; ++i)
+	{
+		if (str.find_first_of(str[i]) != str.find_last_of(str[i]))
+		{
+			return false;
+		}
+	}
+	return true;
+}
+
 int main(int argc, char* argv[])
 {
     return 0;

@@ -37,6 +37,8 @@ vector<Interval> merge(vector<Interval> &intervals) {
     result.push_back(intervals[0]);
     for (int i = 1; i < intervals.size(); ++i)
     {
+		// 上1个区间的end>=下一个区间的start
+		// 需要合并区间
         if (result.back().end >= intervals[i].start)
         {
             if (result.back().end < intervals[i].end)

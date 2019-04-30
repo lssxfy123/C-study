@@ -63,6 +63,8 @@ int removeDuplicates2(vector<int> &nums) {
     }
     int length = 0;
     int index = 1;
+	// 思路是将不同的数字向nums左边移动
+	// length为nums最终的长度，之后的都删除
     for (int i = 1; i < nums.size(); ++i)
     {
         if (nums[length] != nums[i])
@@ -73,7 +75,7 @@ int removeDuplicates2(vector<int> &nums) {
         else
         {
             ++index;
-            if (index == 2)
+            if (index == 2)  // index=2执行++length，之后index再增加也不增加length
             {
                 nums[++length] = nums[i];
             }

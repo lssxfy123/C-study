@@ -28,6 +28,8 @@ ListNode* deleteDuplicates(ListNode* head) {
     ListNode* tmp = nullptr;
     while (next != nullptr)
     {
+		// next结点的删除：先存储next->next
+		// 将前结点prev的next指针指向next->next
         if (next->val == prev->val)
         {
             tmp = next->next;

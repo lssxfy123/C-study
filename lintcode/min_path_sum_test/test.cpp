@@ -80,6 +80,7 @@ int minPathSum1(vector<vector<int>> &grid) {
     {
         for (int j = 1; j < colums; ++j)
         {
+			// dp[i - 1][j]->dp[i][j]为向下走，dp[i][j - 1]->dp[i][j]为向右走
             dp[i][j] = min(dp[i - 1][j], dp[i][j - 1]) + grid[i][j];
         }
     }

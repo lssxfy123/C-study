@@ -13,6 +13,12 @@ int median(vector<int> &nums) {
     priority_queue<int> pq;
     for (int i = 0; i < nums.size(); ++i)
     {
+		// pq为优先队列，顶部元素为其最大值
+		// k为nums长度的一半，pq.size() == k
+		// 其顶部元素为前k个元素的最大值
+		// 如果pq.top()大于之后的元素，就
+		// 需要弹出并将新元素插入，最终pq.top()
+		// 就是中位数
         if (pq.size() == k)
         {
             if (pq.top() > nums[i])

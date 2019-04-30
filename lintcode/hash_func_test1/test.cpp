@@ -40,11 +40,12 @@ int hashCode(string &key, int HASH_SIZE) {
     // sum = (a * base + b) * base + c
     // sum = ((a * base + b) * base + c) * base + d
     // 每次循环都及时计算sum = sum % HASH_SIZE
+	// 这样做是为了防止溢出
     // 这样不会对最终结果产生影响：
     // 令 x = sum % HASH_SIZE，则
     // sum = n * HASH_SIZE + x
     // 根据模运算的特性(n * HASH_SIZE * base) % HASH_SIZE = 0
-    // (sum * base) % HASH_SIZE = (x * base ) % HASH_SIZE
+    // 则得出：(sum * base) % HASH_SIZE = (x * base ) % HASH_SIZE
     for (int i = 0; i < key.length(); ++i)
     {
         // lLL转换为long long，防止溢出

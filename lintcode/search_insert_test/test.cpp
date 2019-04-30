@@ -38,6 +38,7 @@ int searchInsert(vector<int> &A, int target) {
 
         if (A[middle] > target)
         {
+			// 判断前一个位置的元素与target的关系
             if ((middle - 1) >= 0 && A[middle - 1] <= target)
             {
                 return A[middle - 1] == target ? middle - 1 : middle;
@@ -50,6 +51,7 @@ int searchInsert(vector<int> &A, int target) {
 
         if (A[middle] < target)
         {
+			// 判断后一个元素与target的关系
             if ((middle + 1) < length && A[middle + 1] >= target)
             {
                 return middle + 1;

@@ -28,6 +28,8 @@ int climbStairs1(int n) {
     queue<int> tmp;
     tmp.push(1);
     tmp.push(2);
+	// 这是一个斐波那契数列
+	// tmp始终只有两个元素
     for (int i = 3; i <= n; ++i)
     {
         tmp.push(tmp.front() + tmp.back());
