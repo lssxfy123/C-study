@@ -63,7 +63,10 @@ int main(int argc, char* argv[])
 
     cout << endl;
     cout << "call function GetTest() start 2." << endl;
-    Test t1 = GetTest();
+    Test t1;
+    t1 = GetTest();  // 调用赋值运算符
+    cout << endl;
+    Test t3 = GetTest();
     cout << "call function GetTest() end 2." << endl;
     cout << "t1 address: " << &t1 << endl;
     cout << endl;
