@@ -58,6 +58,8 @@ int main(int argc, char* argv[])
     int c = 0;
     // int&& rr1 = c;  // error，右值引用不能绑定左值
     int&& rr1 = std::move(c);  // ok，move()将左值c强制转换为右值
+    rr1 = 2;
+    cout << c << endl;  // 2
 
     {
         Moveable m;
