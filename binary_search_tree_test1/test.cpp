@@ -349,6 +349,8 @@ private:
                 {
                     BinaryNode* delete_node = tmp->right_;
                     BinaryNode* parent = tmp;
+                    // 用tmp结点的右子树的最小结点替代tmp
+                    // 然后删除掉最小子结点
                     while (delete_node->left_ != nullptr)
                     {
                         parent = delete_node;
@@ -805,7 +807,7 @@ private:
 				node_queue.push(node);
 			}
 
-			if (!is_left_child)
+			if (!is_left_child)  // 左右孩子都入队，根结点出队
 			{
 				node_queue.pop();
 			}
