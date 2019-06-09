@@ -16,7 +16,9 @@
 18. 子集II：lintcode/subsets_test
 20. 骰子求和：lintcode/dices_sum_test
 22. 平面列表：无
+24. LFU缓存：lintcode/lfu_cache_test
 28. 搜索二维矩阵：lintcode/search_matrix_test
+29. 交叉字符串：lintcode/isInterleave
 35. 翻转链表：lintcode/reverse_list_test
 39. 恢复旋转排序数组：lintcode/recover_rotated_sorted_test
 41. 最大子数组：lintcode/max_subarray_test
