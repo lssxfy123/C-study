@@ -8,6 +8,7 @@
 8. 旋转字符串：lintcode/rotate_string_test
 9. Fizz Buzz问题：lintcode/fizz_buzz_test
 11. 二叉查找数搜索区间：lintcode/search_range_test
+12.带最小值操作的栈：lintcode/min_stack
 13. 字符串查找：lintcode/string_find_test
 14. 二分查找：lintcode/half_search_test
 15. 全排列：lintcode/permute_test
@@ -19,7 +20,10 @@
 24. LFU缓存：lintcode/lfu_cache_test
 28. 搜索二维矩阵：lintcode/search_matrix_test
 29. 交叉字符串：lintcode/isInterleave
+31. 数组划分：lintcode/partition_array_test
+32. 最小子串覆盖：lintcode/min_window_test
 35. 翻转链表：lintcode/reverse_list_test
+36. 翻转链表II：lintcode/reverse_list_between
 39. 恢复旋转排序数组：lintcode/recover_rotated_sorted_test
 41. 最大子数组：lintcode/max_subarray_test
 44. 最小子数组：lintcode/min_subarray_test
