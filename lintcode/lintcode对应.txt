@@ -24,6 +24,7 @@
 32. 最小子串覆盖：lintcode/min_window_test
 35. 翻转链表：lintcode/reverse_list_test
 36. 翻转链表II：lintcode/reverse_list_between
+38. 搜索二维矩阵 II：
 39. 恢复旋转排序数组：lintcode/recover_rotated_sorted_test
 41. 最大子数组：lintcode/max_subarray_test
 44. 最小子数组：lintcode/min_subarray_test
