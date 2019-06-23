@@ -28,8 +28,12 @@
 39. 恢复旋转排序数组：lintcode/recover_rotated_sorted_test
 40. 用栈实现队列：lintcode/my_stack_to_queue
 41. 最大子数组：lintcode/max_subarray_test
+42. 最大子数组II：lintcode/max_subarray_test2
+43. 最大子数组III：lintcode/max_subarray_test3
 44. 最小子数组：lintcode/min_subarray_test
+45. 最大子数组差：lintcode/max_diff_sub_array_test
 46. 主元素：lintcode/majority_number_test
+47. 主元素II：lintcode/majority_number_test2
 50. 数组剔除元素后的乘积：lintcode/exclude_it_product_test
 53. 翻转字符串中的单词：lintcode/reverse_words_test
 55. 比较字符串：lintcode/compare_string_test
