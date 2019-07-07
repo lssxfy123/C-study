@@ -47,6 +47,8 @@
 60. 搜索插入位置：lintcode/search_insert_test
 61. 搜索区间：lintcode/search_range
 62. 搜索旋转排序数组：lintcode/search_test1
+63. 搜索旋转排序数组II：无
+65. 两个排序数组的中位数：lintcode/find_median_sorted_array_test
 66. 二叉树的前序遍历：binary_search_tree_test1
 67. 二叉树的中序遍历：binary_search_tree_test1
 68. 二叉树的后序遍历：binary_search_tree_test1
