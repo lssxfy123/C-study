@@ -53,6 +53,15 @@
 67. 二叉树的中序遍历：binary_search_tree_test1
 68. 二叉树的后序遍历：binary_search_tree_test1
 69. 二叉树的层次遍历：binary_search_tree_test1
+70. 二叉树的层次遍历II：binary_search_tree_test1
+71. 二叉树的锯齿形层次遍历：binary_search_tree_test1
+72. 中序遍历和后序遍历树构造二叉树：lintcode/build_tree_test1
+73. 前序遍历和中序遍历树构造二叉树：lintcode/build_tree_test1
+74. 第一个错误的代码版本：lintcode/find_first_bad_version_test
+75. 寻找峰值：lintcode/find_peak_test
+76. 最长上升子序列：lintcode/longest_increasing_subsequence_test
+77. 最长公共子序列：lintcode/longes_common_subsequence_test
+78. 最长公共前缀：lintcode/longest_common_prefix_test
 80. 中位数：lintcode/median_test
 82. 落单的数：lintcode/single_number_test
 85. 在二叉查找数中插入节点：binary_search_tree_test1

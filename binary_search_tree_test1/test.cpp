@@ -102,6 +102,16 @@ public:
         LevelPrintTreeNoRecursion(root_);
     }
 
+    void LevelPrintTreeBottom() const
+    {
+        LevelPrintTreeBottom(root_);
+    }
+
+    void ZigzagLevelPrintTree() const
+    {
+        ZigzagLevelPrintTree(root_);
+    }
+
     void MakeEmpty()
     {
         MakeEmpty(root_);
@@ -126,38 +136,38 @@ public:
         root_ = RemoveNoRecursion(x, root_);
     }
 
-	string Serialize() const
-	{
-		return Serialize(root_);
-	}
+    string Serialize() const
+    {
+        return Serialize(root_);
+    }
 
-	void Deserialize(string& data)
-	{
-		if (data == "{}")
-		{
-			root_ = nullptr;
-		}
+    void Deserialize(string& data)
+    {
+        if (data == "{}")
+        {
+            root_ = nullptr;
+        }
 
-		if (data.back() == '}')
-		{
-			data.pop_back();
-		}
+        if (data.back() == '}')
+        {
+            data.pop_back();
+        }
 
-		if (data.front() == '{')
-		{
-			data.erase(data.begin());
-		}
+        if (data.front() == '{')
+        {
+            data.erase(data.begin());
+        }
 
-		regex re{ "," };
-		vector<string> res(sregex_token_iterator(data.begin(), data.end(), re, -1), sregex_token_iterator());
-		for (int i = 0; i < res.size(); ++i)
-		{
-			cout << res[i] << " ";
-		}
-		cout << endl;
+        regex re{ "," };
+        vector<string> res(sregex_token_iterator(data.begin(), data.end(), re, -1), sregex_token_iterator());
+        for (int i = 0; i < res.size(); ++i)
+        {
+            cout << res[i] << " ";
+        }
+        cout << endl;
 
-		root_ = Deserialize(res);
-	}
+        root_ = Deserialize(res);
+    }
 
     const BinarySearchTree& operator= (const BinarySearchTree& rhs)
     {
@@ -604,7 +614,7 @@ private:
         // 根结点不为nullptr，将其压入栈中，并将其左子结点
         // 也压入栈中，访问栈顶元素时，如果其右子树存在，则
         // 将其右孩子看成根结点并重复之前的压栈操作
-		// 与中序遍历不同的是，中序先输出并弹出结点然后再压其右结点
+        // 与中序遍历不同的是，中序先输出并弹出结点然后再压其右结点
         // 需要辅助元素assist的原因是:某结点右子树存在，需要
         // 再次进行压栈操作，该结点并未出栈，后续还会再次访问
         // 到该结点，利用栈后进先出的特性，访问到该元素之前弹出
@@ -674,6 +684,7 @@ private:
 
     }
 
+    // 层次遍历
     void LevelPrintTreeNoRecursion(BinaryNode* root) const
     {
         vector<vector<Object>> result;
@@ -713,108 +724,230 @@ private:
 
             result.push_back(level_result);
         }
+
+        for (int i = 0; i < result.size(); ++i)
+        {
+            for (int j = 0; j < result[i].size(); ++j)
+            {
+                cout << result[i][j] << " ";
+            }
+            cout << endl;
+        }
     }
 
-	string Serialize(BinaryNode* root) const
-	{
-		string result = {};
-		if (root == nullptr)
-		{
-			return result;
-		}
+    // 从底向上层次遍历
+    void LevelPrintTreeBottom(BinaryNode* root) const
+    {
+        if (root == nullptr)
+        {
+            return;
+        }
 
-		vector<BinaryNode*> array;
-		array.push_back(root);
+        vector<vector<Object>> result;
+        queue<BinaryNode*> node_queue;
+        node_queue.push(root);
+        while (!node_queue.empty())
+        {
+            int size = node_queue.size();
+            vector<Object> tmp;
+            for (int i = 0; i < size; ++i)
+            {
+                BinaryNode* node = node_queue.front();
+                node_queue.pop();
+                tmp.push_back(node->element_);
+                if (node->left_ != nullptr)
+                {
+                    node_queue.push(node->left_);
+                }
 
-		// 类似二叉树的层次遍历，但不需要遍历输出，
-	    // 所以不需要使用queue
-		for (int i = 0; i < array.size(); ++i)
-		{
-			BinaryNode* node = array[i];
-			if (node == nullptr)
-			{
-				continue;
-			}
+                if (node->right_ != nullptr)
+                {
+                    node_queue.push(node->right_);
+                }
+            }
 
-			array.push_back(node->left_);
-			array.push_back(node->right_);
-		}
+            if (result.size() == 0)
+            {
+                result.push_back(tmp);
+            }
+            else
+            {
+                result.insert(result.begin(), tmp);
+            }
+        }
 
-		// 去掉末尾的nullptr
-		while (array.size() > 0 && array.back() == nullptr)
-		{
-			array.pop_back();
-		}
+        for (int i = 0; i < result.size(); ++i)
+        {
+            for (int j = 0; j < result[i].size(); ++j)
+            {
+                cout << result[i][j] << " ";
+            }
+            cout << endl;
+        }
+    }
 
-		stringstream ss;
-		ss << "{";
-		for (int i = 0; i < array.size(); ++i)
-		{
-			if (array[i] == nullptr)
-			{
-				ss << "#,";
-			}
-			else
-			{
-				if (i < array.size() - 1)
-					ss << array[i]->element_ << ",";
-				else
-					ss << array[i]->element_;
-			}
-		}
-		ss << "}";
-		result = ss.str();
-		return result;
-	}
+    // 锯齿形层次遍历（先从左向右，下一层从右向左）
+    void ZigzagLevelPrintTree(BinaryNode* root) const
+    {
+        vector<vector<Object>> result;
+        if (root == nullptr)
+        {
+            return;
+        }
 
-	Object Convert(const string & t) {
-		stringstream stream;
-		stream << t;  // 向流中传值
-		Object result;  // 这里存储转换结果
-		stream >> result;  // 向result中写入值
-		return result;
-	}
+        queue<BinaryNode*> node_queue;
+        node_queue.push(root);
 
-	BinaryNode* Deserialize(vector<string>& nodes)
-	{
-		if (nodes.size() == 0)
-		{
-			return nullptr;
-		}
+        bool is_left = true;  // 是否从左向右
+        while (!node_queue.empty())
+        {
+            int size = node_queue.size();
+            vector<Object> tmp;
+            for (int i = 0; i < size; ++i)
+            {
+                BinaryNode* node = node_queue.front();
+                node_queue.pop();
+                if (is_left)
+                {
+                    tmp.push_back(node->element_);
+                }
+                else
+                {
+                    if (tmp.size() == 0)
+                    {
+                        tmp.push_back(node->element_);
+                    }
+                    else
+                    {
+                        tmp.insert(tmp.begin(), node->element_);
+                    }
+                }
 
-		BinaryNode* root = new BinaryNode(Convert(nodes[0]), nullptr, nullptr);
-		bool is_left_child = true;
+                if (node->left_ != nullptr)
+                {
+                    node_queue.push(node->left_);
+                }
 
-		// 反序列化的思想：
-		// 将根结点插入队列中，然后判断下一个nodes字符串是否是有效结点
-		// 如果不为"#"，就当成上一个结点的左孩子，再下一个就是右孩子
-		// 然后把根结点出队，序列化是按层序列的
-		queue<BinaryNode*> node_queue;
-		node_queue.push(root);
-		for (int i = 1; i < nodes.size(); ++i)
-		{
-			if (nodes[i] != "#")
-			{
-				BinaryNode* node = new BinaryNode(Convert(nodes[i]), nullptr, nullptr);
-				if (is_left_child)
-				{
-					node_queue.front()->left_ = node;
-				}
-				else
-				{
-					node_queue.front()->right_ = node;
-				}
-				node_queue.push(node);
-			}
+                if (node->right_ != nullptr)
+                {
+                    node_queue.push(node->right_);
+                }
+            }
+            is_left = !is_left;
 
-			if (!is_left_child)  // 左右孩子都入队，根结点出队
-			{
-				node_queue.pop();
-			}
-			is_left_child = !is_left_child;  // 左孩子的下一个就是右孩子
-		}
-		return root;
-	}
+            result.push_back(tmp);
+        }
+
+        for (int i = 0; i < result.size(); ++i)
+        {
+            for (int j = 0; j < result[i].size(); ++j)
+            {
+                cout << result[i][j] << " ";
+            }
+            cout << endl;
+        }
+    }
+
+    string Serialize(BinaryNode* root) const
+    {
+        string result = {};
+        if (root == nullptr)
+        {
+            return result;
+        }
+
+        vector<BinaryNode*> array;
+        array.push_back(root);
+
+        // 类似二叉树的层次遍历，但不需要遍历输出，
+        // 所以不需要使用queue
+        for (int i = 0; i < array.size(); ++i)
+        {
+            BinaryNode* node = array[i];
+            if (node == nullptr)
+            {
+                continue;
+            }
+
+            array.push_back(node->left_);
+            array.push_back(node->right_);
+        }
+
+        // 去掉末尾的nullptr
+        while (array.size() > 0 && array.back() == nullptr)
+        {
+            array.pop_back();
+        }
+
+        stringstream ss;
+        ss << "{";
+        for (int i = 0; i < array.size(); ++i)
+        {
+            if (array[i] == nullptr)
+            {
+                ss << "#,";
+            }
+            else
+            {
+                if (i < array.size() - 1)
+                    ss << array[i]->element_ << ",";
+                else
+                    ss << array[i]->element_;
+            }
+        }
+        ss << "}";
+        result = ss.str();
+        return result;
+    }
+
+    Object Convert(const string & t) {
+        stringstream stream;
+        stream << t;  // 向流中传值
+        Object result;  // 这里存储转换结果
+        stream >> result;  // 向result中写入值
+        return result;
+    }
+
+    BinaryNode* Deserialize(vector<string>& nodes)
+    {
+        if (nodes.size() == 0)
+        {
+            return nullptr;
+        }
+
+        BinaryNode* root = new BinaryNode(Convert(nodes[0]), nullptr, nullptr);
+        bool is_left_child = true;
+
+        // 反序列化的思想：
+        // 将根结点插入队列中，然后判断下一个nodes字符串是否是有效结点
+        // 如果不为"#"，就当成上一个结点的左孩子，再下一个就是右孩子
+        // 然后把根结点出队，序列化是按层序列的
+        queue<BinaryNode*> node_queue;
+        node_queue.push(root);
+        for (int i = 1; i < nodes.size(); ++i)
+        {
+            if (nodes[i] != "#")
+            {
+                BinaryNode* node = new BinaryNode(Convert(nodes[i]), nullptr, nullptr);
+                if (is_left_child)
+                {
+                    node_queue.front()->left_ = node;
+                }
+                else
+                {
+                    node_queue.front()->right_ = node;
+                }
+                node_queue.push(node);
+            }
+
+            if (!is_left_child)  // 左右孩子都入队，根结点出队
+            {
+                node_queue.pop();
+            }
+            is_left_child = !is_left_child;  // 左孩子的下一个就是右孩子
+        }
+        return root;
+    }
 
     BinaryNode* Clone(BinaryNode* t) const
     {
@@ -857,14 +990,14 @@ int main(int argc, char* argv[])
     binary_search_tree1.InsertNoRecursion(2.9f);
     binary_search_tree1.InsertNoRecursion(5.4f);
 
-	string serialize = binary_search_tree1.Serialize();
-	BinarySearchTree<float> deserialize_tree;
+    string serialize = binary_search_tree1.Serialize();
+    BinarySearchTree<float> deserialize_tree;
 
-	cout << "序列化二叉树: " << serialize  << endl;
-	deserialize_tree.Deserialize(serialize);
-	cout << "反序列化二叉树: " << endl;
-	deserialize_tree.PrintTree() ;
-	cout << endl;
+    cout << "序列化二叉树: " << serialize  << endl;
+    deserialize_tree.Deserialize(serialize);
+    cout << "反序列化二叉树: " << endl;
+    deserialize_tree.PrintTree() ;
+    cout << endl;
 
     cout << "中序遍历：左子树->根->右子树" << endl;
     binary_search_tree.PrintTree();
@@ -885,6 +1018,15 @@ int main(int argc, char* argv[])
     cout << endl;
     cout << "层次遍历" << endl;
     binary_search_tree.LevelPrintTree();
+    binary_search_tree.LevelPrintTreeNoRecursion();
+    cout << endl;
+    cout << "从底向上层次遍历" << endl;
+    binary_search_tree.LevelPrintTreeBottom();
+    cout << endl;
+
+    cout << "锯齿层次遍历" << endl;
+    binary_search_tree.ZigzagLevelPrintTree();
+    cout << endl;
 
     cout << "删除测试" << endl;
     binary_search_tree.RemoveNoRecursion(3.5f);
