@@ -11,6 +11,7 @@
 #include <sstream>
 #include <regex>
 #include <iterator>
+#include <exception>
 using namespace std;
 
 template <typename Object, typename Comparator = less<Object> >
@@ -169,6 +170,11 @@ public:
         root_ = Deserialize(res);
     }
 
+	void Iterator() const
+	{
+		Iterator(root_);
+	}
+
     const BinarySearchTree& operator= (const BinarySearchTree& rhs)
     {
         if (this != &rhs)
@@ -189,6 +195,68 @@ private:
         BinaryNode(const Object& element, BinaryNode* lt, BinaryNode* rt)
         : element_(element), left_(lt), right_(rt) {}
     };
+
+	// 二叉查找树迭代器
+	// 迭代器访问二叉查找树按递增顺序遍历
+	// next()和hasNext()的均摊时间复杂度为O(1)
+	class BSTIterator {
+	public:
+		/*
+		* @param root: The root of binary tree.
+		*/
+		BSTIterator(BinaryNode * root) {
+			// do intialization if necessary
+			while (!my_stack_.empty())
+			{
+				my_stack_.pop();
+			}
+			current_ = root;
+		}
+
+		/*
+		 * @return: True if there has next node, or false
+		 */
+		bool hasNext() {
+			// write your code here
+			return current_ != nullptr || !my_stack_.empty();
+		}
+
+		/*
+		 * @return: return next node
+		 */
+		BinaryNode * next() {
+			// write your code here
+			// stack后进先出
+			// 栈顶元素就是以current_为根结点二叉查找树的最小值
+			while (current_ != nullptr)
+			{
+				my_stack_.push(current_);
+				current_ = current_->left_;
+			}
+
+			// 类似中序遍历
+			current_ = my_stack_.top();
+			my_stack_.pop();
+			BinaryNode* nxt = current_;
+			current_ = current_->right_;
+			return nxt;
+		}
+
+	private:
+		stack<BinaryNode*> my_stack_;
+		BinaryNode* current_;
+	};
+
+	void Iterator(BinaryNode* root) const
+	{
+		BSTIterator iterator(root);
+		while (iterator.hasNext())
+		{
+			BinaryNode* node = iterator.next();
+			cout << node->element_ << " ";
+		}
+		cout << endl;
+	}
 
     // 时间复杂度为O(n*logn)，结点的高度会被重复计算
     bool IsBalanced(BinaryNode* root) const
@@ -343,14 +411,17 @@ private:
         }
 
         BinaryNode* tmp = root;
+		BinaryNode* parent = nullptr;
         while (tmp != nullptr)
         {
             if (tmp->element_ < x)
             {
+				parent = tmp;
                 tmp = tmp->right_;
             }
             else if (tmp->element_ > x)
             {
+				parent = tmp;
                 tmp = tmp->left_;
             }
             else
@@ -358,7 +429,7 @@ private:
                 if (tmp->left_ != nullptr && tmp->right_ != nullptr)
                 {
                     BinaryNode* delete_node = tmp->right_;
-                    BinaryNode* parent = tmp;
+                    parent = tmp;
                     // 用tmp结点的右子树的最小结点替代tmp
                     // 然后删除掉最小子结点
                     while (delete_node->left_ != nullptr)
@@ -369,7 +440,7 @@ private:
                     tmp->element_ = delete_node->element_;
 
                     // 如果待删除结点为其父结点的左孩子
-                    // delete_node没有左孩子
+                    // delete_node没有左孩子，其为tmp结点右子树的最小子结点
                     if (parent->left_ == delete_node)
                     {
                         parent->left_ = delete_node->right_;
@@ -384,9 +455,25 @@ private:
                 }
                 else
                 {
-                    BinaryNode* old = tmp;
-                    tmp = (tmp->left_ != nullptr) ? tmp->left_ : tmp->right_;
+					BinaryNode* old = tmp;
+					if (parent != nullptr)
+					{
+						if (parent->left_ == tmp)
+						{
+							parent->left_ = (tmp->left_ != nullptr) ? tmp->left_ : tmp->right_;
+						}
+						else
+						{
+							parent->right_ = (tmp->left_ != nullptr) ? tmp->left_ : tmp->right_;
+						}
+					}
+					else  // 待删除结点为根结点
+					{
+						root = (root->left_ != nullptr) ? root->left_ : root->right_;;
+					}
+
                     delete old;
+					old = nullptr;
                     break;
                 }
             }
@@ -1028,12 +1115,23 @@ int main(int argc, char* argv[])
     binary_search_tree.ZigzagLevelPrintTree();
     cout << endl;
 
+	cout << "二叉查找树迭代器遍历" << endl;
+	binary_search_tree.Iterator();
+	cout << endl;
+
     cout << "删除测试" << endl;
     binary_search_tree.RemoveNoRecursion(3.5f);
     cout << "删除后的中序遍历：左子树->根->右子树" << endl;
     binary_search_tree.PrintTree();
     cout << endl;
     binary_search_tree1.RemoveNoRecursion(3.5f);
+	binary_search_tree.RemoveNoRecursion(3.2f);
+	binary_search_tree.RemoveNoRecursion(3.3f);
+	binary_search_tree.RemoveNoRecursion(4.6f);
+	binary_search_tree.RemoveNoRecursion(2.9f);
+	binary_search_tree.RemoveNoRecursion(5.4f);
+	binary_search_tree.RemoveNoRecursion(5.1f);
+	binary_search_tree.RemoveNoRecursion(3.9f);;
     cout << "删除后的中序遍历：左子树->根->右子树" << endl;
     binary_search_tree1.PrintTree();
     cout << endl;
@@ -1052,8 +1150,15 @@ int main(int argc, char* argv[])
         cout << "not exist" << endl;
     }
 
-    cout << "Min " << binary_search_tree.FindMin() << endl;
-    cout << "Max " << binary_search_tree.FindMax() << endl;
+	try
+	{
+		cout << "Min " << binary_search_tree.FindMin() << endl;
+		cout << "Max " << binary_search_tree.FindMax() << endl;
+	}
+	catch (exception e)
+	{
+		cout << e.what() << endl;
+	}
 
     BinarySearchTree<float> binary_search_tree2(binary_search_tree);
     binary_search_tree2.PrintTree();

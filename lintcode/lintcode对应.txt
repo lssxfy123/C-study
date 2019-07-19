@@ -62,9 +62,18 @@
 76. 最长上升子序列：lintcode/longest_increasing_subsequence_test
 77. 最长公共子序列：lintcode/longes_common_subsequence_test
 78. 最长公共前缀：lintcode/longest_common_prefix_test
+79. 最长公共子串：lintcode/longest_common_substring_test
 80. 中位数：lintcode/median_test
+81. 数据流的中位数：lintcode/median_test2
 82. 落单的数：lintcode/single_number_test
+83. 落单的数 II：lintcode/single_number_test2
+84. 落单的数 III：lintcode/single_number_test3
 85. 在二叉查找数中插入节点：binary_search_tree_test1
+86. 二叉查找树迭代器：binary_search_tree_test1
+87. 删除二叉查找树的节点：binary_search_tree_test1
+88. 最近公共祖先：无
+89. K数之和：lintcode/k_sum_test
+90. k数和 II：lintcode/k_sum_test2
 93. 平衡二叉树：binary_search_tree_test1
 96. 链表划分：C++ Algorithm/qq_test1
 97. 二叉树的最大深度：无
