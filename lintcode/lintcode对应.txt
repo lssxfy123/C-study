@@ -74,7 +74,9 @@
 88. 最近公共祖先：无
 89. K数之和：lintcode/k_sum_test
 90. k数和 II：lintcode/k_sum_test2
+92. 背包问题：lintcode/back_pack_test
 93. 平衡二叉树：binary_search_tree_test1
+94. 二叉树中的最大路径和：max_path_sum_test
 96. 链表划分：C++ Algorithm/qq_test1
 97. 二叉树的最大深度：无
 100. 删除排序数组中的重复数字：lintcode/remove_duplicates_test
@@ -94,3 +96,4 @@
 157. 判断字符串是否有重复字符：lintcode/unique_character_test
 158. 两个字符串是变位词：lintcode/anagram_test
 165. 合并两个排序链表：lintcode/merge_ordered_list_test
+209. 第一个只出现一次的字符：lintcode/cat_test1
