@@ -97,4 +97,7 @@
 158. 两个字符串是变位词：lintcode/anagram_test
 165. 合并两个排序链表：lintcode/merge_ordered_list_test
 209. 第一个只出现一次的字符：lintcode/cat_test1
+463. 整数排序：lintcode/cat_test4
+846. 多关键字排序：lintcode/cat_test5
 920. 会议室：lintcode/cat_test3
+1663. 忧郁：lintcode/cat_test6
