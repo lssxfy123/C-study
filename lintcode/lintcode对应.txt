@@ -98,8 +98,14 @@
 158. 两个字符串是变位词：lintcode/anagram_test
 165. 合并两个排序链表：lintcode/merge_ordered_list_test
 209. 第一个只出现一次的字符：lintcode/cat_test1
+219. 在排序链表中插入一个节点：lintcode/cat_test7
+228. 链表的中点：lintcode/cat_test8
+376. 二叉树的路径和：无
 463. 整数排序：lintcode/cat_test4
 669. 换硬币：lintcode/coin_change_test
+822. 相反的顺序存储：无
 846. 多关键字排序：lintcode/cat_test5
 920. 会议室：lintcode/cat_test3
+1661. 删除链表中的第n到m个节点：lintcode/cat_test9
 1663. 忧郁：lintcode/cat_test6
+1666. 组合+判断素数：lintcode/cat_test10
