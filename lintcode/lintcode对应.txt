@@ -86,6 +86,7 @@
 112. 删除排序链表中的重复元素：lintcode/delete_duplicates_list_test
 114. 不同的路径：lintcode/unique_paths_test
 115. 不同的路径II：lintcode/unique_paths_test
+125. 背包问题II：lintcode/back_pack_test2
 128. 哈希函数：lintcode/hash_func_test1
 133. 最长单词：lintcode/longest_words_test
 138. 子数组之和：lintcode/sub_sum_zero_test
@@ -98,6 +99,7 @@
 165. 合并两个排序链表：lintcode/merge_ordered_list_test
 209. 第一个只出现一次的字符：lintcode/cat_test1
 463. 整数排序：lintcode/cat_test4
+669. 换硬币：lintcode/coin_change_test
 846. 多关键字排序：lintcode/cat_test5
 920. 会议室：lintcode/cat_test3
 1663. 忧郁：lintcode/cat_test6
