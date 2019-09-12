@@ -25,7 +25,7 @@ int maxSubArray(vector<int> &nums, int k) {
     vector<vector<int>> local_max_sums(nums.size() + 1, vector<int>(k + 1, 0));
     
     // global_max_sums[i][j]表示nums中从1-i个数字，分成j个数组后，和的最大值，其
-    // 第j个数组不一定就包含nums[]i-1
+    // 第j个数组不一定就包含nums[i-1]
     vector<vector<int>> global_max_sums(nums.size() + 1, vector<int>(k + 1, 0));
     for (int i = 1; i <= nums.size(); ++i)
     {

@@ -103,6 +103,7 @@
 376. 二叉树的路径和：无
 463. 整数排序：lintcode/cat_test4
 669. 换硬币：lintcode/coin_change_test
+700. 杆子分割：lintcode/cutting_test
 822. 相反的顺序存储：无
 846. 多关键字排序：lintcode/cat_test5
 920. 会议室：lintcode/cat_test3
