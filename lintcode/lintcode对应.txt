@@ -81,21 +81,30 @@
 97. 二叉树的最大深度：无
 100. 删除排序数组中的重复数字：lintcode/remove_duplicates_test
 101. 删除排序数组中的重复数字II：lintcode/remove_duplicates_test
+108. 分割回文串 II：lintcode/min_cut_test
+109. 数字三角形：lintcode/minium_total_test
 110. 最小路径和：lintcode/min_path_sum_test
 111. 爬楼梯：lintcode/climb_stairs_test
 112. 删除排序链表中的重复元素：lintcode/delete_duplicates_list_test
 114. 不同的路径：lintcode/unique_paths_test
 115. 不同的路径II：lintcode/unique_paths_test
+116. 跳跃游戏：lintcode/can_jump_test
+118. 不同的子序列：lintcode/num_distinct_test
+119. 编辑距离：lintcode/min_distance_test
 128. 哈希函数：lintcode/hash_func_test1
 133. 最长单词：lintcode/longest_words_test
 138. 子数组之和：lintcode/sub_sum_zero_test
 141. x的平方根：lintcode/sqrt_test
 142. O(1)时间检测2的幂次：lintcode/check_power_of_2_test
+154. 正则表达式匹配：lintcode/is_match_test
 155. 二叉树的最小深度：无
 156. 合并区间：lintcode/merge_intervals_test
 157. 判断字符串是否有重复字符：lintcode/unique_character_test
 158. 两个字符串是变位词：lintcode/anagram_test
+163. 不同的二叉查找树：lintcode/num_tree_test
+164. 不同的二叉查找树 II：lintcode/generate_trees_test
 165. 合并两个排序链表：lintcode/merge_ordered_list_test
+168. 吹气球：lintcode/max_coins_test
 209. 第一个只出现一次的字符：lintcode/cat_test1
 219. 在排序链表中插入一个节点：lintcode/cat_test7
 228. 链表的中点：lintcode/cat_test8
