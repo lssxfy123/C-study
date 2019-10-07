@@ -91,6 +91,7 @@
 116. 跳跃游戏：lintcode/can_jump_test
 118. 不同的子序列：lintcode/num_distinct_test
 119. 编辑距离：lintcode/min_distance_test
+125. 背包问题II：lintcode/back_pack_test2
 128. 哈希函数：lintcode/hash_func_test1
 133. 最长单词：lintcode/longest_words_test
 138. 子数组之和：lintcode/sub_sum_zero_test
@@ -110,6 +111,8 @@
 228. 链表的中点：lintcode/cat_test8
 376. 二叉树的路径和：无
 463. 整数排序：lintcode/cat_test4
+669. 换硬币：lintcode/coin_change_test
+700. 杆子分割：lintcode/cutting_test
 822. 相反的顺序存储：无
 846. 多关键字排序：lintcode/cat_test5
 920. 会议室：lintcode/cat_test3
