@@ -19,6 +19,7 @@ int Partition(vector<int>& array, int left, int right)
 		if (array[i] < pivot)
 		{
 			++pivot_position;
+            // i肯定大于或等于pivot_position，其每个循环都会+1
 			// ++pivot_position之后，如果i==pivot_position，则不需执行交换
             // 如果i!=pivot_position，则array[pivot_position]>=pivot
 			// 否则执行++pivot_position之前将不满足右边的元素大于等于pivot的要求
