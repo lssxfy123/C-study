@@ -49,6 +49,7 @@ int maxSubArray(vector<int> &nums, int k) {
             // 然后第i个数nums[i-1]形成第j个数组
             // local_max_sums[i-1][j]+nums[i-1]表示1到i-1个数分成了j个数组
             // 然后第i个数nums[i-1]加入到第j个数组（也只能加入第j个，不允许子数组重叠）
+			// 不用考虑local_max_sums[i-1][j-1]，因为其肯定<=global_max_sums[i-1][j-1]
 
             // 可以看出，动态规划的转移方程有两步，global_max_sums[i][j]从不包含
             // 第i个数字nums[i-1]且分为j个子数组的和的最大值global_max_sums[i - 1][j]
