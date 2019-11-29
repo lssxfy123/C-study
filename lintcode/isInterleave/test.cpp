@@ -14,7 +14,7 @@ bool isInterleave(string &s1, string &s2, string &s3) {
     }
 
     // 使用动态规划求解，dp[i][j]表示s3
-    // 的前i+j位是否由s1的前i位，s2的前j位交叉而成
+    // 的前i+j位是否由s1的前i位，s2的前j位交叉而成(即使dp[i][j]为false也不代表s3就不是由s1和s2交叉构成)
     // 二维数据多分配一行一列，用于存储s3只匹配s1和s3只匹配s2
     vector<vector<bool>> dp(s1.length() + 1, vector<bool>(s2.length() + 1, false));
 
