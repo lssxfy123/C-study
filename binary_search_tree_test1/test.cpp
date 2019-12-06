@@ -259,6 +259,9 @@ private:
 	}
 
     // 时间复杂度为O(n*logn)，结点的高度会被重复计算
+	// 通过GetHeight计算根结点的高度，有可能根结点的左右子树的高度是平衡的
+	// 但其左子树或右子树的高度可能是不平衡的，所以计算完根结点的高度后
+	// 还要计算其左右子树的高度，结点的高度会被重复计算
     bool IsBalanced(BinaryNode* root) const
     {
         if (root == nullptr)
@@ -561,22 +564,13 @@ private:
         stack<BinaryNode*> tree_stack;
         BinaryNode* right = root->right_;
         BinaryNode* left = root->left_;
-        tree_stack.push(root);
 
         // 将根结点与其左孩子压入栈
-        while (left != nullptr)
+		// 栈后进先出，先出栈的为左孩子
+        while (root != nullptr)
         {
-            tree_stack.push(left);
-            root = left->left_;  // t,t->left_都已在 栈中，所以是left->left_
-            if (root != nullptr)
-            {
-                tree_stack.push(root);
-                left = root->left_;
-            }
-            else
-            {
-                break;
-            }
+            tree_stack.push(root);
+            root = root->left_; 
         }
 
         while (tree_stack.size() > 0)
@@ -584,31 +578,12 @@ private:
             BinaryNode* tmp = tree_stack.top();
             tree_stack.pop();
             cout << tmp->element_ << ' ';
-            right = tmp->right_;
-            if (right != nullptr)
-            {
-                // 将右孩子看成根结点
-                // 将根结点与左孩子压入栈
-                tmp = right;
-                left = tmp->left_;
-                right = tmp->right_;
-                tree_stack.push(tmp);
-                while (left != nullptr)
-                {
-                    tree_stack.push(left);
-                    tmp = left->left_;
-                    if (tmp != nullptr)
-                    {
-                        tree_stack.push(tmp);
-                        left = tmp->left_;
-                        right = tmp->right_;
-                    }
-                    else
-                    {
-                        break;
-                    }
-                }
-            }
+            root = tmp->right_;
+			while (root != nullptr)
+			{
+				tree_stack.push(root);
+				root = root->left_;
+			}
         }
 
     }

@@ -29,7 +29,7 @@ vector<int> medianII(vector<int> &nums) {
 		else
 		{
 			// 通过二分法查找tmp中第一个比nums[i]大的元素
-			// tmp就形成了排序数组
+			// tmp就形成了有序数组
 			int start = 0;
 			int end = tmp.size() - 1;
 			int insert_index = -1;
@@ -72,6 +72,7 @@ vector<int> medianII(vector<int> &nums) {
 				tmp.insert(tmp.begin() + insert_index, nums[i]);
 			}
 		}
+		// 保证tmp始终是有序数组
 		result.push_back(tmp[(tmp.size() - 1) / 2]);
 	}
 

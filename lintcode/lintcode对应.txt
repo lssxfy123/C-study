@@ -77,6 +77,7 @@
 92. 背包问题：lintcode/back_pack_test
 93. 平衡二叉树：binary_search_tree_test1
 94. 二叉树中的最大路径和：max_path_sum_test
+95. 验证二叉查找树：无
 96. 链表划分：C++ Algorithm/qq_test1
 97. 二叉树的最大深度：无
 100. 删除排序数组中的重复数字：lintcode/remove_duplicates_test
