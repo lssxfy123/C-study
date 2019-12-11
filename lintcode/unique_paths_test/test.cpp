@@ -37,6 +37,7 @@ int uniquePaths(int m, int n) {
     return paths;
 }
 
+// 114.不同的路径
 int uniquePaths1(int m, int n) {
     // write your code here
     if (m == 0 || n == 0)
@@ -71,6 +72,7 @@ int uniquePaths1(int m, int n) {
     return grid[m - 1][n - 1];
 }
 
+// 115.不同的路径II
 int uniquePaths2(vector<vector<int>>& obstacleGrid) {
     // write your code here
     int m = obstacleGrid.size();
