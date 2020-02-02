@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>sensor_dialog</class>
+ <widget class="QDialog" name="sensor_dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>360</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>传感器调试</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../icon/logo.jpg</normaloff>../icon/logo.jpg</iconset>
+  </property>
+  <widget class="QGroupBox" name="group_box_instrument_select">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>40</y>
+     <width>111</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>选择仪器</string>
+   </property>
+   <widget class="QRadioButton" name="radio_button_instrument_1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>60</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>仪器1</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radio_button_instrument_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>仪器2</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radio_button_instrument_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>60</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>仪器3</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radio_button_instrument_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>120</y>
+      <width>60</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>仪器4</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radio_button_instrument_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>60</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>仪器5</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="group_box_channel_select">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>40</y>
+     <width>91</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>选择通道</string>
+   </property>
+   <widget class="QRadioButton" name="radio_button_channel_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>通道2</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radio_button_channel_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>60</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>通道3</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radio_button_channel_1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>60</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>通道1</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radio_button_channel_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>60</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>通道5</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radio_button_channel_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>120</y>
+      <width>60</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>通道4</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radio_button_channel_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>60</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>通道6</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="button_set">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>290</y>
+     <width>80</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>设置</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button_cancel">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>290</y>
+     <width>80</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

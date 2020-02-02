@@ -10,3 +10,4 @@ Release
 *.ipch
 *.db
 *.vcxproj.user
+/FP/project/*.idb

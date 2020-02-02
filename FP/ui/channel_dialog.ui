@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>channel_dialog</class>
+ <widget class="QDialog" name="channel_dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="label_X">
+   <property name="geometry">
+    <rect>
+     <x>175</x>
+     <y>270</y>
+     <width>50</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>时间/ms</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_Y">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>125</y>
+     <width>15</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>力
+/
+牛</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button_zoom_out">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>0</y>
+     <width>30</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button_zoom_in">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>0</y>
+     <width>30</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

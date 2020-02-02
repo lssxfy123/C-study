@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="/new/prefix1" >
+    <file>collect.png</file>
+    <file>exit.png</file>
+    <file>stop.png</file>
+    <file>save.png</file>
+  </qresource>
+</RCC>
