@@ -17,8 +17,10 @@ int binarySearch(vector<int> &nums, int target) {
     size_t end = nums.size() - 1;
     size_t middle;
     
+	// 不能使用start < end，因为如果target对应的position正好在end，会出现死循环
     while (start + 1 < end)
     {
+		// 不要写成(start + end) / 2，避免start和end都接近整型极限时导致溢出现象
         middle = start + (end - start) / 2;
         if (nums[middle] == target)
         {
