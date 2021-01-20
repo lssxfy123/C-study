@@ -7,10 +7,10 @@ using namespace std;
 
 // 3中位查找分隔位置
 // 升序排列
-// 如果降序，就将比较符合翻转
+// 如果降序，就将比较符号翻转
 int Median3Index(vector<int>& nums, int left, int right)
 {
-	int center = (left + right) / 2;
+	int center = left + (right - left) / 2;
 	if (nums[center] > nums[left])
 	{
 		swap(nums[center], nums[left]);
@@ -40,16 +40,19 @@ int Partition(vector<int>& array, int left, int right)
 	for (int i = left; i <= right; ++i)
 	{
 		// 如果array[i]<pivot，则首先++pivot_position
-		// pivot_position初始在最左边(默认没有元素小于pivot)，当array[i]<pivot时
+		// pivot_position初始在最左边(Median3Index返回值为left,默认没有元素小于pivot)，当array[i]<pivot时
 		// 由于pivot_position需要满足:pivot_position左边元素比pivot小，右边比pivot大
 		// 所以++pivot_position
+		// 这个for循环其实是在查找最合适的枢纽元的位置pivot_position，for循环结束后还会执行一次交换
+		// 将pivot放置在pivot_position上
+		// 碰到比pivot小的元素array[i]就++pivot_position，加1表示pivot_position的右边出现了1个比pivot小的元素
 		if (array[i] < pivot && i != tmp)
 		{
 			++pivot_position;
             // i肯定大于或等于pivot_position，其每个循环都会+1
 			// ++pivot_position之后，如果i==pivot_position，则不需执行交换
             // 如果i!=pivot_position，则array[pivot_position]>=pivot
-			// 否则执行++pivot_position之前将不满足右边的元素大于等于pivot的要求
+			// 否则执行++pivot_position之前将不满足pivot_position右边的元素大于等于pivot的要求
 			// 交换array[i]和array[pivot_position]，这样是为了将所有小于pivot的元素连续放置
 			// 在循环结束后，只需交换array[left]和array[pivot_position]，pivot_position左边的元素
 			// 肯定小于pivot，右边的大于等于pivot
@@ -78,8 +81,8 @@ void QuickSort(vector<int>& array, int left, int right)
 		return;
 	}
 
-	// 找出一个分隔位置，left-pivot_position-1中的
-	// 元素肯定比array[pivot_position]小，pivot_position+1-right
+	// 找出一个分隔位置，left到pivot_position-1中的
+	// 元素肯定比array[pivot_position]小，pivot_position+1到right
 	// 肯定比array[pivot_position]大
 	int pivot_position = Partition(array, left, right);
 	QuickSort(array, left, pivot_position - 1);
