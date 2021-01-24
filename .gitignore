@@ -11,3 +11,4 @@ Release
 *.db
 *.vcxproj.user
 /FP/project/*.idb
+/lintcode/kclosest_numbers_test/.ipynb_checkpoints
