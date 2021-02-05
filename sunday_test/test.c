@@ -97,6 +97,9 @@ int SundaySearch(unsigned char* src, int src_length, unsigned char* dest, int de
             result_index = i;
             return result_index;
         }
+		
+		if (i + dest_length >= src_length)
+		    break
 
         // 查找在源字符串中，待搜索的字符串长度后一位的字符对应的标记
         k = marks[src[i + dest_length]];
