@@ -112,6 +112,7 @@
 219. 在排序链表中插入一个节点：lintcode/cat_test7
 228. 链表的中点：lintcode/cat_test8
 376. 二叉树的路径和：无
+415. 有效回文串：lintcode/is_palindrome_test
 460. 在排序数组中找最接近的K个数：lintcode/kclosest_numbers_test
 463. 整数排序：lintcode/cat_test4
 594. 字符串查找 II：lintcode/strstr_test
