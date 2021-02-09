@@ -9,8 +9,8 @@
 9. Fizz Buzz问题：lintcode/fizz_buzz_test
 11. 二叉查找数搜索区间：lintcode/search_range_test
 12.带最小值操作的栈：lintcode/min_stack
-13. 字符串查找：lintcode/string_find_test
-14. 二分查找：lintcode/half_search_test
+13. 字符串查找：lintcode/string_find_test, strstr_test
+14. 二分查找：lintcode/half_search_test,
 15. 全排列：lintcode/permute_test
 16. 带重复元素的排列：lintcode/permute_test
 17. 子集：lintcode/subsets_test
@@ -40,7 +40,7 @@
 53. 翻转字符串中的单词：lintcode/reverse_words_test
 54. 转换字符串到整数：lintcode/atoi_test
 55. 比较字符串：lintcode/compare_string_test
-56. 两数之和：lintcode/two_sum_test
+56. 两数之和：lintcode/two_sum_test, two_sum_py_test
 57. 三数之和：lintcode/three_sum_test1
 58. 四数之和：lintcode/four_sum_test
 59. 最接近的三数之和：lintcode/three_sum_closest
@@ -107,11 +107,16 @@
 164. 不同的二叉查找树 II：lintcode/generate_trees_test
 165. 合并两个排序链表：lintcode/merge_ordered_list_test
 168. 吹气球：lintcode/max_coins_test
+200. 最长回文子串：lintcode/longest_palindrome
 209. 第一个只出现一次的字符：lintcode/cat_test1
 219. 在排序链表中插入一个节点：lintcode/cat_test7
 228. 链表的中点：lintcode/cat_test8
 376. 二叉树的路径和：无
+460. 在排序数组中找最接近的K个数：lintcode/kclosest_numbers_test
 463. 整数排序：lintcode/cat_test4
+594. 字符串查找 II：lintcode/strstr_test
+627. 最长回文串：lintcode/longest_palindrome
+667. 最长的回文序列：lintcode/longest_palindrome_seq_test
 669. 换硬币：lintcode/coin_change_test
 700. 杆子分割：lintcode/cutting_test
 822. 相反的顺序存储：无
