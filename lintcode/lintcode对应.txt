@@ -116,12 +116,14 @@
 460. 在排序数组中找最接近的K个数：lintcode/kclosest_numbers_test
 463. 整数排序：lintcode/cat_test4
 594. 字符串查找 II：lintcode/strstr_test
+609. 两数和-小于或等于目标值:lintcode/two_sum_py_test
 627. 最长回文串：lintcode/longest_palindrome
 667. 最长的回文序列：lintcode/longest_palindrome_seq_test
 669. 换硬币：lintcode/coin_change_test
 700. 杆子分割：lintcode/cutting_test
 822. 相反的顺序存储：无
 846. 多关键字排序：lintcode/cat_test5
+891. 有效回文 II：lintcode/is_palindrome_test
 920. 会议室：lintcode/cat_test3
 1661. 删除链表中的第n到m个节点：lintcode/cat_test9
 1663. 忧郁：lintcode/cat_test6
