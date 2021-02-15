@@ -2,8 +2,9 @@
 2. 尾部的零：lintcode/end_zero
 3. 统计数字：lintcode/digit_counts_test
 4. 丑数II：lintcode/nth_ugly_number_test
-5. 第k大元素：lintcode/kth_largest_element_test
+5. 第k大元素：lintcode/kth_largest_element_test, kth_largest_element_py_test
 6. 合并排序数组II：lintcode/merge_array_test
+6. 合并排序数组II：lintcode/merge_array_py_test
 7. 二叉树的序列化和反序列化：binary_search_tree_test1
 8. 旋转字符串：lintcode/rotate_string_test
 9. Fizz Buzz问题：lintcode/fizz_buzz_test
@@ -115,6 +116,7 @@
 415. 有效回文串：lintcode/is_palindrome_test
 460. 在排序数组中找最接近的K个数：lintcode/kclosest_numbers_test
 463. 整数排序：lintcode/cat_test4
+464. 整数排序 II：lintcode/merge_sort_test
 594. 字符串查找 II：lintcode/strstr_test
 609. 两数和-小于或等于目标值:lintcode/two_sum_py_test
 627. 最长回文串：lintcode/longest_palindrome
