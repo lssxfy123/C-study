@@ -99,6 +99,7 @@
 138. 子数组之和：lintcode/sub_sum_zero_test
 141. x的平方根：lintcode/sqrt_test
 142. O(1)时间检测2的幂次：lintcode/check_power_of_2_test
+148. 颜色分类：lintcode/sort_colors_test
 154. 正则表达式匹配：lintcode/is_match_test
 155. 二叉树的最小深度：无
 156. 合并区间：lintcode/merge_intervals_test
