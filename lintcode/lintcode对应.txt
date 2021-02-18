@@ -36,7 +36,7 @@
 46. 主元素：lintcode/majority_number_test
 47. 主元素II：lintcode/majority_number_test2
 48. 主元素III：lintcode/majority_number_test3
-49. 字符大小写排序：lintcode/sort_letters_test
+49. 字符大小写排序：lintcode/sort_letters_test, sort_letters_py_test
 50. 数组剔除元素后的乘积：lintcode/exclude_it_product_test
 53. 翻转字符串中的单词：lintcode/reverse_words_test
 54. 转换字符串到整数：lintcode/atoi_test
@@ -100,6 +100,7 @@
 140. 快速幂：lintcode/recursion_test
 141. x的平方根：lintcode/sqrt_test
 142. O(1)时间检测2的幂次：lintcode/check_power_of_2_test
+143. 排颜色 II：lintcode/sort_colors_test
 144. 交错正负数:lintcode/partition_array_py_test
 148. 颜色分类：lintcode/sort_colors_test
 154. 正则表达式匹配：lintcode/is_match_test
@@ -116,6 +117,7 @@
 219. 在排序链表中插入一个节点：lintcode/cat_test7
 228. 链表的中点：lintcode/cat_test8
 366. 斐波纳契数列：lintcode/fibonacci_test
+373. 奇偶分割数组：lintcode/partition_array_py_test
 376. 二叉树的路径和：无
 382. 三角形计数：lintcode/three_sum_closest
 415. 有效回文串：lintcode/is_palindrome_test
@@ -125,6 +127,7 @@
 460. 在排序数组中找最接近的K个数：lintcode/kclosest_numbers_test
 463. 整数排序：lintcode/cat_test4
 464. 整数排序 II：lintcode/merge_sort_test
+539. 移动零：lintcode/move_zero_test
 585. 山脉序列中的最大值：lintcode/binary_search_test
 594. 字符串查找 II：lintcode/strstr_test
 609. 两数和-小于或等于目标值:lintcode/two_sum_py_test
