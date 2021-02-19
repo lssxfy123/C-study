@@ -127,6 +127,7 @@
 460. 在排序数组中找最接近的K个数：lintcode/kclosest_numbers_test
 463. 整数排序：lintcode/cat_test4
 464. 整数排序 II：lintcode/merge_sort_test
+492. 队列维护：lintcode/my_queue_test
 539. 移动零：lintcode/move_zero_test
 585. 山脉序列中的最大值：lintcode/binary_search_test
 594. 字符串查找 II：lintcode/strstr_test
