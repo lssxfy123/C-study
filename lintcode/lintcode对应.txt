@@ -47,7 +47,7 @@
 59. 最接近的三数之和：lintcode/three_sum_closest
 60. 搜索插入位置：lintcode/search_insert_test
 61. 搜索区间：lintcode/search_range
-62. 搜索旋转排序数组：lintcode/search_test1
+62. 搜索旋转排序数组：lintcode/search_test1, binary_search_test
 63. 搜索旋转排序数组II：无
 65. 两个排序数组的中位数：lintcode/find_median_sorted_array_test
 66. 二叉树的前序遍历：binary_search_tree_test1
@@ -59,7 +59,7 @@
 72. 中序遍历和后序遍历树构造二叉树：lintcode/build_tree_test1
 73. 前序遍历和中序遍历树构造二叉树：lintcode/build_tree_test1
 74. 第一个错误的代码版本：lintcode/find_first_bad_version_test
-75. 寻找峰值：lintcode/find_peak_test
+75. 寻找峰值：lintcode/find_peak_test, find_peak_py_test
 76. 最长上升子序列：lintcode/longest_increasing_subsequence_test
 77. 最长公共子序列：lintcode/longes_common_subsequence_test
 78. 最长公共前缀：lintcode/longest_common_prefix_test
@@ -108,6 +108,7 @@
 156. 合并区间：lintcode/merge_intervals_test
 157. 判断字符串是否有重复字符：lintcode/unique_character_test
 158. 两个字符串是变位词：lintcode/anagram_test
+159. 寻找旋转排序数组中的最小值：lintcode/binary_search_test
 163. 不同的二叉查找树：lintcode/num_tree_test
 164. 不同的二叉查找树 II：lintcode/generate_trees_test
 165. 合并两个排序链表：lintcode/merge_ordered_list_test
@@ -120,9 +121,11 @@
 373. 奇偶分割数组：lintcode/partition_array_py_test
 376. 二叉树的路径和：无
 382. 三角形计数：lintcode/three_sum_closest
+390. 寻找峰值 II：lintcode/find_peak_py_test
 415. 有效回文串：lintcode/is_palindrome_test
 428. x的n次幂：lintcode/recursion_test
 443. 两数之和 II：lintcode/two_sum_py_test
+447. 在大数组中查找：lintcode/binary_search_test
 457. 经典二分查找问题：lintcode/binary_search_test
 460. 在排序数组中找最接近的K个数：lintcode/kclosest_numbers_test
 463. 整数排序：lintcode/cat_test4
