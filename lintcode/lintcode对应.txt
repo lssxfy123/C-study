@@ -98,7 +98,7 @@
 133. 最长单词：lintcode/longest_words_test
 138. 子数组之和：lintcode/sub_sum_zero_test
 140. 快速幂：lintcode/recursion_test
-141. x的平方根：lintcode/sqrt_test
+141. x的平方根：lintcode/sqrt_test, sqrt_py_test
 142. O(1)时间检测2的幂次：lintcode/check_power_of_2_test
 143. 排颜色 II：lintcode/sort_colors_test
 144. 交错正负数:lintcode/partition_array_py_test
@@ -113,6 +113,7 @@
 164. 不同的二叉查找树 II：lintcode/generate_trees_test
 165. 合并两个排序链表：lintcode/merge_ordered_list_test
 168. 吹气球：lintcode/max_coins_test
+183. 木材加工：lintcode/binary_search_test
 200. 最长回文子串：lintcode/longest_palindrome
 209. 第一个只出现一次的字符：lintcode/cat_test1
 219. 在排序链表中插入一个节点：lintcode/cat_test7
