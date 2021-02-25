@@ -134,6 +134,7 @@
 492. 队列维护：lintcode/my_queue_test
 539. 移动零：lintcode/move_zero_test
 585. 山脉序列中的最大值：lintcode/binary_search_test
+587. 两数之和 - 不同组成：lintcode/two_sum_py_test
 594. 字符串查找 II：lintcode/strstr_test
 609. 两数和-小于或等于目标值:lintcode/two_sum_py_test
 627. 最长回文串：lintcode/longest_palindrome
@@ -141,10 +142,12 @@
 669. 换硬币：lintcode/coin_change_test
 700. 杆子分割：lintcode/cutting_test
 822. 相反的顺序存储：无
+841. 字符串替换：lintcode/str_replace_test
 846. 多关键字排序：lintcode/cat_test5
 891. 有效回文 II：lintcode/is_palindrome_test
 920. 会议室：lintcode/cat_test3
 976. 4数和 II：lintcode/four_sum_py_test
 1661. 删除链表中的第n到m个节点：lintcode/cat_test9
 1663. 忧郁：lintcode/cat_test6
-1666. 组合+判断素数：lintcode/cat_test10
+1666. 组合+判断素数：lintcode/
+1790. 旋转字符串II：lintcode/rotate_string_py_test
