@@ -53,7 +53,7 @@
 66. 二叉树的前序遍历：binary_search_tree_test1
 67. 二叉树的中序遍历：binary_search_tree_test1
 68. 二叉树的后序遍历：binary_search_tree_test1
-69. 二叉树的层次遍历：binary_search_tree_test1
+69. 二叉树的层次遍历：binary_search_tree_test1, 直接在lintcode上的python代码
 70. 二叉树的层次遍历II：binary_search_tree_test1
 71. 二叉树的锯齿形层次遍历：binary_search_tree_test1
 72. 中序遍历和后序遍历树构造二叉树：lintcode/build_tree_test1

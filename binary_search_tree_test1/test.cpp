@@ -750,7 +750,7 @@ private:
 
     }
 
-    // 层次遍历
+    // 层次遍历，宽度优先搜索的算法，不用递归
     void LevelPrintTreeNoRecursion(BinaryNode* root) const
     {
         vector<vector<Object>> result;
