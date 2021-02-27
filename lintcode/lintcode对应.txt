@@ -93,6 +93,7 @@
 116. 跳跃游戏：lintcode/can_jump_test
 118. 不同的子序列：lintcode/num_distinct_test
 119. 编辑距离：lintcode/min_distance_test
+120. 单词接龙：lintcode/ladder_length
 125. 背包问题II：lintcode/back_pack_test2
 128. 哈希函数：lintcode/hash_func_test1
 133. 最长单词：lintcode/longest_words_test
@@ -138,6 +139,7 @@
 594. 字符串查找 II：lintcode/strstr_test
 609. 两数和-小于或等于目标值:lintcode/two_sum_py_test
 627. 最长回文串：lintcode/longest_palindrome
+630. 骑士的最短路径II：lintcode/shortest_path_test
 667. 最长的回文序列：lintcode/longest_palindrome_seq_test
 669. 换硬币：lintcode/coin_change_test
 700. 杆子分割：lintcode/cutting_test
@@ -147,6 +149,7 @@
 891. 有效回文 II：lintcode/is_palindrome_test
 920. 会议室：lintcode/cat_test3
 976. 4数和 II：lintcode/four_sum_py_test
+1179. 朋友圈：lintcode/friend_circle_num_test
 1661. 删除链表中的第n到m个节点：lintcode/cat_test9
 1663. 忧郁：lintcode/cat_test6
 1666. 组合+判断素数：lintcode/
