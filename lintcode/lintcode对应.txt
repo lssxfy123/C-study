@@ -49,7 +49,7 @@
 61. 搜索区间：lintcode/search_range
 62. 搜索旋转排序数组：lintcode/search_test1, binary_search_test
 63. 搜索旋转排序数组II：无
-65. 两个排序数组的中位数：lintcode/find_median_sorted_array_test
+65. 两个排序数组的中位数：lintcode/find_median_sorted_array_test, find_median_sorted_array_py_test
 66. 二叉树的前序遍历：binary_search_tree_test1
 67. 二叉树的中序遍历：binary_search_tree_test1
 68. 二叉树的后序遍历：binary_search_tree_test1
@@ -76,7 +76,7 @@
 89. K数之和：lintcode/k_sum_test, k_sum_py_test
 90. k数和 II：lintcode/k_sum_test2
 92. 背包问题：lintcode/back_pack_test
-93. 平衡二叉树：binary_search_tree_test1
+93. 平衡二叉树：binary_search_tree_test1, 直接在lintcode上的python代码
 94. 二叉树中的最大路径和：max_path_sum_test
 95. 验证二叉查找树：无
 96. 链表划分：C++ Algorithm/qq_test1
@@ -132,6 +132,7 @@
 460. 在排序数组中找最接近的K个数：lintcode/kclosest_numbers_test
 463. 整数排序：lintcode/cat_test4
 464. 整数排序 II：lintcode/merge_sort_test
+480. 二叉树的所有路径：直接在lintcode上的python代码
 492. 队列维护：lintcode/my_queue_test
 539. 移动零：lintcode/move_zero_test
 585. 山脉序列中的最大值：lintcode/binary_search_test
@@ -139,6 +140,7 @@
 594. 字符串查找 II：lintcode/strstr_test
 609. 两数和-小于或等于目标值:lintcode/two_sum_py_test
 627. 最长回文串：lintcode/longest_palindrome
+628. 最大子树：直接在lintcode上的python代码
 630. 骑士的最短路径II：lintcode/shortest_path_test
 667. 最长的回文序列：lintcode/longest_palindrome_seq_test
 669. 换硬币：lintcode/coin_change_test
