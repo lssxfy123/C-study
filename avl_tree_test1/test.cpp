@@ -94,7 +94,8 @@ private:
         // 类似于将整个失衡子树向左旋转了一格
         AVLTreeNode* right_child = root->right_child_;
 
-        // 原根结点为新根结点的左孩子
+        // 原根结点为新根结点的左孩子,这样做可以保证新的树是平衡的搜索树
+        // 如果将原根结点插入到其他位置，不能保证
         // 新根结点的左孩子为原根结点的右孩子
         // 因为新根结点的左孩子的值肯定比原根结点的值大
         root->right_child_ = right_child->left_child_;
