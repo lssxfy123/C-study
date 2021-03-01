@@ -70,7 +70,7 @@
 83. 落单的数 II：lintcode/single_number_test2
 84. 落单的数 III：lintcode/single_number_test3
 85. 在二叉查找数中插入节点：binary_search_tree_test1
-86. 二叉查找树迭代器：binary_search_tree_test1
+86. 二叉查找树迭代器：binary_search_tree_test1,直接在lintcode上的python代码
 87. 删除二叉查找树的节点：binary_search_tree_test1
 88. 最近公共祖先：无
 89. K数之和：lintcode/k_sum_test, k_sum_py_test
