@@ -149,6 +149,7 @@
 841. 字符串替换：lintcode/str_replace_test
 846. 多关键字排序：lintcode/cat_test5
 891. 有效回文 II：lintcode/is_palindrome_test
+900. 二叉搜索树中最接近的值：直接在lintcode上的python代码
 920. 会议室：lintcode/cat_test3
 976. 4数和 II：lintcode/four_sum_py_test
 1179. 朋友圈：lintcode/friend_circle_num_test
