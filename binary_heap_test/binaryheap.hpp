@@ -127,7 +127,7 @@ private:
         Comparable tmp = array_[hole];
         for (; hole * 2 <= current_size_; hole = child)
         {
-            child = hole * 2;  // 左儿子
+            child = hole * 2;  // 左儿子,这里之所以不是2*hole+1，是因为数组的第0个位置不是堆中的元素
 
             // 如果child不等于current_size_，则表示右儿子肯定存在
             // 如果右儿子比左儿子小，则比较右儿子

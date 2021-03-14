@@ -34,7 +34,7 @@ void Stack::Push(int element)
     }
 
     p->element = element;
-    p->next = top_ptr_;  // top_ptr_存储的是上一个栈元素
+    p->prev = top_ptr_;  // top_ptr_存储的是上一个栈元素
     top_ptr_ = p;  // 将top_ptr指向当前栈元素
     ++size_;
 }
@@ -52,7 +52,7 @@ int Stack::Pop(bool& ok)
     Node* p = NULL;
     int element = 0;
     element = top_ptr_->element;
-    p = top_ptr_->next;
+    p = top_ptr_->prev;
     delete top_ptr_;
     top_ptr_ = p;
     --size_;
@@ -70,7 +70,7 @@ void Stack::ClearStack()
 
     while (top_ptr_ != NULL)
     {
-        p = top_ptr_->next;
+        p = top_ptr_->prev;
         delete top_ptr_;
         top_ptr_ = p;
     }

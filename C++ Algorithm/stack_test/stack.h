@@ -5,7 +5,7 @@
 typedef struct Node
 {
     int element;
-    Node* next;
+    Node* prev;
 } Node;
 
 class Stack

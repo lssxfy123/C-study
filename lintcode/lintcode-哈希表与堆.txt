@@ -1,0 +1,10 @@
+4. 丑数II：lintcode/nth_ugly_number_test, heap_py_test
+128. 哈希函数：lintcode/hash_func_test1, hash_py_test
+129. 重哈希：lintocde/hash_py_test
+130. 堆化：lintcode/heap_py_test
+134. LRU缓存策略：lintcode/hash_py_test
+463. 整数排序(堆排序)：lintcode/heap_py_test
+657. O(1)实现数组插入/删除/随机访问：lintocde/hash_py_test
+685. 数据流中第一个唯一的数字：lintocde/hash_py_test
+954. Insert Delete GetRandom O(1) - 允许重复：用C++自己实现
+960. 数据流中第一个独特的数 II：lintcode/hash_py_test
