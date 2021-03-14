@@ -1,0 +1,3 @@
+109. 数字三角形：lintcode/minium_total_test, memoization_test
+114. 不同的路径：lintcode/unique_paths_test,dp_test
+1300. 巴什博弈：lintcode/memoization_test
