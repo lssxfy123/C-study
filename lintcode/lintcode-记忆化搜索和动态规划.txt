@@ -1,3 +1,7 @@
+92. 背包问题：lintcode/back_pack_test, dp_test
 109. 数字三角形：lintcode/minium_total_test, memoization_test
-114. 不同的路径：lintcode/unique_paths_test,dp_test
+114. 不同的路径：lintcode/unique_paths_test, dp_test
+115. 不同的路径 II：lintcode/dp_test
+116. 跳跃游戏：lintcode/can_jump_test, dp_test
+630. 骑士的最短路径II：lintcode/dp_test
 1300. 巴什博弈：lintcode/memoization_test
