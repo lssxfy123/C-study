@@ -8,4 +8,5 @@
 192. 通配符匹配：lintcode/dp_test
 440. 背包问题 III：lintcode/dp_test
 630. 骑士的最短路径II：lintcode/dp_test
+829. 字模式 II：lintcode/dp_test
 1300. 巴什博弈：lintcode/memoization_test
