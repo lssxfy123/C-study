@@ -5,18 +5,27 @@
 57. 三数之和：lintcode/three_sum_py_test
 58. 四数之和：lintcode/four_sum_test
 59. 最接近的三数之和：lintcode/three_sum_closest
+102. 带环链表：lintcode/has_cycle_test
 143. 排颜色 II：lintcode/sort_colors_test
 144. 交错正负数:lintcode/partition_array_py_test
 148. 颜色分类：lintcode/sort_colors_test
+228. 链表的中点：lintcode/cat_test8, middle_node_list_test
 373. 奇偶分割数组：lintcode/partition_array_py_test
+380. 两个链表的交叉：lintcode/has_cycle_test
+386. 最多有k个不同字符的最长子字符串：lintcode/length_longest_substr_test
 415. 有效回文串：lintcode/is_palindrome_test
 443. 两数之和 II：lintcode/two_sum_py_test
+521. 去除重复元素：lintcode/array_deduplication_test
 539. 移动零：lintcode/move_zero_test
 587. 两数之和 - 不同组成：lintcode/two_sum_py_test
+604. 滑动窗口内数的和：
 609. 两数和-小于或等于目标值:lintcode/two_sum_py_test
+610. 两数和 - 差等于目标值：lintcode/two_sum_py_test
 627. 最长回文串：lintcode/longest_palindrome
 667. 最长的回文序列：lintcode/longest_palindrome_seq_test
 841. 字符串替换：lintcode/str_replace_test
 891. 有效回文 II：lintcode/is_palindrome_test
 976. 4数和 II：lintcode/four_sum_py_test
+1246. 替换后的最长重复字符：lintcode/character_replace_test
 1790. 旋转字符串II：lintcode/rotate_string_py_test
+1870. 全零子串的数量：lintcode/zero_string_count_test
