@@ -1,4 +1,5 @@
 4. 丑数II：lintcode/nth_ugly_number_test, heap_py_test
+124. 最长连续序列：lintcode/longest_consecutive
 128. 哈希函数：lintcode/hash_func_test1, hash_py_test
 129. 重哈希：lintocde/hash_py_test
 130. 堆化：lintcode/heap_py_test

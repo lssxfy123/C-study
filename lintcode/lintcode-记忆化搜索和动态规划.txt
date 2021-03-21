@@ -1,3 +1,4 @@
+76. 最长上升子序列：lintcode/dp_test
 92. 背包问题：lintcode/back_pack_test, dp_test
 109. 数字三角形：lintcode/minium_total_test, memoization_test
 114. 不同的路径：lintcode/unique_paths_test, dp_test
@@ -6,7 +7,10 @@
 125. 背包问题II：lintcode/back_pack_test2, dp_test
 154. 正则表达式匹配：lintcode/is_match_test, dp_test
 192. 通配符匹配：lintcode/dp_test
+366. 斐波纳契数列：lintcode/dp_test
+398. 最长上升连续子序列 II：lintcode/dp_test
 440. 背包问题 III：lintcode/dp_test
+603. 最大整除子集：lintcode/dp_test
 630. 骑士的最短路径II：lintcode/dp_test
 683. 单词拆分 III：lintcode/dp_test
 829. 字模式 II：lintcode/dp_test
