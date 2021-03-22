@@ -1,3 +1,5 @@
+28. 搜索二维矩阵：lintcode/search_matrix_test,binary_search_test
+38. 搜索二维矩阵 II：lintcode/search_matrix_test2, binary_search_test
 62. 搜索旋转排序数组：lintcode/search_test1, binary_search_test
 75. 寻找峰值：lintcode/find_peak_test, find_peak_py_test
 81. 数据流中位数：待刷
@@ -12,3 +14,4 @@
 457. 经典二分查找问题：lintcode/binary_search_test
 460. 在排序数组中找最接近的K个数：lintcode/kclosest_numbers_test
 585. 山脉序列中的最大值：lintcode/binary_search_test
+600. 包裹黑色像素点的最小矩形：lintcode/binary_search_test
