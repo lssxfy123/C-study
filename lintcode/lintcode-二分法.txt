@@ -10,8 +10,10 @@
 366. 斐波纳契数列：lintcode/fibonacci_test
 390. 寻找峰值 II：lintcode/find_peak_py_test
 428. x的n次幂：lintcode/recursion_test
+437. 书籍复印：lintcode/binary_search_test
 447. 在大数组中查找：lintcode/binary_search_test
 457. 经典二分查找问题：lintcode/binary_search_test
 460. 在排序数组中找最接近的K个数：lintcode/kclosest_numbers_test
 585. 山脉序列中的最大值：lintcode/binary_search_test
 600. 包裹黑色像素点的最小矩形：lintcode/binary_search_test
+1536. 在排序数组中查找元素的第一个和最后一个位置：待刷
