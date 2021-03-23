@@ -2,7 +2,7 @@
 38. 搜索二维矩阵 II：lintcode/search_matrix_test2, binary_search_test
 62. 搜索旋转排序数组：lintcode/search_test1, binary_search_test
 75. 寻找峰值：lintcode/find_peak_test, find_peak_py_test
-81. 数据流中位数：待刷
+81. 数据流中位数：lintcode/binary_search_test
 140. 快速幂：lintcode/recursion_test
 141. x的平方根：lintcode/sqrt_test, sqrt_py_test
 159. 寻找旋转排序数组中的最小值：lintcode/binary_search_test
