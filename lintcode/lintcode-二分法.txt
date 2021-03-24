@@ -1,12 +1,15 @@
 28. 搜索二维矩阵：lintcode/search_matrix_test,binary_search_test
 38. 搜索二维矩阵 II：lintcode/search_matrix_test2, binary_search_test
 62. 搜索旋转排序数组：lintcode/search_test1, binary_search_test
+65. 两个排序数组的中位数：lintcode/find_median_sorted_array_test, find_median_sorted_array_py_test
 75. 寻找峰值：lintcode/find_peak_test, find_peak_py_test
 81. 数据流中位数：lintcode/binary_search_test
 140. 快速幂：lintcode/recursion_test
 141. x的平方根：lintcode/sqrt_test, sqrt_py_test
 159. 寻找旋转排序数组中的最小值：lintcode/binary_search_test
 183. 木材加工：lintcode/binary_search_test
+235. 分解质因数:lintcode/prime_factorization_test
+249. 统计前面比自己小的数的个数：lintcode/count_smaller_number_test，待刷
 366. 斐波纳契数列：lintcode/fibonacci_test
 390. 寻找峰值 II：lintcode/find_peak_py_test
 428. x的n次幂：lintcode/recursion_test
@@ -16,4 +19,5 @@
 460. 在排序数组中找最接近的K个数：lintcode/kclosest_numbers_test
 585. 山脉序列中的最大值：lintcode/binary_search_test
 600. 包裹黑色像素点的最小矩形：lintcode/binary_search_test
+845. 最大公约数：lintcode/gcd_test
 1536. 在排序数组中查找元素的第一个和最后一个位置：lintcode/binary_search_test
