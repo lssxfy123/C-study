@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{1FA7BC35-9398-49D7-B75C-D02B1918E7BA}</ProjectGuid>
-    <RootNamespace>topkwordsinlinetest</RootNamespace>
+    <ProjectGuid>{D78806A3-5B67-46ED-BA8C-FC82BB52A8C3}</ProjectGuid>
+    <RootNamespace>randomsettest</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

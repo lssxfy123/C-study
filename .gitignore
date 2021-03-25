@@ -17,3 +17,4 @@ Release
 /lintcode/strstr_test/.ipynb_checkpoints
 /lintcode/two_sum_py_test/.ipynb_checkpoints
 *.ipynb_checkpoints
+**/config/*.config
