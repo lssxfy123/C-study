@@ -1,7 +1,8 @@
+7. 二叉树的序列化和反序列化：待刷
 65. 两个排序数组的中位数：lintcode/find_median_sorted_array_test, find_median_sorted_array_py_test
 86. 二叉查找树迭代器：binary_search_tree_test1,lintcode/binary_tree_test
 88. 最近公共祖先：lintcode/binary_tree_test
-93. 平衡二叉树：binary_search_tree_test1, 直接在lintcode上的python代码
+93. 平衡二叉树：binary_search_tree_test1, lintcode/binary_tree_test
 合并k个排序链表：lintcode/merge_k_sorted_lists
 453. 将二叉树拆成链表：lintcode/binary_tree_test
 474. 最近公共祖先 II：lintcode/binary_tree_test

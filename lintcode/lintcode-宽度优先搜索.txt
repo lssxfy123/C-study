@@ -7,5 +7,6 @@
 611. 骑士的最短路线：lintcode/shortest_path_test
 616. 安排课程：lintcode/topological_sort_test
 630. 骑士的最短路径II：lintcode/shortest_path_test
+761. 最小子集：lintcode/min_elements_test
 892. 外星人字典：lintcode/topological_sort_test
 1179. 朋友圈：lintcode/friend_circle_num_test
