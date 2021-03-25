@@ -3,7 +3,7 @@
 137. 克隆图：lintcode/clone_graph_test
 433. 岛屿的个数：lintcode/num_island_test
 492. 队列维护：lintcode/my_queue_test
-605. 序列重构：lintcode/bfs_test
+605. 序列重构：lintcode/topological_sort_test
 611. 骑士的最短路线：lintcode/shortest_path_test
 616. 安排课程：lintcode/topological_sort_test
 630. 骑士的最短路径II：lintcode/shortest_path_test
