@@ -1,4 +1,6 @@
 28. 搜索二维矩阵：lintcode/search_matrix_test,binary_search_test
+35. 翻转链表：lintcode/reverse_list_test, reverse_list_py_test
+36. 翻转链表II：lintcode/reverse_list_between, reverse_list_py_test
 38. 搜索二维矩阵 II：lintcode/search_matrix_test2, binary_search_test
 62. 搜索旋转排序数组：lintcode/search_test1, binary_search_test
 65. 两个排序数组的中位数：lintcode/find_median_sorted_array_test, find_median_sorted_array_py_test

@@ -5,7 +5,7 @@
 18. 子集II：lintcode/dfs_test
 33. N皇后问题：lintcode/dfs_test
 34. N皇后问题 II：lintcode/dfs_test
-51. 上一个排列：待刷
+51. 上一个排列：lintcode/dfs_test
 52. 下一个排列：lintcode/dfs_test
 90. k数和 II：lintcode/dfs_test
 121. 单词接龙 II：lintcode/dfs_test

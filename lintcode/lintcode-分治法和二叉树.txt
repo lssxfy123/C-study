@@ -1,5 +1,4 @@
 二叉查找树的增删改查：lintcode/binary_tree_test
-平衡二叉树的增删改查：待刷
 7. 二叉树的序列化和反序列化：lintcode/binary_tree_test, binary_search_tree_test1
 11. 二叉查找树搜索区间：lintcode/search_range_test, binary_tree_test
 65. 两个排序数组的中位数：lintcode/find_median_sorted_array_test, find_median_sorted_array_py_test
@@ -10,7 +9,7 @@
 104. 合并k个排序链表：lintcode/merge_k_sorted_lists
 453. 将二叉树拆成链表：lintcode/binary_tree_test
 474. 最近公共祖先 II：lintcode/binary_tree_test
-480. 二叉树的所有路径：直接在lintcode上的python代码
+480. 二叉树的所有路径：lintcode/binary_tree_test
 578. 最近公共祖先 III：lintcode/binary_tree_test
 596. 最小子树：lintcode/binary_tree_test
 628. 最大子树：lintcode/binary_tree_test
