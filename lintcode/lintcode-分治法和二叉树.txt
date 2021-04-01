@@ -1,20 +1,28 @@
 二叉查找树的增删改查：lintcode/binary_tree_test
+6. 合并排序数组II：lintcode/merge_array_py_test
 7. 二叉树的序列化和反序列化：lintcode/binary_tree_test, binary_search_tree_test1
 11. 二叉查找树搜索区间：lintcode/search_range_test, binary_tree_test
+64. 合并排序数组：lintcode/merge_array_py_test
 65. 两个排序数组的中位数：lintcode/find_median_sorted_array_test, find_median_sorted_array_py_test
 66. 二叉树的前序遍历：lintcode/binary_tree_test
 86. 二叉查找树迭代器：binary_search_tree_test1,lintcode/binary_tree_test
 88. 最近公共祖先：lintcode/binary_tree_test
 93. 平衡二叉树：binary_search_tree_test1, lintcode/binary_tree_test
+165. 合并两个排序链表：lintcode/merge_ordered_list_test, merge_array_py_test
 104. 合并k个排序链表：lintcode/merge_k_sorted_lists
 453. 将二叉树拆成链表：lintcode/binary_tree_test
 474. 最近公共祖先 II：lintcode/binary_tree_test
 480. 二叉树的所有路径：lintcode/binary_tree_test
+486. 合并k个排序数组：待刷
+547. 两数组的交集：待刷
+577. 合并K个排序间隔列表：待刷
 578. 最近公共祖先 III：lintcode/binary_tree_test
 596. 最小子树：lintcode/binary_tree_test
 628. 最大子树：lintcode/binary_tree_test
+654. 稀疏矩阵乘法：待刷
 689. 两数之和 - BST版本：lintcode/binary_tree_test
 701. 修剪二叉搜索树：lintcode/binary_tree_test
+839. 合并两个排序的间隔列表：待刷
 900. 二叉搜索树中最接近的值：lintcode/binary_tree_test
 901. 二叉搜索树中最接近的值 II：lintcode/binary_tree_test
 902. BST中第K小的元素：lintcode/binary_tree_test
