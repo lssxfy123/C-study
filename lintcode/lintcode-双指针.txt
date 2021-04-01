@@ -9,6 +9,7 @@
 143. 排颜色 II：lintcode/sort_colors_test
 144. 交错正负数:lintcode/partition_array_py_test
 148. 颜色分类：lintcode/sort_colors_test
+200. 最长回文子串：lintcode/longest_palindrome
 228. 链表的中点：lintcode/cat_test8, middle_node_list_test
 373. 奇偶分割数组：lintcode/partition_array_py_test
 380. 两个链表的交叉：lintcode/has_cycle_test
