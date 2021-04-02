@@ -13,8 +13,8 @@
 453. 将二叉树拆成链表：lintcode/binary_tree_test
 474. 最近公共祖先 II：lintcode/binary_tree_test
 480. 二叉树的所有路径：lintcode/binary_tree_test
-486. 合并k个排序数组：待刷
-547. 两数组的交集：待刷
+486. 合并k个排序数组：lintcode/merge_array_py_test
+547. 两数组的交集：lintcode/merge_array_py_test
 577. 合并K个排序间隔列表：待刷
 578. 最近公共祖先 III：lintcode/binary_tree_test
 596. 最小子树：lintcode/binary_tree_test
