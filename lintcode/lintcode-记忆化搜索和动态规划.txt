@@ -15,5 +15,6 @@
 603. 最大整除子集：lintcode/dp_test
 630. 骑士的最短路径II：lintcode/dp_test
 683. 单词拆分 III：lintcode/dp_test
+741. 计算最大值II：lintcode/dp_test
 829. 字模式 II：lintcode/dp_test
 1300. 巴什博弈：lintcode/memoization_test
