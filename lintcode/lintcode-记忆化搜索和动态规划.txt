@@ -1,9 +1,11 @@
 76. 最长上升子序列：lintcode/dp_test
+77. 最长公共子序列：lintcode/longes_common_subsequence_test, dp_test
 92. 背包问题：lintcode/back_pack_test, dp_test
 109. 数字三角形：lintcode/minium_total_test, memoization_test
 114. 不同的路径：lintcode/unique_paths_test, dp_test
 115. 不同的路径 II：lintcode/dp_test
 116. 跳跃游戏：lintcode/can_jump_test, dp_test
+119. 编辑距离：lintcode/min_distance_test, dp_test
 125. 背包问题II：lintcode/back_pack_test2, dp_test
 154. 正则表达式匹配：lintcode/is_match_test, dp_test
 168. 吹气球：lintcode/max_coins_test, dp_test
