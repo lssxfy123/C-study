@@ -28,5 +28,7 @@
 891. 有效回文 II：lintcode/is_palindrome_test
 976. 4数和 II：lintcode/four_sum_py_test
 1246. 替换后的最长重复字符：lintcode/character_replace_test
+1343. 两字符串和：lintcode/sum_of_two_string_test
+1375. 至少K个不同字符的子串：lintcode/k_distinct_chars_test
 1790. 旋转字符串II：lintcode/rotate_string_py_test
 1870. 全零子串的数量：lintcode/zero_string_count_test
