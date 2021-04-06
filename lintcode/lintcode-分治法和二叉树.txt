@@ -14,6 +14,7 @@
 242. 将二叉树按照层级转化为链表：lintcode/binary_tree_test
 246. 二叉树的路径和 II：lintcode/binary_tree_test
 376. 二叉树的路径和：lintcode/binary_tree_test
+448. 二叉查找树的中序后继：lintcode/binary_tree_test
 453. 将二叉树拆成链表：lintcode/binary_tree_test
 474. 最近公共祖先 II：lintcode/binary_tree_test
 480. 二叉树的所有路径：lintcode/binary_tree_test

@@ -20,6 +20,7 @@
 539. 移动零：lintcode/move_zero_test
 587. 两数之和 - 不同组成：lintcode/two_sum_py_test
 604. 滑动窗口内数的和：lintcode/win_sum_test
+606. 第K大的元素 II：lintcode/kth_largest_element_py_test
 609. 两数和-小于或等于目标值:lintcode/two_sum_py_test
 610. 两数和 - 差等于目标值：lintcode/two_sum_py_test
 627. 最长回文串：lintcode/longest_palindrome
