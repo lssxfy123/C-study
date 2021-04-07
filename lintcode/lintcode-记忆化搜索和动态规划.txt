@@ -22,4 +22,5 @@
 683. 单词拆分 III：lintcode/dp_test
 741. 计算最大值II：lintcode/dp_test
 829. 字模式 II：lintcode/dp_test
+1076. 两字符串ASCII的最小删除和：lintcode/dp_test
 1300. 巴什博弈：lintcode/memoization_test

@@ -11,10 +11,13 @@
 121. 单词接龙 II：lintcode/dfs_test
 132. 单词搜索 II：lintcode/dfs_test
 135. 数字组合：lintcode/dfs_test
+152. 组合：lintcode/dfs_test
+153. 数字组合 II：lintcode/dfs_test
 425. 电话号码的字母组合：lintcode/dfs_test
 426. 恢复IP地址：lintcode/dfs_test
 570. 寻找丢失的数 II：lintcode/dfs_test
 582. 单词拆分II：lintcode/dfs_test
 680. 分割字符串：lintcode/dfs_test
+780. 删除无效的括号：lintcode/dfs_test
 802. 数独：lintcode/dfs_test
 816. 旅行商问题：lintcode/dfs_test
