@@ -23,6 +23,7 @@
 516. 房屋染色 II：lintcode/dp_test
 602. 俄罗斯套娃信封：lintcode/dp_test
 603. 最大整除子集：lintcode/dp_test
+622. 青蛙跳：lintcode/dp_test
 630. 骑士的最短路径II：lintcode/dp_test
 683. 单词拆分 III：lintcode/dp_test
 741. 计算最大值II：lintcode/dp_test
