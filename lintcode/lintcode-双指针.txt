@@ -16,6 +16,7 @@
 386. 最多有k个不同字符的最长子字符串：lintcode/length_longest_substr_test
 415. 有效回文串：lintcode/is_palindrome_test
 443. 两数之和 II：lintcode/two_sum_py_test
+479. 数组第二大数：lintcode/second_max_test
 521. 去除重复元素：lintcode/array_deduplication_test
 539. 移动零：lintcode/move_zero_test
 587. 两数之和 - 不同组成：lintcode/two_sum_py_test
