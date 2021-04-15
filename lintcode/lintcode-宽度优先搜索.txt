@@ -6,6 +6,7 @@
 531. 六度问题：lintcode/six_degrees_test
 605. 序列重构：lintcode/topological_sort_test
 611. 骑士的最短路线：lintcode/shortest_path_test
+615. 课程表：lintcode/topological_sort_test
 616. 安排课程：lintcode/topological_sort_test
 624. 移除子串：lintcode/min_length_test
 630. 骑士的最短路径II：lintcode/shortest_path_test
