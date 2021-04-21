@@ -11,6 +11,7 @@
 93. 平衡二叉树：binary_search_tree_test1, lintcode/binary_tree_test
 165. 合并两个排序链表：lintcode/merge_ordered_list_test, merge_array_py_test
 104. 合并k个排序链表：lintcode/merge_k_sorted_lists
+175. 翻转二叉树：lintcode/binary_tree_test
 242. 将二叉树按照层级转化为链表：lintcode/binary_tree_test
 246. 二叉树的路径和 II：lintcode/binary_tree_test
 376. 二叉树的路径和：lintcode/binary_tree_test
@@ -23,6 +24,7 @@
 577. 合并K个排序间隔列表：lintcode/merge_array_py_test
 578. 最近公共祖先 III：lintcode/binary_tree_test
 596. 最小子树：lintcode/binary_tree_test
+597. 具有最大平均数的子树：lintcode/binary_tree_test
 628. 最大子树：lintcode/binary_tree_test
 654. 稀疏矩阵乘法：lintcode/merge_array_py_test
 689. 两数之和 - BST版本：lintcode/binary_tree_test

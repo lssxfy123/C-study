@@ -1,11 +1,15 @@
+堆的增删以及构建：lintcode/heap_test
 4. 丑数II：lintcode/nth_ugly_number_test, heap_py_test
 12. 带最小值操作的栈：lintcode/data_structure_test
 40. 用栈实现队列：lintcode/data_structure_test
+105. 复制带随机指针的链表：lintcode/copy_random_list_test
 124. 最长连续序列：lintcode/longest_consecutive
 128. 哈希函数：lintcode/hash_func_test1, hash_py_test
 129. 重哈希：lintocde/hash_py_test
 130. 堆化：lintcode/heap_py_test
 134. LRU缓存策略：lintcode/hash_py_test
+171. 乱序字符串：lintcode/hash_py_test
+397. 最长上升连续子序列：lintcode/longest_increasing_continous_subsequence_test
 463. 整数排序(堆排序)：lintcode/heap_py_test
 494. 双队列实现栈：lintcode/data_structure_test
 544. 前K大数：lintcode/heap_py_test
