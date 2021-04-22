@@ -14,9 +14,11 @@
 373. 奇偶分割数组：lintcode/partition_array_py_test
 380. 两个链表的交叉：lintcode/has_cycle_test
 386. 最多有k个不同字符的最长子字符串：lintcode/length_longest_substr_test
+401. 排序矩阵中的从小到大第k个数：lintcode/kth_smallest_matrix_test
 415. 有效回文串：lintcode/is_palindrome_test
 443. 两数之和 II：lintcode/two_sum_py_test
 461. 无序数组K小元素：lintcode/kth_smallest_test
+465. 两个排序数组和的第K小：lintcode/kth_smallest_sum_test
 479. 数组第二大数：lintcode/second_max_test
 521. 去除重复元素：lintcode/array_deduplication_test
 533. 两数和的最接近值：lintcode/two_sum_py_test
