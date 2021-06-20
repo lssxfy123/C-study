@@ -36,4 +36,7 @@
 915. BST的中序前驱节点：lintcode/binary_tree_test
 1235. 序列化和反序列化二叉搜索树：lintcode/binary_tree_test
 1311. 二叉搜索树的最近公共祖先：lintcode/binary_tree_test
+1506. 二叉树中所有距离为 K 的结点：lintcode/binary_tree_test
+1534. 将二叉搜索树转换为已排序的双向链接列表：lintcode/binary_tree_test
+1744. 递增顺序查找树：lintcode/binary_tree_test
 1783. 二叉树的后序遍历：lintcode/binary_tree_test
