@@ -7,7 +7,7 @@
 492. 队列维护：lintcode/my_queue_test
 531. 六度问题：lintcode/six_degrees_test
 573. 邮局的建立 II：lintcode/shortest_distance_test
-598. 僵尸矩阵：lintcode
+598. 僵尸矩阵：lintcode/zombie_test
 605. 序列重构：lintcode/topological_sort_test
 611. 骑士的最短路线：lintcode/shortest_path_test
 615. 课程表：lintcode/topological_sort_test
@@ -19,6 +19,7 @@
 787. 迷宫：lintcode/maze_path_test
 788. 迷宫 II：lintcode/maze_path_test
 794. 滑动拼图 II：lintcode/min_move_step
+872. 终止进程：lintcode/kill_process_py_test
 892. 外星人字典：lintcode/topological_sort_test
 939. 二叉树第K层节点数量：lintcode/binary_tree_test
 1179. 朋友圈：lintcode/friend_circle_num_test
