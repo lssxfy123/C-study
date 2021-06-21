@@ -29,5 +29,6 @@
 741. 计算最大值II：lintcode/dp_test
 829. 字模式 II：lintcode/dp_test
 1076. 两字符串ASCII的最小删除和：lintcode/dp_test
+1084. “马”在棋盘上的概率：lintcode/dp_test
 1300. 巴什博弈：lintcode/memoization_test
 1512. 雇佣K个人的最低费用：lintcode/dp_test
