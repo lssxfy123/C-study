@@ -1,2 +1,3 @@
 13. 字符串查找：lintcode/string_find_test, strstr_test
 594. 字符串查找 II：lintcode/strstr_test
+1592. 查找和替换模式：lintcode/dfs_test
