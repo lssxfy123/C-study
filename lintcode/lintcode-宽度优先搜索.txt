@@ -24,3 +24,4 @@
 939. 二叉树第K层节点数量：lintcode/binary_tree_test
 1179. 朋友圈：lintcode/friend_circle_num_test
 1197. 寻找树中最左下结点的值：lintcode/binary_tree_test
+1428. 钥匙和房间：lintcode/can_visited_all_rooms_py_test
