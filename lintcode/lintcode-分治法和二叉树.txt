@@ -17,6 +17,7 @@
 376. 二叉树的路径和：lintcode/binary_tree_test
 448. 二叉查找树的中序后继：lintcode/binary_tree_test
 453. 将二叉树拆成链表：lintcode/binary_tree_test
+472. 二叉树的路径和 III：lintcode/binary_tree_test
 474. 最近公共祖先 II：lintcode/binary_tree_test
 480. 二叉树的所有路径：lintcode/binary_tree_test
 486. 合并k个排序数组：lintcode/merge_array_py_test
