@@ -21,3 +21,4 @@
 780. 删除无效的括号：lintcode/dfs_test
 802. 数独：lintcode/dfs_test
 816. 旅行商问题：lintcode/dfs_test
+1891. 旅行计划：lintcode/dfs_test
