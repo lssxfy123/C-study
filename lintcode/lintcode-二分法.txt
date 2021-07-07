@@ -24,4 +24,5 @@
 585. 山脉序列中的最大值：lintcode/binary_search_test
 600. 包裹黑色像素点的最小矩形：lintcode/binary_search_test
 845. 最大公约数：lintcode/gcd_test
+1219. 加热器：lintcode/binary_search_test
 1536. 在排序数组中查找元素的第一个和最后一个位置：lintcode/binary_search_test
