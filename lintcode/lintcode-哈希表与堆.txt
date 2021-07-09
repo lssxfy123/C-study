@@ -20,3 +20,4 @@
 954. Insert Delete GetRandom O(1) - 允许重复：lintcode/hash_py_test, random_set_test
 960. 数据流中第一个独特的数 II：lintcode/hash_py_test
 1116. 函数执行时间：lintcode/exclusive_time_py_test
+1316. 幸运数字：lintcode/data_structure_test
